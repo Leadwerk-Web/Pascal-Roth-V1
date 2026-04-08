@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finanzberatung Karlsruhe – Pascal Roth · Unabhängig & Persönlich</title>
+  <meta name="description" content="Unabhängige Finanzberatung in Karlsruhe. Absicherung, Vorsorge & Vermögensaufbau – verständlich erklärt, ohne Verkaufsdruck. Jetzt Erstgespräch vereinbaren.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Finanzberatung Karlsruhe – Pascal Roth">
+  <meta property="og:description" content="Unabhängige Finanzberatung in Karlsruhe. Absicherung, Vorsorge & Vermögensaufbau – verständlich erklärt, ohne Verkaufsdruck.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:image" content="Fotos/Paar.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="Fotos/Pascal Roth Logo_blau.png" type="image/png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FinancialService",
+    "name": "Pascal Roth – Unabhängige Finanzberatung",
+    "description": "Unabhängige Finanzberatung in Karlsruhe: Absicherung, Vorsorge und Vermögensaufbau.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Karlsruhe",
+      "addressCountry": "DE"
+    },
+    "telephone": "+4980052569960",
+    "email": "pascal.roth@allfinanz.ag",
+    "areaServed": "Karlsruhe",
+    "priceRange": "Erstberatung kostenlos",
+    "image": "Fotos/Pascal Roth Logo.png"
+  }
+  </script>
+</head>
+
+<body>
+
+<!-- ============================================
+     NAVIGATION
+     ============================================ -->
+<nav class="nav-wrapper" role="navigation" aria-label="Hauptnavigation">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;">
+
+    <!-- Logo -->
+    <a href="#hero" class="site-logo-link" aria-label="Pascal Roth – Zur Startseite">
+      <img src="Fotos/Pascal Roth Logo_blau.png" alt="Pascal Roth – Unabhängige Finanzberatung" class="site-logo" width="200" height="48" fetchpriority="high" loading="eager">
+    </a>
+
+    <!-- Desktop Nav -->
+    <div style="display:flex;align-items:center;gap:32px;" class="desktop-nav">
+      <!-- Leistungen Dropdown -->
+      <div class="nav-item" style="position:relative;">
+        <a href="#leistungen" style="text-decoration:none;color:#5A6B7C;font-weight:500;font-size:15px;display:flex;align-items:center;gap:4px;transition:color 0.3s;">
+          Leistungen
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <a href="absicherung.html">
+            <div>
+              <div>Absicherung</div>
+              <span class="dropdown-desc">BU, Haftpflicht, Risiko-Leben</span>
+            </div>
+          </a>
+          <a href="vorsorge.html">
+            <div>
+              <div>Vorsorge</div>
+              <span class="dropdown-desc">Altersvorsorge, Rürup, Kindervorsorge</span>
+            </div>
+          </a>
+          <a href="vermoegensaufbau.html">
+            <div>
+              <div>Vermögensaufbau</div>
+              <span class="dropdown-desc">Fonds, Sparpläne, Nachhaltigkeit</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Für dich Dropdown -->
+      <div class="nav-item" style="position:relative;">
+        <a href="#lebensphasen" style="text-decoration:none;color:#5A6B7C;font-weight:500;font-size:15px;display:flex;align-items:center;gap:4px;transition:color 0.3s;">
+          Für dich
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <a href="berufseinsteiger.html">
+            <div>
+              <div>Berufseinsteiger</div>
+              <span class="dropdown-desc">Erste Versicherungen & Sparplan</span>
+            </div>
+          </a>
+          <a href="junge-familien.html">
+            <div>
+              <div>Junge Familien</div>
+              <span class="dropdown-desc">Absicherung & Vermögensaufbau</span>
+            </div>
+          </a>
+          <a href="spaetstarter.html">
+            <div>
+              <div>Spätstarter 50+</div>
+              <span class="dropdown-desc">Vorsorge aufholen, ohne Druck</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <a href="ueber-pascal.html" style="text-decoration:none;color:#5A6B7C;font-weight:500;font-size:15px;transition:color 0.3s;">Über Pascal</a>
+      <a href="faq.html" style="text-decoration:none;color:#5A6B7C;font-weight:500;font-size:15px;transition:color 0.3s;">FAQ</a>
+      <a href="#kontakt" class="btn-primary" style="padding:10px 22px;font-size:14px;">Termin vereinbaren <span aria-hidden="true">→</span></a>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <button id="mobile-menu-trigger" class="mobile-trigger" aria-label="Menü öffnen" aria-expanded="false"
+      style="display:none;background:none;border:none;cursor:pointer;padding:8px;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A2B3C" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+  <style>
+    @media (max-width: 1023px) {
+      .desktop-nav { display: none !important; }
+      .mobile-trigger { display: block !important; }
+    }
+  </style>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Mobile Navigation">
+  <div style="padding:20px;display:flex;align-items:center;justify-content:space-between;">
+    <a href="#hero" class="site-logo-link" aria-label="Pascal Roth – Menü schließen und zur Startseite">
+      <img src="Fotos/Pascal Roth Logo_blau.png" alt="" class="site-logo" width="200" height="48" loading="eager">
+    </a>
+    <button id="mobile-menu-close" aria-label="Menü schließen" style="background:none;border:none;cursor:pointer;padding:8px;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A2B3C" stroke-width="2" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+  <div style="padding:20px 24px;display:flex;flex-direction:column;gap:8px;">
+    <p style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#5A6B7C;margin-bottom:8px;">Leistungen</p>
+    <a href="absicherung.html" style="text-decoration:none;color:#1A2B3C;font-size:18px;font-weight:500;padding:12px 0;border-bottom:1px solid #E2E8F0;">Absicherung</a>
+    <a href="vorsorge.html" style="text-decoration:none;color:#1A2B3C;font-size:18px;font-weight:500;padding:12px 0;border-bottom:1px solid #E2E8F0;">Vorsorge</a>
+    <a href="vermoegensaufbau.html" style="text-decoration:none;color:#1A2B3C;font-size:18px;font-weight:500;padding:12px 0;border-bottom:1px solid #E2E8F0;">Vermögensaufbau</a>
+    <p style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#5A6B7C;margin:16px 0 8px;">Für dich</p>
+    <a href="berufseinsteiger.html" style="text-decoration:none;color:#1A2B3C;font-size:18px;font-weight:500;padding:12px 0;border-bottom:1px solid #E2E8F0;">Berufseinsteiger</a>
+    <a href="junge-familien.html" style="text-decoration:none;color:#1A2B3C;font-size:18px;font-weight:500;padding:12px 0;border-bottom:1px solid #E2E8F0;">Junge Familien</a>
+    <a href="spaetstarter.html" style="text-decoration:none;color:#1A2B3C;font-size:18px;font-weight:500;padding:12px 0;border-bottom:1px solid #E2E8F0;">Spätstarter 50+</a>
+    <div style="margin-top:8px;border-bottom:1px solid #E2E8F0;"></div>
+    <a href="ueber-pascal.html" style="text-decoration:none;color:#1A2B3C;font-size:18px;font-weight:500;padding:12px 0;border-bottom:1px solid #E2E8F0;">Über Pascal</a>
+    <a href="faq.html" style="text-decoration:none;color:#1A2B3C;font-size:18px;font-weight:500;padding:12px 0;border-bottom:1px solid #E2E8F0;">FAQ</a>
+    <a href="#kontakt" class="btn-primary" style="margin-top:24px;justify-content:center;width:100%;padding:16px 28px;">Termin vereinbaren <span aria-hidden="true">→</span></a>
+  </div>
+</div>
+
+
+<!-- ============================================
+     SECTION 1: HERO
+     ============================================ -->
+<section id="hero" class="section" style="padding-top:120px;background:linear-gradient(180deg,#F8F9FC 0%,#FFFFFF 100%);position:relative;overflow:hidden;">
+  <div class="hero-bg-shape hero-bg-shape-1" aria-hidden="true"></div>
+  <div class="hero-bg-shape hero-bg-shape-2" aria-hidden="true"></div>
+
+  <div class="container" style="display:grid;grid-template-columns:1fr;gap:48px;align-items:center;">
+
+    <!-- Text Content -->
+    <div style="position:relative;z-index:2;max-width:680px;">
+
+      <span class="overline reveal" style="display:inline-block;margin-bottom:16px;">Unabhängige Finanzberatung in Karlsruhe</span>
+
+      <h1 class="reveal reveal-delay-1" style="font-size:clamp(32px,5vw,56px);font-weight:700;line-height:1.1;letter-spacing:-0.02em;color:#1A2B3C;margin-bottom:20px;">
+        Finanzberatung, die Klarheit schafft<span style="color:#035AA7;"> – nicht&nbsp;Druck.</span>
+      </h1>
+
+      <p class="reveal reveal-delay-2" style="font-size:clamp(17px,2vw,20px);line-height:1.6;color:#5A6B7C;margin-bottom:32px;max-width:560px;">
+        Unabhängige Finanzberatung in Karlsruhe – für Menschen, die Klarheit wollen, nicht Druck. Details zu Leistungen und Lebensphasen findest du auf den&nbsp;Folgeseiten.
+      </p>
+
+      <!-- CTAs -->
+      <div class="reveal reveal-delay-3" style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px;">
+        <a href="#kontakt" class="btn-primary">Erstgespräch vereinbaren <span aria-hidden="true">→</span></a>
+        <a href="#leistungen" class="btn-ghost">Mehr erfahren <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="reveal reveal-delay-4" style="display:flex;flex-wrap:wrap;gap:10px;">
+        <div class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6.5 11.5L2.5 7.5" stroke="#2BB6A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Unabhängig beraten
+        </div>
+        <div class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6.5 11.5L2.5 7.5" stroke="#2BB6A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Über 15 Jahre Erfahrung
+        </div>
+        <div class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6.5 11.5L2.5 7.5" stroke="#2BB6A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Kostenlose Erstberatung
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Hero-Bild (Symbolbild) -->
+    <div class="hero-visual reveal reveal-delay-2">
+      <div class="portrait-glow" aria-hidden="true"></div>
+      <figure class="hero-figure">
+        <img src="Fotos/Paar.png" alt="Paar in entspannter Außenkulisse – Symbolbild für gemeinsame Lebensplanung" class="hero-photo" width="960" height="1200" loading="eager" fetchpriority="high">
+      </figure>
+      <p class="hero-caption">Symbolbild · Motiv aus dem Bildmaterial von Pascal Roth</p>
+    </div>
+  </div>
+
+  <style>
+    @media (min-width: 1024px) {
+      #hero .container {
+        grid-template-columns: 1.1fr 0.9fr !important;
+      }
+    }
+  </style>
+</section>
+
+
+<!-- ============================================
+     SECTION 2: VERTRAUEN – WORUM ES WIRKLICH GEHT
+     ============================================ -->
+<section class="section" style="background:#FFFFFF;">
+  <div class="container" style="max-width:640px;text-align:center;">
+
+    <h2 class="reveal" style="font-size:clamp(24px,4vw,38px);font-weight:700;line-height:1.15;letter-spacing:-0.015em;color:#1A2B3C;margin-bottom:16px;">
+      Finanzen können einfacher sein, als du&nbsp;denkst.
+    </h2>
+
+    <p class="reveal reveal-delay-1" style="font-size:clamp(16px,1.8vw,18px);line-height:1.65;color:#5A6B7C;margin-bottom:24px;">
+      Wenn du Orientierung suchst: Ich erkläre dir Zusammenhänge verständlich – ohne Verkaufsdruck. Mehr zu mir und meiner Arbeitsweise steht auf der Seite „Über&nbsp;Pascal“.
+    </p>
+
+    <a href="ueber-pascal.html" class="text-link reveal reveal-delay-2">Pascal kennenlernen <span aria-hidden="true">→</span></a>
+
+  </div>
+</section>
+
+
+<!-- ============================================
+     SECTION 3: LEISTUNGSÜBERBLICK – DREI SÄULEN
+     ============================================ -->
+<section id="leistungen" class="section" style="background:#F8F9FC;">
+  <div class="container">
+
+    <div style="text-align:center;max-width:560px;margin:0 auto 40px;" class="reveal">
+      <span class="overline" style="display:block;margin-bottom:12px;">Leistungen</span>
+      <h2 style="font-size:clamp(24px,4vw,38px);font-weight:700;line-height:1.15;letter-spacing:-0.015em;color:#1A2B3C;margin-bottom:12px;">
+        Absichern, vorsorgen, aufbauen
+      </h2>
+      <p style="font-size:clamp(15px,1.5vw,16px);line-height:1.6;color:#5A6B7C;">
+        Drei Säulen, die zusammenspielen – im Detail erklärt auf den jeweiligen&nbsp;Seiten.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;">
+
+      <!-- Card: Absicherung -->
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-card-media">
+          <img src="Fotos/Familie Boden.png" alt="" width="1200" height="514" loading="lazy">
+        </div>
+        <div class="service-card-inner">
+        <div class="icon-box" style="margin-bottom:20px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3 style="font-size:22px;font-weight:600;color:#1A2B3C;margin-bottom:12px;">Absicherung</h3>
+        <p style="font-size:15px;line-height:1.6;color:#5A6B7C;margin-bottom:20px;">
+          Schutz für echte Risiken – von BU bis Haftpflicht. Was sinnvoll ist, klären wir gemeinsam.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;">
+          <span class="tag">BU</span>
+          <span class="tag">Haftpflicht</span>
+          <span class="tag">Risiko-Leben</span>
+          <span class="tag">Krankenversicherung</span>
+        </div>
+        <a href="absicherung.html" class="text-link">Zur Absicherung <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <!-- Card: Vorsorge -->
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-card-media">
+          <img src="Fotos/Altersvorsorge.png" alt="" width="1200" height="514" loading="lazy">
+        </div>
+        <div class="service-card-inner">
+        <div class="icon-box" style="margin-bottom:20px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+          </svg>
+        </div>
+        <h3 style="font-size:22px;font-weight:600;color:#1A2B3C;margin-bottom:12px;">Vorsorge</h3>
+        <p style="font-size:15px;line-height:1.6;color:#5A6B7C;margin-bottom:20px;">
+          Rente, Rürup, Kindervorsorge – strukturiert und verständlich für deine&nbsp;Situation.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;">
+          <span class="tag">Altersvorsorge</span>
+          <span class="tag">Rürup</span>
+          <span class="tag">Kinderabsicherung</span>
+        </div>
+        <a href="vorsorge.html" class="text-link">Zur Vorsorge <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <!-- Card: Vermögensaufbau -->
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-card-media">
+          <img src="Fotos/Familie Gras.png" alt="" width="1200" height="514" loading="lazy">
+        </div>
+        <div class="service-card-inner">
+        <div class="icon-box" style="margin-bottom:20px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+          </svg>
+        </div>
+        <h3 style="font-size:22px;font-weight:600;color:#1A2B3C;margin-bottom:12px;">Vermögensaufbau</h3>
+        <p style="font-size:15px;line-height:1.6;color:#5A6B7C;margin-bottom:20px;">
+          Sparpläne, Fonds, nachhaltige Anlagen – mit einem Plan, der zu dir&nbsp;passt.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;">
+          <span class="tag">Fonds</span>
+          <span class="tag">Sparpläne</span>
+          <span class="tag">Nachhaltig anlegen</span>
+        </div>
+        <a href="vermoegensaufbau.html" class="text-link">Zum Vermögensaufbau <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     SECTION 4: LEBENSPHASEN
+     ============================================ -->
+<section id="lebensphasen" class="section" style="background:#FFFFFF;">
+  <div class="container">
+
+    <div style="text-align:center;max-width:520px;margin:0 auto 40px;" class="reveal">
+      <span class="overline" style="display:block;margin-bottom:12px;">Für dich</span>
+      <h2 style="font-size:clamp(24px,4vw,38px);font-weight:700;line-height:1.15;letter-spacing:-0.015em;color:#1A2B3C;margin-bottom:12px;">
+        Deine Lebensphase
+      </h2>
+      <p style="font-size:clamp(15px,1.5vw,16px);line-height:1.6;color:#5A6B7C;">
+        Kurz hier, ausführlich auf der passenden&nbsp;Unterseite.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;">
+
+      <!-- Berufseinsteiger -->
+      <div class="phase-card reveal reveal-delay-1" data-accent="secondary">
+        <div class="phase-card-media">
+          <img src="Fotos/Paar (2).png" alt="Junges Paar – Symbolbild Berufseinsteiger und erste gemeinsame Planung" width="800" height="500" loading="lazy">
+        </div>
+        <div class="phase-card-inner">
+        <div style="width:40px;height:40px;border-radius:10px;background:rgba(147,181,228,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#93B5E4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <h3 style="font-size:22px;font-weight:600;color:#1A2B3C;margin-bottom:12px;">Berufseinsteiger</h3>
+        <p style="font-size:15px;line-height:1.6;color:#5A6B7C;margin-bottom:20px;">
+          Erster Job, erste Entscheidungen: BU, Haftpflicht, erster Sparplan – sortiert und ohne&nbsp;Überforderung.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;">
+          <span class="tag">BU</span>
+          <span class="tag">Haftpflicht</span>
+          <span class="tag">Sparplan</span>
+        </div>
+        <a href="berufseinsteiger.html" class="text-link">Seite Berufseinsteiger <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <!-- Junge Familien -->
+      <div class="phase-card reveal reveal-delay-2" data-accent="primary">
+        <div class="phase-card-media">
+          <img src="Fotos/Familie Natur.png" alt="Familie in der Natur – Symbolbild für Familienabsicherung und Vorsorge" width="800" height="500" loading="lazy">
+        </div>
+        <div class="phase-card-inner">
+        <div style="width:40px;height:40px;border-radius:10px;background:rgba(3,90,167,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#035AA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3 style="font-size:22px;font-weight:600;color:#1A2B3C;margin-bottom:12px;">Junge Familien</h3>
+        <p style="font-size:15px;line-height:1.6;color:#5A6B7C;margin-bottom:20px;">
+          Absicherung, Kindervorsorge, Vermögensaufbau – strukturiert für euren&nbsp;Alltag.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;">
+          <span class="tag">Familie</span>
+          <span class="tag">Vorsorge</span>
+          <span class="tag">Absicherung</span>
+        </div>
+        <a href="junge-familien.html" class="text-link">Seite junge Familien <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <!-- Spätstarter -->
+      <div class="phase-card reveal reveal-delay-3" data-accent="accent">
+        <div class="phase-card-media">
+          <img src="Fotos/Altersvorsorge.png" alt="Älteres Paar beim Spaziergang – Symbolbild für Altersvorsorge und Ruhestand" width="800" height="500" loading="lazy">
+        </div>
+        <div class="phase-card-inner">
+        <div style="width:40px;height:40px;border-radius:10px;background:rgba(43,182,168,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2BB6A8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <h3 style="font-size:22px;font-weight:600;color:#1A2B3C;margin-bottom:12px;">Spätstarter 50+</h3>
+        <p style="font-size:15px;line-height:1.6;color:#5A6B7C;margin-bottom:20px;">
+          Vorsorge aufholen, ohne Schuldgefühle – mit klarem Plan und realistischen&nbsp;Schritten.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;">
+          <span class="tag">Rente</span>
+          <span class="tag">Rürup</span>
+          <span class="tag">Bestand</span>
+        </div>
+        <a href="spaetstarter.html" class="text-link">Seite Spätstarter <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     SECTION 5: WARUM PASCAL ROTH (Dunkle Sektion)
+     ============================================ -->
+<section id="ueber-pascal" class="section" style="background:linear-gradient(180deg,#02254A 0%,#031D3A 100%);color:#FFFFFF;">
+  <div class="container about-grid">
+
+      <!-- Text -->
+      <div style="max-width:680px;">
+        <span class="overline reveal" style="color:#2BB6A8;display:block;margin-bottom:12px;">Über mich</span>
+
+        <h2 class="reveal reveal-delay-1" style="font-size:clamp(24px,4vw,38px);font-weight:700;line-height:1.15;letter-spacing:-0.015em;margin-bottom:16px;">
+          Unabhängig. Verständlich. Ohne&nbsp;Druck.
+        </h2>
+
+        <p class="reveal reveal-delay-2" style="font-size:clamp(16px,1.5vw,17px);line-height:1.65;color:#B0C4DE;margin-bottom:28px;">
+          Pascal Roth, Finanzberater in Karlsruhe – über 15 Jahre Erfahrung, kein Verkaufsdruck, keine Bindung an einzelne Anbieter. Ausführlicher auf der Seite „Über&nbsp;Pascal“.
+        </p>
+
+        <div class="trust-grid reveal reveal-delay-3" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin-bottom:28px;">
+
+          <div class="trust-point">
+            <div class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <div>
+              <p style="font-weight:600;font-size:15px;margin-bottom:2px;">Unabhängig</p>
+              <p style="font-size:13px;color:#B0C4DE;">Marktvergleich für dich</p>
+            </div>
+          </div>
+
+          <div class="trust-point">
+            <div class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div>
+              <p style="font-weight:600;font-size:15px;margin-bottom:2px;">15+ Jahre</p>
+              <p style="font-size:13px;color:#B0C4DE;">Beratung mit Erfahrung</p>
+            </div>
+          </div>
+
+          <div class="trust-point">
+            <div class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <div>
+              <p style="font-weight:600;font-size:15px;margin-bottom:2px;">Ohne Druck</p>
+              <p style="font-size:13px;color:#B0C4DE;">Du bestimmst das Tempo</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="reveal reveal-delay-4">
+          <a href="ueber-pascal.html" class="btn-white">Mehr über Pascal <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <figure class="about-visual reveal reveal-delay-2">
+        <img src="Fotos/Familie Boden.png" alt="Familie zu Hause am Boden – Symbolbild für Nähe und Vertrauen in der Beratung" width="800" height="1000" loading="lazy">
+        <figcaption>Symbolbild · Motiv aus dem Bildmaterial von Pascal Roth</figcaption>
+      </figure>
+
+  </div>
+</section>
+
+
+<!-- ============================================
+     SECTION 6: BERATUNGSABLAUF
+     ============================================ -->
+<section id="beratung" class="section" style="background:#F8F9FC;">
+  <div class="container">
+
+    <div style="text-align:center;max-width:520px;margin:0 auto 40px;" class="reveal">
+      <span class="overline" style="display:block;margin-bottom:12px;">Ablauf</span>
+      <h2 style="font-size:clamp(24px,4vw,38px);font-weight:700;line-height:1.15;letter-spacing:-0.015em;color:#1A2B3C;margin-bottom:8px;">
+        Vier Schritte
+      </h2>
+      <p style="font-size:clamp(15px,1.5vw,16px);line-height:1.6;color:#5A6B7C;">
+        Kennenlernen, Analyse, Beratung, Umsetzung – unverbindlich und ohne&nbsp;Vertragszwang im Erstgespräch.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;position:relative;">
+
+      <!-- Step 1 -->
+      <div class="reveal reveal-delay-1" style="text-align:center;position:relative;">
+        <div class="step-badge" style="margin:0 auto 20px;">01</div>
+        <h4 style="font-size:17px;font-weight:600;color:#1A2B3C;margin-bottom:6px;">Kennenlernen</h4>
+        <p style="font-size:14px;line-height:1.55;color:#5A6B7C;">
+          Erstgespräch online oder in Karlsruhe – kostenlos, ohne&nbsp;Pflicht.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="reveal reveal-delay-2" style="text-align:center;position:relative;">
+        <div class="step-badge" style="margin:0 auto 20px;">02</div>
+        <h4 style="font-size:17px;font-weight:600;color:#1A2B3C;margin-bottom:6px;">Analyse</h4>
+        <p style="font-size:14px;line-height:1.55;color:#5A6B7C;">
+          Einordnung von Absicherung, Vorsorge und Vermögen – sachlich und&nbsp;neutral.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="reveal reveal-delay-3" style="text-align:center;position:relative;">
+        <div class="step-badge" style="margin:0 auto 20px;">03</div>
+        <h4 style="font-size:17px;font-weight:600;color:#1A2B3C;margin-bottom:6px;">Beratung</h4>
+        <p style="font-size:14px;line-height:1.55;color:#5A6B7C;">
+          Klare Empfehlungen mit Begründung – verständlich, ohne&nbsp;Fachchinesisch.
+        </p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="reveal reveal-delay-4" style="text-align:center;position:relative;">
+        <div class="step-badge" style="margin:0 auto 20px;">04</div>
+        <h4 style="font-size:17px;font-weight:600;color:#1A2B3C;margin-bottom:6px;">Umsetzung</h4>
+        <p style="font-size:14px;line-height:1.55;color:#5A6B7C;">
+          Wenn du bereit bist: Unterstützung bei der Umsetzung, du behältst die&nbsp;Kontrolle.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="reveal" style="text-align:center;margin-top:48px;">
+      <a href="#kontakt" class="btn-primary">Erstgespräch vereinbaren <span aria-hidden="true">→</span></a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================
+     SECTION 7: TESTIMONIALS / KUNDENSTIMMEN
+     ============================================ -->
+<section id="kundenstimmen" class="section" style="background:#FFFFFF;overflow:hidden;">
+  <div class="container" style="margin-bottom:40px;">
+    <div style="text-align:center;max-width:540px;margin:0 auto;" class="reveal">
+      <span class="overline" style="display:block;margin-bottom:12px;">Das sagen meine Kunden</span>
+      <h2 style="font-size:clamp(24px,4vw,42px);font-weight:700;line-height:1.15;letter-spacing:-0.015em;color:#1A2B3C;">
+        Vertrauen entsteht im&nbsp;Gespräch.
+      </h2>
+    </div>
+  </div>
+
+  <!-- Marquee Slider -->
+  <div class="marquee-container reveal">
+    <div class="marquee-track">
+
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <div class="stars" style="margin-bottom:16px;">
+          <svg class="star" viewBox="0 0 20 20" fill="#2BB6A8"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20" fill="#2BB6A8"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20" fill="#2BB6A8"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20" fill="#2BB6A8"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20" fill="#2BB6A8"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <p style="font-size:15px;line-height:1.6;color:#1A2B3C;margin-bottom:20px;font-style:italic;">
+          „Endlich verstanden, ohne Druck. Genau so wollte ich&nbsp;beraten werden."
+        </p>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#93B5E4,#035AA7);display:flex;align-items:center;justify-content:center;color:white;font-weight:600;font-size:14px;">LM</div>
+          <div>
+            <p style="font-weight:600;font-size:14px;color:#1A2B3C;">Lisa M.</p>
+            <p style="font-size:13px;color:#5A6B7C;">28, Berufseinsteigerin aus Karlsruhe</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <div class="stars" style="margin-bottom:16px;">
+          <svg class="star" viewBox="0 0 20 20" fill="#2BB6A8"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20" fill="#2BB6A8"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20" fill="#2BB6A8"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20" fill="#2BB6A8"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20" fill="#2BB6A8"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <p style="font-size:15px;line-height:1.6;color:#1A2B3C;margin-bottom:20px;font-style:italic;">
+          „Strukturiert und ruhig – genau richtig, als Familie neu zu&nbsp;planen."
+        </p>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#035AA7,#2BB6A8);display:flex;align-items:center;justify-content:center;color:white;font-weight:600;font-size:14px;">TK</div>
+          <div>
+            <p style="font-weight:600;font-size:14px;color:#1A2B3C;">Thomas & Sarah K.</p>
+            <p style="font-size:13px;color:#5A6B7C;">Junge Familie aus Ettlingen</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <div class="stars" style="margin-bottom:16px;">
+          <svg class="star" viewBox="0 0 20 20" fill="#2BB6A8"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20" fill="#2BB6A8"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20" fill="#2BB6A8"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20" fill="#2BB6A8"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20" fill="#2BB6A8"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <p style="font-size:15px;line-height:1.6;color:#1A2B3C;margin-bottom:20px;font-style:italic;">
+          „Mit 52 eingestiegen – ohne schlechtes Gewissen, mit klarem&nbsp;Plan."
+        </p>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#2BB6A8,#035AA7);display:flex;align-items:center;justify-content:center;color:white;font-weight:600;font-size:14px;">MH</div>
+          <div>
+            <p style="font-weight:600;font-size:14px;color:#1A2B3C;">Michael H.</p>
+            <p style="font-size:13px;color:#5A6B7C;">54, Spätstarter aus Karlsruhe</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /marquee-track -->
+  </div><!-- /marquee-container -->
+
+  <p style="text-align:center;font-size:12px;color:#5A6B7C;margin-top:24px;padding:0 20px;font-style:italic;">
+    *Beispielhafte Darstellungen – wird durch echte Kundenstimmen ersetzt.
+  </p>
+</section>
+
+
+<!-- ============================================
+     SECTION 8: FAQ
+     ============================================ -->
+<section id="faq" class="section" style="background:#F8F9FC;">
+  <div class="container" style="max-width:800px;">
+
+    <div style="text-align:center;margin-bottom:32px;" class="reveal">
+      <span class="overline" style="display:block;margin-bottom:12px;">FAQ</span>
+      <h2 style="font-size:clamp(24px,4vw,36px);font-weight:700;line-height:1.15;letter-spacing:-0.015em;color:#1A2B3C;margin-bottom:8px;">
+        Kurz gefragt
+      </h2>
+      <p style="font-size:15px;color:#5A6B7C;">Mehr Antworten in der <a href="faq.html" style="color:#035AA7;font-weight:600;">vollständigen FAQ</a>.</p>
+    </div>
+
+    <div class="reveal reveal-delay-1">
+
+      <!-- FAQ 1 -->
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          Ist das Erstgespräch wirklich kostenlos?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-content">
+          <p class="faq-answer">Ja. Wir lernen uns kennen – ohne Verpflichtung, ohne Verkauf im ersten&nbsp;Termin.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          Was bedeutet „unabhängig"?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-content">
+          <p class="faq-answer">Ich bin an keine einzelnen Anbieter gebunden und vergleiche für dich – Empfehlungen orientieren sich an deiner Situation, nicht an&nbsp;Provisionen.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          Muss ich im Erstgespräch etwas abschließen?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-content">
+          <p class="faq-answer">Nein. Du entscheidest in deinem Tempo. Ich berate – du entscheidest.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="text-align:center;margin-top:28px;" class="reveal">
+      <a href="faq.html" class="text-link">Zur FAQ mit allen Themen <span aria-hidden="true">→</span></a>
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ============================================
+     SECTION 9: FINALE CONVERSION
+     ============================================ -->
+<section class="section" style="background:linear-gradient(135deg,#035AA7 0%,#02254A 100%);color:#FFFFFF;text-align:center;">
+  <div class="container" style="max-width:640px;">
+
+    <h2 class="reveal" style="font-size:clamp(26px,4.5vw,48px);font-weight:700;line-height:1.1;letter-spacing:-0.02em;margin-bottom:20px;">
+      Bereit für mehr Klarheit?
+    </h2>
+
+    <p class="reveal reveal-delay-1" style="font-size:clamp(16px,1.6vw,18px);line-height:1.65;color:#B0C4DE;margin-bottom:32px;">
+      Ein erstes Gespräch reicht – unverbindlich, ohne Verpflichtung.
+    </p>
+
+    <div class="reveal reveal-delay-2" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:24px;">
+      <a href="#kontakt" class="btn-white">Erstgespräch vereinbaren <span aria-hidden="true">→</span></a>
+      <a href="tel:+4980052569960" class="btn-ghost-white">Oder anrufen: 0800 525 6996</a>
+    </div>
+
+    <p class="reveal reveal-delay-3" style="font-size:13px;color:rgba(255,255,255,0.5);">
+      Kostenlos · Unverbindlich · In unter 2 Minuten gebucht
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ============================================
+     SECTION 10: KONTAKT / TERMINMODUL
+     ============================================ -->
+<section id="kontakt" class="section" style="background:#FFFFFF;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr;gap:48px;align-items:start;">
+
+      <!-- Left: Info -->
+      <div>
+        <span class="overline reveal" style="display:block;margin-bottom:12px;">Kontakt</span>
+        <h2 class="reveal reveal-delay-1" style="font-size:clamp(24px,4vw,42px);font-weight:700;line-height:1.15;letter-spacing:-0.015em;color:#1A2B3C;margin-bottom:16px;">
+          Lass uns sprechen.
+        </h2>
+        <p class="reveal reveal-delay-1" style="font-size:clamp(15px,1.5vw,17px);line-height:1.6;color:#5A6B7C;margin-bottom:28px;max-width:480px;">
+          Nachricht, Anruf oder Terminwunsch – ich melde mich persönlich zurück.
+        </p>
+
+        <!-- Contact Info -->
+        <div class="reveal reveal-delay-2" style="display:flex;flex-direction:column;gap:16px;margin-bottom:32px;">
+          <a href="tel:+4980052569960" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#1A2B3C;font-weight:500;">
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(3,90,167,0.08);display:flex;align-items:center;justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035AA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            0800 525 6996 (kostenfrei)
+          </a>
+          <a href="mailto:pascal.roth@allfinanz.ag" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#1A2B3C;font-weight:500;">
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(3,90,167,0.08);display:flex;align-items:center;justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035AA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            pascal.roth@allfinanz.ag
+          </a>
+          <div style="display:flex;align-items:center;gap:12px;color:#1A2B3C;font-weight:500;">
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(3,90,167,0.08);display:flex;align-items:center;justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#035AA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            Karlsruhe
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="reveal reveal-delay-2">
+        <form id="contact-form" style="background:#F8F9FC;border-radius:16px;padding:32px;border:1px solid #E2E8F0;">
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+            <div>
+              <label class="form-label" for="vorname">Vorname *</label>
+              <input class="form-input" type="text" id="vorname" name="vorname" placeholder="Dein Vorname" required>
+            </div>
+            <div>
+              <label class="form-label" for="nachname">Nachname *</label>
+              <input class="form-input" type="text" id="nachname" name="nachname" placeholder="Dein Nachname" required>
+            </div>
+          </div>
+
+          <div style="margin-bottom:16px;">
+            <label class="form-label" for="email">E-Mail *</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="deine@email.de" required>
+          </div>
+
+          <div style="margin-bottom:16px;">
+            <label class="form-label" for="telefon">Telefon (optional)</label>
+            <input class="form-input" type="tel" id="telefon" name="telefon" placeholder="Für einen Rückruf">
+          </div>
+
+          <div style="margin-bottom:16px;">
+            <label class="form-label" for="thema">Wobei kann ich dir helfen?</label>
+            <select class="form-input form-select" id="thema" name="thema">
+              <option value="" disabled selected>Bitte wählen</option>
+              <option value="absicherung">Absicherung</option>
+              <option value="vorsorge">Vorsorge</option>
+              <option value="vermoegen">Vermögensaufbau</option>
+              <option value="unsicher">Ich bin mir nicht sicher</option>
+            </select>
+          </div>
+
+          <div style="margin-bottom:20px;">
+            <label class="form-label" for="nachricht">Was beschäftigt dich? (optional)</label>
+            <textarea class="form-input form-textarea" id="nachricht" name="nachricht" placeholder="Erzähl mir kurz, was dich bewegt..." maxlength="500"></textarea>
+          </div>
+
+          <div style="margin-bottom:24px;">
+            <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:13px;color:#5A6B7C;line-height:1.5;">
+              <input type="checkbox" name="datenschutz" required style="margin-top:3px;accent-color:#2BB6A8;">
+              Ich stimme der Verarbeitung meiner Daten gemäß der <a href="#" style="color:#035AA7;">Datenschutzerklärung</a> zu.
+            </label>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:16px 28px;">
+            Nachricht senden <span aria-hidden="true">→</span>
+          </button>
+
+          <p style="text-align:center;font-size:12px;color:#5A6B7C;margin-top:12px;">
+            Ich antworte persönlich. Kein Bot, kein Callcenter.
+          </p>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+    @media (min-width: 768px) {
+      #kontakt .container > div {
+        grid-template-columns: 1fr 1fr !important;
+      }
+    }
+  </style>
+</section>
+
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer style="background:#02254A;color:#B0C4DE;padding:64px 20px 24px;">
+  <div class="container">
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;margin-bottom:48px;">
+
+      <!-- Spalte 1 -->
+      <div>
+        <a href="#hero" class="site-logo-link" style="margin-bottom:16px;display:inline-block;" aria-label="Pascal Roth – Zur Startseite">
+          <img src="Fotos/Pascal_Roth_Logo_weiss.png" alt="Pascal Roth – Logo" class="site-logo site-logo--footer" width="220" height="52" loading="lazy">
+        </a>
+        <p style="font-size:14px;line-height:1.6;color:#B0C4DE;">
+          Unabhängige Finanzberatung<br>in Karlsruhe.
+        </p>
+        <p style="font-size:14px;line-height:1.6;color:#B0C4DE;margin-top:8px;font-style:italic;">
+          Verstehen. Vertrauen. Versichern.
+        </p>
+      </div>
+
+      <!-- Spalte 2: Leistungen -->
+      <div>
+        <p style="font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px;">Leistungen</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="absicherung.html" style="text-decoration:none;color:#B0C4DE;font-size:15px;transition:color 0.3s;">Absicherung</a>
+          <a href="vorsorge.html" style="text-decoration:none;color:#B0C4DE;font-size:15px;transition:color 0.3s;">Vorsorge</a>
+          <a href="vermoegensaufbau.html" style="text-decoration:none;color:#B0C4DE;font-size:15px;transition:color 0.3s;">Vermögensaufbau</a>
+        </div>
+      </div>
+
+      <!-- Spalte 3: Für dich -->
+      <div>
+        <p style="font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px;">Für dich</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="berufseinsteiger.html" style="text-decoration:none;color:#B0C4DE;font-size:15px;transition:color 0.3s;">Berufseinsteiger</a>
+          <a href="junge-familien.html" style="text-decoration:none;color:#B0C4DE;font-size:15px;transition:color 0.3s;">Junge Familien</a>
+          <a href="spaetstarter.html" style="text-decoration:none;color:#B0C4DE;font-size:15px;transition:color 0.3s;">Spätstarter 50+</a>
+          <a href="ueber-pascal.html" style="text-decoration:none;color:#B0C4DE;font-size:15px;transition:color 0.3s;">Über Pascal</a>
+          <a href="faq.html" style="text-decoration:none;color:#B0C4DE;font-size:15px;transition:color 0.3s;">FAQ</a>
+        </div>
+      </div>
+
+      <!-- Spalte 4: Kontakt -->
+      <div>
+        <p style="font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px;">Kontakt</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="tel:+4980052569960" style="text-decoration:none;color:#B0C4DE;font-size:15px;">0800 525 6996</a>
+          <a href="mailto:pascal.roth@allfinanz.ag" style="text-decoration:none;color:#B0C4DE;font-size:15px;">pascal.roth@allfinanz.ag</a>
+          <span style="font-size:15px;">Karlsruhe</span>
+          <a href="#kontakt" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:#2BB6A8;font-size:15px;font-weight:600;margin-top:8px;">
+            Termin vereinbaren <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <div style="height:1px;background:rgba(255,255,255,0.08);margin-bottom:24px;"></div>
+
+    <!-- Copyright -->
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;">
+      <p style="font-size:13px;color:rgba(255,255,255,0.35);">
+        &copy; 2026 Pascal Roth. Alle Rechte vorbehalten.
+      </p>
+      <div style="display:flex;gap:24px;">
+        <a href="#" style="font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.3s;">Impressum</a>
+        <a href="#" style="font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.3s;">Datenschutz</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- ============================================
+     STICKY MOBILE CTA
+     ============================================ -->
+<div class="sticky-cta" aria-label="Termin vereinbaren">
+  <a href="#kontakt" class="btn-primary" style="width:100%;justify-content:center;padding:14px 24px;font-size:15px;">
+    Erstgespräch vereinbaren <span aria-hidden="true">→</span>
+  </a>
+</div>
+
+
+<!-- ============================================
+     SKIP-TO-CONTENT (Accessibility)
+     ============================================ -->
+<style>
+  .skip-to-content {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    z-index: 999;
+    background: #035AA7;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 0 0 8px 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: top 0.3s;
+  }
+  .skip-to-content:focus {
+    top: 0;
+  }
+</style>
+<a href="#hero" class="skip-to-content">Zum Inhalt springen</a>
+
+
+<!-- Scripts -->
+<script src="script.js"></script>
+
+</body>
+</html>
