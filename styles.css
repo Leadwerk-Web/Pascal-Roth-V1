@@ -82,43 +82,50 @@ body {
   transform: translateX(0);
 }
 
-/* --- Hero Background Shapes --- */
-.hero-bg-shape {
+/* --- Hero: Vollbreite Hintergrundgrafik, min. 80vh Höhe --- */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-warm);
+  min-height: 80vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section::before {
+  content: '';
   position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.08;
-  pointer-events: none;
+  inset: 0;
+  z-index: 0;
+  background-color: var(--bg-warm);
+  background-image: url('Fotos/Pascal Roth header.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
-.hero-bg-shape-1 {
-  width: 600px;
-  height: 600px;
-  background: var(--secondary);
-  top: -200px;
-  right: -100px;
-}
-
-.hero-bg-shape-2 {
-  width: 400px;
-  height: 400px;
-  background: var(--accent);
-  bottom: -100px;
-  left: -100px;
-}
-
-/* --- Portrait Backdrop Glow --- */
-.portrait-glow {
+/* Weißes Overlay links für Text; ab ~2/3 Breite ausgeblendet, rechtes Drittel unverdeckt */
+.hero-section::after {
+  content: '';
   position: absolute;
-  width: 120%;
-  height: 120%;
-  top: -10%;
-  left: -10%;
-  border-radius: 50%;
-  background: var(--secondary);
-  opacity: 0.12;
-  filter: blur(60px);
+  inset: 0;
+  z-index: 1;
   pointer-events: none;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.88) 0%,
+    rgba(255, 255, 255, 0.52) 34%,
+    rgba(255, 255, 255, 0.22) 52%,
+    rgba(255, 255, 255, 0.06) 62%,
+    transparent 66.67%
+  );
+}
+
+.hero-section__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
 }
 
 /* --- Site Logo --- */
@@ -143,40 +150,6 @@ body {
   margin-bottom: 16px;
 }
 
-/* --- Hero Photo --- */
-.hero-visual {
-  position: relative;
-  z-index: 2;
-  justify-self: center;
-  width: 100%;
-  max-width: 480px;
-}
-
-.hero-figure {
-  position: relative;
-  margin: 0;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  box-shadow: var(--shadow-hover);
-}
-
-.hero-photo {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  vertical-align: middle;
-}
-
-.hero-caption {
-  margin-top: 10px;
-  font-size: 12px;
-  color: var(--text-secondary);
-  text-align: center;
-  line-height: 1.4;
-}
-
 /* --- Service Cards --- */
 .service-card {
   background: var(--bg-white);
@@ -187,12 +160,16 @@ body {
   border: 1px solid transparent;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .service-card-media {
   aspect-ratio: 21 / 9;
   overflow: hidden;
   background: var(--bg-warm);
+  flex-shrink: 0;
 }
 
 .service-card-media img {
@@ -203,6 +180,22 @@ body {
 
 .service-card-inner {
   padding: 32px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.service-card-inner > a.text-link {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  align-items: stretch;
 }
 
 .service-card::before {
@@ -235,12 +228,16 @@ body {
   border-top: 3px solid var(--border-subtle);
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .phase-card-media {
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background: var(--bg-warm);
+  flex-shrink: 0;
 }
 
 .phase-card-media img {
@@ -251,6 +248,15 @@ body {
 
 .phase-card-inner {
   padding: 24px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.phase-card-inner > a.text-link {
+  margin-top: auto;
+  padding-top: 20px;
 }
 
 /* --- Über-mich / About visual --- */
@@ -590,6 +596,22 @@ body {
   }
 }
 
+.hero-section.section {
+  padding: 120px 20px 48px;
+}
+
+@media (min-width: 768px) {
+  .hero-section.section {
+    padding: 120px 40px 56px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section.section {
+    padding: 120px 40px 64px;
+  }
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -719,6 +741,17 @@ body {
   width: 24px;
   height: 24px;
   color: var(--primary);
+}
+
+.service-card .icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+}
+
+.service-card .icon-box svg {
+  width: 30px;
+  height: 30px;
 }
 
 /* --- Grid for Trust Points --- */
