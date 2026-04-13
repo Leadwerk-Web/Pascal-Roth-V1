@@ -496,6 +496,27 @@ body {
   transform: scale(1.02);
 }
 
+/* Hero: Sekundär-CTA lesbar auf hellem Verlauf (Rand + leichte Fläche) */
+.hero-section .btn-ghost {
+  border: 1.5px solid rgba(26, 43, 60, 0.34);
+  background: rgba(255, 255, 255, 0.82);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(2, 37, 74, 0.08);
+}
+
+.hero-section .btn-ghost:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 4px 14px rgba(3, 90, 167, 0.12);
+}
+
+.hero-section .btn-ghost:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(3, 90, 167, 0.28);
+}
+
 .btn-white {
   display: inline-flex;
   align-items: center;
@@ -759,6 +780,15 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+}
+
+/* „Über mich“: Abstand Fließtext → drei Spalten */
+#ueber-pascal .about-intro {
+  margin-bottom: 0;
+}
+
+#ueber-pascal .about-intro + .trust-grid {
+  margin-top: 48px;
 }
 
 @media (min-width: 768px) {
