@@ -82,12 +82,12 @@ body {
   transform: translateX(0);
 }
 
-/* --- Hero: Vollbreite Hintergrundgrafik, min. 80vh Höhe --- */
+/* --- Hero: Vollbreite Hintergrundgrafik, min. 100vh (Startseite) --- */
 .hero-section {
   position: relative;
   overflow: hidden;
   background-color: var(--bg-warm);
-  min-height: 80vh;
+  min-height: 100vh;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -262,16 +262,178 @@ body {
 /* --- Über-mich / About visual --- */
 .about-visual {
   margin: 0;
+  overflow: visible;
+  padding-right: clamp(10px, 3.5vw, 32px);
 }
 
-.about-visual img {
+.about-visual__frame {
+  position: relative;
+  overflow: visible;
+}
+
+.about-visual__photo {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.22);
+}
+
+.about-visual__photo img {
   display: block;
   width: 100%;
   height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  border-radius: var(--radius-xl);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+  vertical-align: bottom;
+}
+
+.about-visual__bubbles {
+  position: absolute;
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 14px;
+  transform: translateX(28px);
+  z-index: 2;
+  width: min(calc(100% - 8px), 248px);
+  max-width: calc(100% + 20px);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.about-bubble {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+  padding: 14px 16px;
+  border-radius: 18px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  box-shadow:
+    0 4px 6px rgba(15, 23, 42, 0.07),
+    0 18px 38px rgba(15, 23, 42, 0.16);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-bubble:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 10px rgba(15, 23, 42, 0.08),
+    0 22px 44px rgba(15, 23, 42, 0.2);
+}
+
+/* Dunkles Badge (Referenz: Infokarte mit Untertitel) */
+.about-bubble--dark {
+  color: #ffffff;
+  background: #1e2430;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.about-bubble--dark .about-bubble__icon {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.about-bubble--dark .about-bubble__head {
+  color: #ffffff;
+  flex: 1;
+  min-width: 0;
+}
+
+.about-bubble__head {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.about-bubble__sub {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+/* Marken-Türkis mit weißem Icon-Kreis */
+.about-bubble--brand {
+  color: #ffffff;
+  background: linear-gradient(135deg, #248f86 0%, var(--accent) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.about-bubble--brand .about-bubble__single {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Helles Badge (Referenz: Zahl/Wort + seitlicher Text) */
+.about-bubble--light {
+  gap: 10px;
+  color: var(--text-primary);
+  background: #ffffff;
+  border: 1px solid rgba(2, 37, 74, 0.08);
+}
+
+.about-bubble__accent {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.about-bubble--light .about-bubble__accent {
+  flex: 1;
+  min-width: 0;
+}
+
+.about-bubble__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.about-bubble__icon svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.about-bubble__icon--paw svg {
+  width: 30px;
+  height: 30px;
+}
+
+.about-bubble--brand .about-bubble__icon--ball {
+  color: #ffffff;
+}
+
+.about-bubble__icon--ball svg {
+  width: 30px;
+  height: 30px;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.15));
+}
+
+.about-bubble--light .about-bubble__icon--plane {
+  color: var(--accent);
+  align-self: center;
+}
+
+.about-bubble__icon--plane svg {
+  width: 28px;
+  height: 28px;
+  transform: rotate(-30deg);
+  filter: drop-shadow(0 1px 2px rgba(2, 37, 74, 0.12));
 }
 
 .about-visual figcaption {
@@ -281,6 +443,15 @@ body {
   color: var(--text-muted);
   text-align: center;
   line-height: 1.4;
+}
+
+@media (max-width: 520px) {
+  .about-visual__bubbles {
+    transform: translateX(18px);
+    width: min(calc(100% - 4px), 228px);
+    bottom: 12px;
+    gap: 8px;
+  }
 }
 
 .about-grid {
@@ -334,7 +505,7 @@ body {
 .marquee-track {
   display: flex;
   gap: 24px;
-  animation: marquee 40s linear infinite;
+  animation: marquee 85s linear infinite;
   width: max-content;
 }
 
@@ -379,6 +550,17 @@ body {
   width: 16px;
   height: 16px;
   color: var(--accent);
+}
+
+/* Kundenstimmen-Marquee: kompakte 5-Sterne-Zeile (ohne 5× SVG pro Karte) */
+.testimonial-stars {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 15px;
+  letter-spacing: 4px;
+  line-height: 1;
+  color: #93b5e4;
+  user-select: none;
 }
 
 /* --- FAQ Accordion (Basis: u. a. faq.html) --- */
@@ -636,7 +818,7 @@ body {
   font-weight: 600;
   font-size: 16px;
   border-radius: var(--radius-full);
-  border: 1px solid var(--border-subtle);
+  border: 1.5px solid rgba(26, 43, 60, 0.38);
   cursor: pointer;
   text-decoration: none;
   transition: border-color var(--transition), color var(--transition), transform var(--transition);
@@ -648,9 +830,14 @@ body {
   transform: scale(1.02);
 }
 
+.btn-ghost:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
 /* Hero: Sekundär-CTA lesbar auf hellem Verlauf (Rand + leichte Fläche) */
 .hero-section .btn-ghost {
-  border: 1.5px solid rgba(26, 43, 60, 0.34);
+  border: 1.5px solid rgba(26, 43, 60, 0.42);
   background: rgba(255, 255, 255, 0.82);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -665,8 +852,12 @@ body {
 }
 
 .hero-section .btn-ghost:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(3, 90, 167, 0.28);
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.95),
+    0 0 0 5px rgba(3, 90, 167, 0.45),
+    0 2px 8px rgba(2, 37, 74, 0.1);
 }
 
 .btn-white {
@@ -1005,10 +1196,20 @@ body {
   color: var(--accent);
 }
 
-.section--about .about-visual img {
+.section--about .about-visual__photo {
   box-shadow:
     0 12px 40px rgba(2, 37, 74, 0.08),
     0 0 0 1px rgba(2, 37, 74, 0.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-bubble {
+    transition: none;
+  }
+
+  .about-bubble:hover {
+    transform: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1082,7 +1283,8 @@ body {
   transform: translateX(-50%) translateY(0);
 }
 
-.nav-dropdown a {
+.nav-dropdown a,
+.nav-dropdown .nav-link--coming-soon {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -1100,12 +1302,37 @@ body {
   color: var(--primary);
 }
 
-.nav-dropdown a span.dropdown-desc {
+.nav-dropdown .nav-link--coming-soon {
+  cursor: default;
+  opacity: 0.62;
+  pointer-events: none;
+}
+
+.nav-dropdown a span.dropdown-desc,
+.nav-dropdown .nav-link--coming-soon span.dropdown-desc {
   font-size: 13px;
   font-weight: 400;
   color: var(--text-secondary);
   display: block;
   margin-top: 2px;
+}
+
+/* Mobile- und Footer-Menü: Eintrag ohne Ziel (noch nicht veröffentlicht) */
+.nav-mobile-link--coming-soon {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 0;
+  border-bottom: 1px solid #E2E8F0;
+  color: #1A2B3C;
+  cursor: default;
+  opacity: 0.62;
+}
+
+.nav-footer-link--coming-soon {
+  font-size: 15px;
+  color: #B0C4DE;
+  cursor: default;
+  opacity: 0.62;
 }
 
 /* --- Reduced Motion --- */
@@ -1144,7 +1371,23 @@ body {
 
 /* --- Landingpages / längere Textseiten --- */
 .landing-wrap {
-  padding-top: 100px;
+  min-height: 60vh;
+  padding-top: clamp(72px, 10vh, 120px);
+}
+
+/* Einheitliche Hero-Titel auf Unterseiten (ohne Inline-Font) */
+.landing-hero-title {
+  font-size: clamp(24px, 3.4vw, 36px);
+  font-weight: 700;
+  line-height: 1.12;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  margin-bottom: 0.5em;
+}
+
+.landing-hero-title--compact {
+  margin-bottom: 12px;
 }
 
 .back-link {
@@ -1373,6 +1616,10 @@ body {
   cursor: pointer;
   box-shadow: 0 12px 32px -16px rgba(2, 37, 74, 0.45);
   outline: none;
+}
+
+.phase-lamella.phase-lamella--nav-disabled {
+  cursor: default;
 }
 
 /* Mobile: vertikal stapeln, Click-to-open */

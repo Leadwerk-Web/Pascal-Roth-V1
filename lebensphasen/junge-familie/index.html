@@ -3,72 +3,1241 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Junge Familie &amp; Finanzplanung Karlsruhe | Pascal Roth</title>
-  <meta name="description" content="Junge Familie: Verantwortung, Zukunft, Kinder und Eigenheim verständlich einordnen. Persönliche Finanzberatung in Karlsruhe.">
+
+  <!-- SEO -->
+  <title>Finanzberatung für junge Familien | Pascal Roth</title>
+  <meta name="description" content="Familie, Verantwortung und viele Finanzfragen? Pascal Roth hilft jungen Familien bei Absicherung, Vorsorge und Vermögensaufbau – verständlich, unabhängig und ohne Druck.">
+  <meta name="keywords" content="Finanzberatung junge Familien, Familie absichern, Versicherung für junge Familien, Familienvorsorge, unabhängige Finanzberatung Karlsruhe, Einkommensschutz Familie, Vermögensaufbau Familie, Altersvorsorge für Familien, Kinder absichern, Familien-Check">
+  <link rel="canonical" href="https://pascal-roth.de/lebensphasen/junge-familie/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Finanzberatung für junge Familien | Pascal Roth">
+  <meta property="og:description" content="Familie, Verantwortung und viele Finanzfragen? Pascal Roth hilft jungen Familien bei Absicherung, Vorsorge und Vermögensaufbau – verständlich, unabhängig und ohne Druck.">
+  <meta property="og:image" content="../../Fotos/Familien.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Finanzberatung für junge Familien | Pascal Roth">
+  <meta name="twitter:description" content="Verständliche Finanzberatung für junge Familien in Karlsruhe – persönlich, unabhängig und ohne Druck.">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="icon" href="../../Fotos/cropped-Favicon.png" type="image/png">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="page.css">
+
+  <!-- JSON-LD: Service + FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Finanzberatung für junge Familien",
+    "name": "Finanzberatung für junge Familien – Pascal Roth",
+    "description": "Finanzberatung für junge Familien in Karlsruhe: Orientierung zu Absicherung, Vorsorge und Vermögensaufbau – verständlich, unabhängig und ohne Verkaufsdruck.",
+    "provider": {
+      "@type": "FinancialService",
+      "name": "Pascal Roth · Finanzberatung",
+      "areaServed": "Karlsruhe",
+      "telephone": "+4980052569960",
+      "email": "pascal.roth@allfinanz.ag"
+    },
+    "areaServed": "Karlsruhe",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Junge Familien"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Welche Versicherungen sind für junge Familien wirklich wichtig?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Es gibt nicht die eine Liste, die für jede Familie passt. Wir starten mit den Themen, die euer Leben gerade trägt: Einkommensschutz, Haftung im Alltag und ein realistisches Polster. Alles andere bauen wir nur dazu, wenn es wirklich euren Alltag besser macht."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie sichere ich meine Familie ab, wenn ein Einkommen wegfällt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wir schauen gemeinsam, wie eure Fixkosten, Rücklagen und Einkommen zusammenspielen. Daraus ergibt sich, wie viel Schutz wirklich nötig ist – und wie viel ihr euch ohne schlechtes Gewissen sparen könnt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Brauchen Kinder eigene Versicherungen oder Vorsorgeprodukte?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Manche Bausteine ergeben Sinn, viele andere sind eher Verkaufsargument als echter Mehrwert. Ich sage euch ehrlich, was ich an eurer Stelle für meine Kinder tun würde – und was ich bewusst weglassen würde."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie viel Rücklage sollte eine Familie haben?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Als Faustregel: drei bis sechs Monate eurer Fixkosten als Notfallpolster. Wir schauen uns euren Alltag an und finden eine Größe, die zu euch passt – nicht zu wenig, aber auch nicht so viel, dass Geld unnötig herumliegt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Müssen wir uns im Erstgespräch direkt entscheiden?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nein. Im Erstgespräch wird nichts unterschrieben. Ihr bekommt Orientierung und entscheidet in eurem Tempo, was und ob ihr etwas umsetzen möchtet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann die Beratung auch online stattfinden?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Persönlich in Karlsruhe oder digital per Video, Telefon oder E-Mail – ganz wie es zu eurem Familienalltag passt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hilft Pascal auch beim Vermögensaufbau für Familien?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Versicherung, Vorsorge und Investment kommen aus einer Hand. So entsteht eine Strategie, die zusammenpasst – und keine Lücken zwischen verschiedenen Ansprechpartnern."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was ist, wenn wir schon viele Verträge haben, aber keinen Überblick?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Genau dann lohnt sich ein Familien-Check. Wir sortieren, was sinnvoll ist, was sich überschneidet und was ihr getrost streichen könnt. Ohne Druck und ohne Angst, etwas verpasst zu haben."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
 
-<nav class="nav-wrapper scrolled" role="navigation" aria-label="Hauptnavigation">
-  <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;padding:16px 20px;">
-    <a href="../../index.html#hero" class="site-logo-link" aria-label="Zur Startseite">
-      <img src="../../Fotos/Pascal Roth Logo.png" alt="Pascal Roth, unabhängiger Finanzberater Karlsruhe" class="site-logo" width="200" height="48" loading="eager">
+<!-- Skip-Link für Tastaturnutzer -->
+<a href="#fam-hero" class="skip-to-content">Zum Inhalt springen</a>
+
+<!-- ============================================
+     NAVIGATION (kompatibel zur Index-Seite)
+     ============================================ -->
+<nav class="nav-wrapper" role="navigation" aria-label="Hauptnavigation">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;">
+
+    <a href="../../index.html#hero" class="site-logo-link" aria-label="Pascal Roth: Zur Startseite">
+      <img src="../../Fotos/Pascal Roth Logo_blau.png" alt="Pascal Roth, Finanzberatung Karlsruhe" class="site-logo site-logo--nav" width="200" height="48" fetchpriority="high" loading="eager">
     </a>
-    <div style="display:flex;align-items:center;gap:12px 18px;flex-wrap:wrap;">
-      <a href="../../index.html" style="text-decoration:none;color:#5A6B7C;font-weight:500;font-size:14px;">Start</a>
-      <a href="../../index.html#lebensphasen" style="text-decoration:none;color:#5A6B7C;font-weight:500;font-size:14px;">Lebensphasen</a>
-      <a href="../../index.html#beratung" style="text-decoration:none;color:#5A6B7C;font-weight:500;font-size:14px;">Ablauf</a>
-      <a href="../../index.html#faq" style="text-decoration:none;color:#5A6B7C;font-weight:500;font-size:14px;">FAQ</a>
-      <a href="tel:+4980052569960" class="btn-primary" style="padding:10px 18px;font-size:14px;">Erstgespräch</a>
+
+    <div style="display:flex;align-items:center;gap:32px;" class="desktop-nav">
+      <div class="nav-item" style="position:relative;">
+        <a href="../../index.html#lebensphasen" style="text-decoration:none;color:#5A6B7C;font-weight:500;font-size:15px;display:flex;align-items:center;gap:4px;transition:color 0.3s;">
+          Für dich
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <a href="../../index.html#lebensphasen">
+            <div>
+              <div>Alle Lebensphasen</div>
+              <span class="dropdown-desc">Auf der Startseite ansehen</span>
+            </div>
+          </a>
+          <a href="../berufseinstieg/index.html">
+            <div>
+              <div>Berufseinstieg</div>
+              <span class="dropdown-desc">Klarheit am Anfang</span>
+            </div>
+          </a>
+          <a href="../junge-familie/index.html" aria-current="page">
+            <div>
+              <div>Junge Familie</div>
+              <span class="dropdown-desc">Verantwortung sortieren</span>
+            </div>
+          </a>
+          <span class="nav-link--coming-soon" aria-disabled="true" title="Demnächst">
+            <div>
+              <div>Selbstständigkeit</div>
+              <span class="dropdown-desc">Freiheit mit stabiler Basis</span>
+            </div>
+          </span>
+          <span class="nav-link--coming-soon" aria-disabled="true" title="Demnächst">
+            <div>
+              <div>Vermögen aufbauen</div>
+              <span class="dropdown-desc">Vom Verdienen zum Plan</span>
+            </div>
+          </span>
+          <span class="nav-link--coming-soon" aria-disabled="true" title="Demnächst">
+            <div>
+              <div>Spätstarter 50+</div>
+              <span class="dropdown-desc">Mit 50+ neu sortieren</span>
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <a href="../../index.html#ueber-pascal" style="text-decoration:none;color:#5A6B7C;font-weight:500;font-size:15px;transition:color 0.3s;">Über Pascal</a>
+      <a href="#fam-faq" style="text-decoration:none;color:#5A6B7C;font-weight:500;font-size:15px;transition:color 0.3s;">FAQ</a>
+      <a href="tel:+4980052569960" class="btn-primary" style="padding:10px 22px;font-size:14px;">Erstgespräch <span aria-hidden="true">→</span></a>
     </div>
+
+    <button id="mobile-menu-trigger" class="mobile-trigger" aria-label="Menü öffnen" aria-expanded="false"
+      style="display:none;background:none;border:none;cursor:pointer;padding:8px;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A2B3C" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
   </div>
+
+  <style>
+    @media (max-width: 1023px) {
+      .desktop-nav { display: none !important; }
+      .mobile-trigger { display: block !important; }
+    }
+  </style>
 </nav>
 
-<main class="section landing-wrap" style="background:#fff;">
-  <div class="container prose" style="padding-top:24px;">
-    <a href="../../index.html#lebensphasen" class="back-link">← Zur Lebensphasen-Übersicht</a>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Mobile Navigation">
+  <div style="padding:20px;display:flex;align-items:center;justify-content:space-between;">
+    <a href="../../index.html#hero" class="site-logo-link" aria-label="Pascal Roth: Menü schließen und zur Startseite">
+      <img src="../../Fotos/Pascal Roth Logo.png" alt="" class="site-logo" width="200" height="48" loading="eager">
+    </a>
+    <button id="mobile-menu-close" aria-label="Menü schließen" style="background:none;border:none;cursor:pointer;padding:8px;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A2B3C" stroke-width="2" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+  <div style="padding:20px 24px;display:flex;flex-direction:column;gap:8px;">
+    <p style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#5A6B7C;margin-bottom:8px;">Lebensphasen</p>
+    <a href="../../index.html#lebensphasen" style="text-decoration:none;color:#1A2B3C;font-size:18px;font-weight:500;padding:12px 0;border-bottom:1px solid #E2E8F0;">Überblick</a>
+    <a href="../berufseinstieg/index.html" style="text-decoration:none;color:#1A2B3C;font-size:18px;font-weight:500;padding:12px 0;border-bottom:1px solid #E2E8F0;">Berufseinstieg</a>
+    <a href="../junge-familie/index.html" style="text-decoration:none;color:#035AA7;font-size:18px;font-weight:600;padding:12px 0;border-bottom:1px solid #E2E8F0;" aria-current="page">Junge Familie</a>
+    <span class="nav-mobile-link--coming-soon" aria-disabled="true" title="Demnächst">Selbstständigkeit</span>
+    <span class="nav-mobile-link--coming-soon" aria-disabled="true" title="Demnächst">Vermögen aufbauen</span>
+    <span class="nav-mobile-link--coming-soon" aria-disabled="true" title="Demnächst">Spätstarter 50+</span>
+    <div style="margin-top:8px;border-bottom:1px solid #E2E8F0;"></div>
+    <a href="../../index.html#ueber-pascal" style="text-decoration:none;color:#1A2B3C;font-size:18px;font-weight:500;padding:12px 0;border-bottom:1px solid #E2E8F0;">Über Pascal</a>
+    <a href="#fam-faq" style="text-decoration:none;color:#1A2B3C;font-size:18px;font-weight:500;padding:12px 0;border-bottom:1px solid #E2E8F0;">FAQ</a>
+    <a href="tel:+4980052569960" class="btn-primary" style="margin-top:24px;justify-content:center;width:100%;padding:16px 28px;">Erstgespräch <span aria-hidden="true">→</span></a>
+  </div>
+</div>
 
-    <h1 style="font-size:clamp(28px,4vw,40px);font-weight:700;color:#1A2B3C;margin-bottom:0.5em;letter-spacing:-0.02em;">Mehr Verantwortung, mehr Fragen. Das ist normal.</h1>
-    <p class="overline" style="margin-bottom:1.5rem;">Junge Familie · Finanzberatung Karlsruhe</p>
 
-    <p>Mit Kindern, mit Wohnung oder Haus und dem Wunsch, alles „richtig“ zu machen, werden Finanzthemen schnell zu vielen Themen auf einmal. Ich helfe euch, das in überschaubare Schritte zu teilen: was jetzt wichtig ist, was später folgen kann, und wo ihr euch ganz bewusst Zeit lasst.</p>
+<!-- ============================================
+     SECTION 1: HERO
+     ============================================ -->
+<section id="fam-hero" class="fam-hero" data-parallax aria-labelledby="fam-hero-h1">
+  <div class="fam-hero__inner">
 
-    <h2>Was Familienleben über die Jahre kostet, grob gedacht.</h2>
-    <p>Eine Übersicht über 15 oder 20 Jahre macht typische Ausgaben und mögliche Engpässe sichtbar, ohne dass es panisch wird. Das Ziel ist Orientierung: Wo lohnt sich Struktur? Wo reicht ein einfacher Puffer? Hier kommt später eine Grafik oder ein vereinfachtes Beispiel hin.</p>
+    <div class="fam-hero__copy">
+      <span class="overline reveal">Junge Familie</span>
 
-    <figure style="margin:2rem 0;border-radius:16px;overflow:hidden;border:1px solid #E2E8F0;background:#F8F9FC;">
-      <img src="../../assets/images/lebensphase-familie.jpg" alt="Familienfinanzen über längere Zeiträume (Platzhalter für spätere Statistik oder Infografik)" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;object-fit:cover;aspect-ratio:16/9;">
-      <figcaption style="padding:12px 16px;font-size:13px;color:#5A6B7C;">Platzhalter-Grafik · später: z.&nbsp;B. Kostenstruktur oder Beispielrechnung</figcaption>
-    </figure>
+      <h1 id="fam-hero-h1" class="reveal reveal-delay-1">
+        Familie &amp; Finanzen unter einen Hut?
+        <span class="fam-hero__accent">Absicherung, Vorsorge, Vermögen – ohne Druck.</span>
+      </h1>
 
-    <h2>Typische Fragen in dieser Phase</h2>
-    <ul>
-      <li>Wie priorisiert ihr Absicherung, Vorsorge und Rücklagen, ohne den Alltag zu verkomplizieren?</li>
-      <li>Welche Entscheidungen sollten fest sein, und wo ist Flexibilität sinnvoll?</li>
-      <li>Wie bleibt ihr handlungsfähig, wenn sich etwas ändert: Job, Wohnort, Gesundheit?</li>
-    </ul>
+      <p class="fam-hero__sub reveal reveal-delay-2">
+        Persönlich in Karlsruhe oder online. Erstgespräch kostenlos.
+      </p>
 
-    <p>Wir schauen gemeinsam, was für euch wirklich passt: verständlich, ohne Verkaufsdruck und in dem Tempo, das zu eurer Familie passt.</p>
+      <div class="fam-hero__cta-row reveal reveal-delay-3">
+        <a href="#fam-check" class="btn-primary">
+          Familien-Check starten <span aria-hidden="true">→</span>
+        </a>
+        <a href="#fam-relatable" class="btn-ghost">
+          Typische Gedanken <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+    </div>
 
-    <div class="landing-cta">
-      <a href="tel:+4980052569960" class="btn-primary">Kostenloses Erstgespräch vereinbaren <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+
+<!-- ============================================
+     SECTION 2: KOMMT EUCH DAS BEKANNT VOR?
+     ============================================ -->
+<section id="fam-relatable" class="section fam-relatable" aria-labelledby="fam-relatable-h2">
+  <div class="container">
+
+    <header class="fam-relatable__intro reveal">
+      <span class="overline" style="display:block;margin-bottom:12px;">Typisch für diese Phase</span>
+      <h2 id="fam-relatable-h2" class="heading-section">Kommt euch das bekannt vor?</h2>
+      <p>
+        Familie, Job, Alltag – und plötzlich Entscheidungen, die für die nächsten Jahre tragen müssen. Ein paar Gedanken, die mir bei jungen Eltern oft begegnen:
+      </p>
+    </header>
+
+    <div class="fam-orbit">
+      <div class="fam-orbit__stage">
+        <div class="fam-orbit__bubbles" role="list" aria-label="Typische Gedanken junger Familien">
+
+          <div class="fam-bubble fam-bubble--tail-b" role="listitem">
+            <div class="fam-bubble__inner reveal">
+              <span class="fam-bubble__dot" aria-hidden="true"></span>
+              <p>„Wir wollen alles richtig machen &ndash; aber wissen nicht, wo wir anfangen sollen."</p>
+            </div>
+          </div>
+
+          <div class="fam-bubble fam-bubble--accent fam-bubble--tail-b" role="listitem">
+            <div class="fam-bubble__inner reveal reveal-delay-1">
+              <span class="fam-bubble__dot" aria-hidden="true"></span>
+              <p>„Was passiert eigentlich, wenn ein Einkommen plötzlich wegfällt?"</p>
+            </div>
+          </div>
+
+          <div class="fam-bubble fam-bubble--secondary fam-bubble--tail-b" role="listitem">
+            <div class="fam-bubble__inner reveal reveal-delay-2">
+              <span class="fam-bubble__dot" aria-hidden="true"></span>
+              <p>„Welche Absicherung brauchen wir wirklich für unsere Kinder?"</p>
+            </div>
+          </div>
+
+          <div class="fam-bubble fam-bubble--tail-b" role="listitem">
+            <div class="fam-bubble__inner reveal reveal-delay-1">
+              <span class="fam-bubble__dot" aria-hidden="true"></span>
+              <p>„Wie sorgen wir vor, ohne uns finanziell zu übernehmen?"</p>
+            </div>
+          </div>
+
+          <div class="fam-bubble fam-bubble--accent fam-bubble--tail-b" role="listitem">
+            <div class="fam-bubble__inner reveal reveal-delay-3">
+              <span class="fam-bubble__dot" aria-hidden="true"></span>
+              <p>„Wir haben viele Verträge &ndash; aber keinen echten Überblick."</p>
+            </div>
+          </div>
+
+          <div class="fam-bubble fam-bubble--secondary fam-bubble--tail-b" role="listitem">
+            <div class="fam-bubble__inner reveal reveal-delay-2">
+              <span class="fam-bubble__dot" aria-hidden="true"></span>
+              <p>„Wir wollen keine Verkaufsgespräche &ndash; sondern klare Antworten."</p>
+            </div>
+          </div>
+
+        </div><!-- /.fam-orbit__bubbles -->
+
+        <div class="fam-orbit__portrait" data-fam-portrait-rise aria-hidden="true">
+          <img
+            src="../../Fotos/junge%20Familien-Gedanken.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+            width="520"
+            height="650">
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================
+     SECTION 3: INTERAKTIVER FAMILIEN-SICHERHEITSCHECK
+     ============================================ -->
+<section id="fam-check" class="section fam-check-section" aria-labelledby="fam-check-h2">
+  <div class="container">
+
+    <header class="fam-check-intro reveal">
+      <span class="overline" style="display:block;margin-bottom:12px;">Familien-Check</span>
+      <h2 id="fam-check-h2" class="heading-section">Wo steht eure Familie gerade?</h2>
+      <p>
+        Acht kurze Fragen, kein Verkaufsbogen. Am Ende seht ihr euren persönlichen Klarheitsgrad und welche Themen sich für euch lohnen könnten. Anonym &ndash; ihr müsst nichts angeben.
+      </p>
+    </header>
+
+    <!--
+      INTERAKTIVES TOOL:
+      - Antwortlogik in page.js: 'Ja' = 1, 'Teils' = 0,5, 'Nein' = 0 Punkte.
+      - Kategorien lassen sich später anpassen (siehe page.js: FAM_CHECK_QUESTIONS).
+      - Kein Datenversand: alles bleibt im Browser.
+    -->
+    <div class="fam-check reveal reveal-delay-1" data-fam-check>
+
+      <header class="fam-check__head">
+        <p class="fam-check__eyebrow" data-fam-eyebrow>
+          Frage <span data-fam-progress-current>1</span> <span class="fam-check__eyebrow-of">von</span> <span data-fam-progress-total>8</span>
+        </p>
+        <div class="fam-check__dots" data-fam-dots aria-hidden="true"></div>
+      </header>
+
+      <div class="fam-check__stage" data-fam-stage aria-live="polite">
+        <!-- Wird per JS befüllt: Frage oder Ergebnis -->
+      </div>
+
+      <!-- Klarheits-Skala unten: persistent, füllt sich mit jeder Antwort -->
+      <div class="fam-check__scale">
+        <div class="fam-check__scale-meta">
+          <span class="fam-check__scale-label">Euer Klarheitsgrad</span>
+          <span class="fam-check__scale-score">
+            <span data-fam-scale-score>0</span><span class="fam-check__scale-score-of">/ 8</span>
+          </span>
+        </div>
+        <div class="fam-check__scale-track">
+          <div class="fam-check__scale-fill" data-fam-scale-fill></div>
+          <span class="fam-check__scale-tick" style="left:37.5%" aria-hidden="true"></span>
+          <span class="fam-check__scale-tick" style="left:75%" aria-hidden="true"></span>
+          <div class="fam-check__scale-pin" data-fam-scale-pin aria-hidden="true"></div>
+        </div>
+        <div class="fam-check__scale-zones" aria-hidden="true">
+          <span>Gemeinsamer Blick</span>
+          <span>Ein paar Punkte offen</span>
+          <span>Schon gut sortiert</span>
+        </div>
+      </div>
+
+      <footer class="fam-check__foot">
+        <button type="button" class="fam-check__back" data-fam-back disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          Zurück
+        </button>
+        <p class="fam-check__hint">Tippt auf eine Antwort &ndash; oder nutzt die Tasten 1, 2 und 3.</p>
+      </footer>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================
+     SECTION 4: RECHNER „WAS KOSTET EIN EINKOMMENSAUSFALL?“
+     ============================================ -->
+<section id="fam-calc" class="section fam-calc-section" aria-labelledby="fam-calc-h2">
+  <div class="container">
+
+    <header class="fam-calc-intro reveal">
+      <span class="overline" style="display:block;margin-bottom:12px;">Realistisch eingeordnet</span>
+      <h2 id="fam-calc-h2" class="heading-section">Was kostet ein Einkommensausfall eure Familie?</h2>
+      <p>
+        Schiebt eure echten Werte rein. Ihr seht direkt, wie lange eure Rücklagen tragen, wenn ein Einkommen mal wegfällt &ndash; und wo sich ein gemeinsamer Blick lohnt.
+      </p>
+    </header>
+
+    <div class="fam-calc reveal reveal-delay-1" data-fam-calc>
+
+      <!-- LINKS: INPUTS -->
+      <div class="fam-calc__inputs">
+        <p class="fam-calc__title">Eure Eckdaten</p>
+
+        <!-- Haushaltsnetto -->
+        <div class="fam-calc__field">
+          <label class="fam-calc__label" for="fam-net-input">
+            Monatliches Haushalts-Netto
+            <span class="fam-calc__label-value" data-fam-net-label>4.500 €</span>
+          </label>
+          <div class="fam-calc__input-row">
+            <input id="fam-net-input" class="fam-calc__input" type="number" min="1500" max="15000" step="100" value="4500" inputmode="numeric" data-fam-net-number>
+            <span class="fam-calc__suffix">€/Monat</span>
+          </div>
+          <input type="range" class="fam-calc__range" min="1500" max="15000" step="100" value="4500" aria-label="Haushaltsnetto anpassen" data-fam-net-range>
+        </div>
+
+        <!-- Fixkosten -->
+        <div class="fam-calc__field">
+          <label class="fam-calc__label" for="fam-fix-input">
+            Monatliche Fixkosten
+            <span class="fam-calc__label-value" data-fam-fix-label>3.200 €</span>
+          </label>
+          <div class="fam-calc__input-row">
+            <input id="fam-fix-input" class="fam-calc__input" type="number" min="500" max="12000" step="100" value="3200" inputmode="numeric" data-fam-fix-number>
+            <span class="fam-calc__suffix">€/Monat</span>
+          </div>
+          <input type="range" class="fam-calc__range" min="500" max="12000" step="100" value="3200" aria-label="Fixkosten anpassen" data-fam-fix-range>
+          <p class="fam-calc__hint">Wohnen, Essen, Mobilität, Kita, Versicherungen &ndash; alles, was monatlich raus muss.</p>
+        </div>
+
+        <!-- Anzahl Kinder -->
+        <div class="fam-calc__field">
+          <label class="fam-calc__label" for="fam-kids-input">
+            Anzahl Kinder
+            <span class="fam-calc__label-value" data-fam-kids-label>1</span>
+          </label>
+          <div class="fam-calc__input-row">
+            <input id="fam-kids-input" class="fam-calc__input" type="number" min="0" max="6" step="1" value="1" inputmode="numeric" data-fam-kids-number>
+            <span class="fam-calc__suffix">Kinder</span>
+          </div>
+          <input type="range" class="fam-calc__range" min="0" max="6" step="1" value="1" aria-label="Anzahl Kinder anpassen" data-fam-kids-range>
+        </div>
+
+        <!-- Rücklagen -->
+        <div class="fam-calc__field">
+          <label class="fam-calc__label" for="fam-reserve-input">
+            Vorhandene Rücklagen
+            <span class="fam-calc__label-value" data-fam-reserve-label>10.000 €</span>
+          </label>
+          <div class="fam-calc__input-row">
+            <input id="fam-reserve-input" class="fam-calc__input" type="number" min="0" max="100000" step="500" value="10000" inputmode="numeric" data-fam-reserve-number>
+            <span class="fam-calc__suffix">€</span>
+          </div>
+          <input type="range" class="fam-calc__range" min="0" max="100000" step="500" value="10000" aria-label="Rücklagen anpassen" data-fam-reserve-range>
+        </div>
+
+        <!-- Anteil Ausfall -->
+        <div class="fam-calc__field">
+          <label class="fam-calc__label" for="fam-loss-input">
+            Wie viel Einkommen fällt aus?
+            <span class="fam-calc__label-value" data-fam-loss-label>50&nbsp;%</span>
+          </label>
+          <div class="fam-calc__input-row">
+            <input id="fam-loss-input" class="fam-calc__input" type="number" min="20" max="100" step="5" value="50" inputmode="numeric" data-fam-loss-number>
+            <span class="fam-calc__suffix">%</span>
+          </div>
+          <input type="range" class="fam-calc__range" min="20" max="100" step="5" value="50" aria-label="Ausfallanteil anpassen" data-fam-loss-range>
+          <p class="fam-calc__hint">Beispielwert: 50 % entspricht etwa „ein Einkommen fällt komplett weg" bei zwei Verdienenden.</p>
+        </div>
+      </div>
+
+      <!-- RECHTS: ERGEBNIS -->
+      <div class="fam-calc__result" aria-live="polite">
+        <p class="fam-calc__result-eyebrow">Eure Versorgungslücke</p>
+        <p class="fam-calc__result-headline">So lange tragen eure Rücklagen die Lücke:</p>
+
+        <div class="fam-calc__big-number">
+          <span data-fam-out-months>0</span>
+          <span class="fam-calc__big-number-suffix" data-fam-out-months-unit>Monate</span>
+        </div>
+
+        <div class="fam-calc__stats">
+          <div class="fam-calc__stat">
+            <p class="fam-calc__stat-label">Lücke pro Monat</p>
+            <p class="fam-calc__stat-value"><span data-fam-out-gap>0</span> €</p>
+          </div>
+          <div class="fam-calc__stat">
+            <p class="fam-calc__stat-label">Verfügbares Einkommen</p>
+            <p class="fam-calc__stat-value"><span data-fam-out-remaining>0</span> €</p>
+          </div>
+        </div>
+
+        <!-- Visualisierung: Rücklagen reichen X Monate (Balken aus 12) -->
+        <div class="fam-calc__timeline" aria-hidden="true">
+          <div class="fam-calc__timeline-track">
+            <div class="fam-calc__timeline-fill" data-fam-timeline-fill></div>
+            <div class="fam-calc__timeline-label" data-fam-timeline-label>0 Monate</div>
+          </div>
+          <div class="fam-calc__timeline-marks">
+            <span>heute</span>
+            <span>3 M.</span>
+            <span>6 M.</span>
+            <span>9 M.</span>
+            <span>12 M.</span>
+          </div>
+        </div>
+
+        <p class="fam-calc__result-text" data-fam-out-message>
+          Schiebt die Werte links &ndash; das Ergebnis aktualisiert sich automatisch.
+        </p>
+
+        <p class="fam-calc__disclaimer">
+          Grobe Orientierung, keine rechtliche oder finanzielle Beratung. Reale Werte hängen von eurem Tarif, staatlichen Leistungen und vielem mehr ab.
+        </p>
+
+        <a href="#fam-kontakt" class="btn-white fam-calc__cta">
+          Einkommensschutz mit Pascal prüfen <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================
+     SECTION 5: DONUT „WOFÜR FAMILIEN MONATLICH VERANTWORTUNG TRAGEN“
+     ============================================ -->
+<section class="section fam-load-section" aria-labelledby="fam-load-h2">
+  <div class="container">
+
+    <header class="fam-load-intro reveal">
+      <span class="overline" style="display:block;margin-bottom:12px;">Worauf Familien-Budget reagiert</span>
+      <h2 id="fam-load-h2" class="heading-section">Wofür Familien monatlich Verantwortung tragen.</h2>
+      <p>
+        Es geht nicht darum, dass alles teuer ist. Sondern darum, wie viele Bereiche gleichzeitig laufen müssen. Genau deshalb lohnt sich Struktur.
+      </p>
+    </header>
+
+    <!--
+      DATEN-PLATZHALTER:
+      Werte in % am .fam-load__segment / .fam-load__card (data-value).
+      Vor dem Live-Gang mit echten Branchenzahlen oder eurer eigenen Default-Familie ersetzen.
+      Beide Listen müssen denselben data-key haben, damit Hover/Highlight funktioniert.
+    -->
+    <div class="fam-load reveal reveal-delay-1">
+
+      <!-- Toggle: Mietwohnung / Eigenheim -->
+      <div class="fam-load__toggle" role="tablist" aria-label="Wohnsituation wählen">
+        <button type="button" class="is-active" data-fam-load-mode="miete" aria-pressed="true">Mietwohnung</button>
+        <button type="button" data-fam-load-mode="eigenheim" aria-pressed="false">Eigenheim</button>
+      </div>
+
+      <div class="fam-load__grid">
+
+        <!-- DONUT -->
+        <div class="fam-load__chart-wrap">
+          <svg class="fam-load__chart" viewBox="0 0 100 100" data-fam-load-chart aria-hidden="true">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#E2E8F0" stroke-width="14"/>
+
+            <!-- Werte für "Mietwohnung" (Default) -->
+            <circle class="fam-load__segment" data-fam-load-key="wohnen"     data-miete="34" data-eigenheim="38" cx="50" cy="50" r="40" stroke="#035AA7"/>
+            <circle class="fam-load__segment" data-fam-load-key="alltag"     data-miete="20" data-eigenheim="18" cx="50" cy="50" r="40" stroke="#0468BF"/>
+            <circle class="fam-load__segment" data-fam-load-key="kinder"     data-miete="14" data-eigenheim="13" cx="50" cy="50" r="40" stroke="#2BB6A8"/>
+            <circle class="fam-load__segment" data-fam-load-key="mobilitaet" data-miete="10" data-eigenheim="10" cx="50" cy="50" r="40" stroke="#35D4C4"/>
+            <circle class="fam-load__segment" data-fam-load-key="versich"    data-miete="9"  data-eigenheim="9"  cx="50" cy="50" r="40" stroke="#93B5E4"/>
+            <circle class="fam-load__segment" data-fam-load-key="ruecklagen" data-miete="7"  data-eigenheim="6"  cx="50" cy="50" r="40" stroke="#5A6B7C"/>
+            <circle class="fam-load__segment" data-fam-load-key="vorsorge"   data-miete="6"  data-eigenheim="6"  cx="50" cy="50" r="40" stroke="#1A2B3C"/>
+          </svg>
+
+          <div class="fam-load__chart-center">
+            <p class="fam-load__chart-center-eyebrow">Familien-Budget</p>
+            <p class="fam-load__chart-center-number" data-fam-load-center>100 %</p>
+            <p class="fam-load__chart-center-label">verteilt auf <span data-fam-load-center-count>7</span> Bereiche</p>
+          </div>
+        </div>
+
+        <!-- LEGENDE / CARDS -->
+        <div class="fam-load__cards">
+
+          <div class="fam-load__card" data-fam-load-card="wohnen" data-miete="34" data-eigenheim="38" tabindex="0" style="--fam-color:#035AA7;">
+            <div class="fam-load__card-row">
+              <span class="fam-load__card-dot"></span>
+              <span class="fam-load__card-label">Wohnen</span>
+              <span class="fam-load__card-value" data-fam-load-value>0 %</span>
+            </div>
+            <p class="fam-load__card-desc">Miete oder Finanzierung, Nebenkosten, Strom, Internet &ndash; meist der größte Block im Familien-Budget.</p>
+          </div>
+
+          <div class="fam-load__card" data-fam-load-card="alltag" data-miete="20" data-eigenheim="18" tabindex="0" style="--fam-color:#0468BF;">
+            <div class="fam-load__card-row">
+              <span class="fam-load__card-dot"></span>
+              <span class="fam-load__card-label">Lebensmittel &amp; Alltag</span>
+              <span class="fam-load__card-value" data-fam-load-value>0 %</span>
+            </div>
+            <p class="fam-load__card-desc">Einkaufen, Drogerie, Kleidung, Haushalt. Wächst spürbar, sobald Kinder dazukommen.</p>
+          </div>
+
+          <div class="fam-load__card" data-fam-load-card="kinder" data-miete="14" data-eigenheim="13" tabindex="0" style="--fam-color:#2BB6A8;">
+            <div class="fam-load__card-row">
+              <span class="fam-load__card-dot"></span>
+              <span class="fam-load__card-label">Kinder &amp; Freizeit</span>
+              <span class="fam-load__card-value" data-fam-load-value>0 %</span>
+            </div>
+            <p class="fam-load__card-desc">Kita, Schule, Betreuung, Hobbys &ndash; ein eigener Posten, der mit dem Alter der Kinder mitwächst.</p>
+          </div>
+
+          <div class="fam-load__card" data-fam-load-card="mobilitaet" data-miete="10" data-eigenheim="10" tabindex="0" style="--fam-color:#35D4C4;">
+            <div class="fam-load__card-row">
+              <span class="fam-load__card-dot"></span>
+              <span class="fam-load__card-label">Mobilität</span>
+              <span class="fam-load__card-value" data-fam-load-value>0 %</span>
+            </div>
+            <p class="fam-load__card-desc">Auto, ÖPNV, Sprit, Reparaturen. Oft unterschätzt, weil Kosten unregelmäßig anfallen.</p>
+          </div>
+
+          <div class="fam-load__card" data-fam-load-card="versich" data-miete="9" data-eigenheim="9" tabindex="0" style="--fam-color:#93B5E4;">
+            <div class="fam-load__card-row">
+              <span class="fam-load__card-dot"></span>
+              <span class="fam-load__card-label">Versicherung &amp; Gesundheit</span>
+              <span class="fam-load__card-value" data-fam-load-value>0 %</span>
+            </div>
+            <p class="fam-load__card-desc">Was wirklich nötig ist &ndash; und was sich vermeiden lässt &ndash; ist hier oft sehr unterschiedlich.</p>
+          </div>
+
+          <div class="fam-load__card" data-fam-load-card="ruecklagen" data-miete="7" data-eigenheim="6" tabindex="0" style="--fam-color:#5A6B7C;">
+            <div class="fam-load__card-row">
+              <span class="fam-load__card-dot"></span>
+              <span class="fam-load__card-label">Rücklagen</span>
+              <span class="fam-load__card-value" data-fam-load-value>0 %</span>
+            </div>
+            <p class="fam-load__card-desc">Notgroschen für Reparaturen, Auto, Krankheit. Der unsichtbare Stabilisator im Familienalltag.</p>
+          </div>
+
+          <div class="fam-load__card" data-fam-load-card="vorsorge" data-miete="6" data-eigenheim="6" tabindex="0" style="--fam-color:#1A2B3C;">
+            <div class="fam-load__card-row">
+              <span class="fam-load__card-dot"></span>
+              <span class="fam-load__card-label">Vorsorge &amp; Sparen</span>
+              <span class="fam-load__card-value" data-fam-load-value>0 %</span>
+            </div>
+            <p class="fam-load__card-desc">Altersvorsorge, langfristiges Sparen, Sparpläne für Kinder &ndash; das, was Zukunft baut.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <p class="fam-load__note">
+        Viele Familien haben nicht zu wenig Verantwortung &ndash; sondern zu wenig Überblick. Ein strukturierter Plan hilft, Fixkosten, Absicherung und Zukunftsziele miteinander zu verbinden.
+      </p>
+    </div>
+
+    <p class="fam-load__source">
+      Illustrative Verteilung. Vor dem Live-Gang mit aktuellen Branchenzahlen oder einer fiktiven Default-Familie ersetzbar.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ============================================
+     SECTION 6: ROADMAP – HEUTE BIS LANGFRISTIG
+     ============================================ -->
+<section class="section fam-roadmap-section" aria-labelledby="fam-roadmap-h2" style="background:#FFFFFF;">
+  <div class="container" style="margin-bottom:32px;">
+    <header class="fam-roadmap-intro reveal">
+      <span class="overline" style="display:block;margin-bottom:12px;">Heute absichern. Morgen entspannter planen.</span>
+      <h2 id="fam-roadmap-h2" class="heading-section">Eure Familien-Roadmap.</h2>
+      <p>
+        Kein Karussell, kein Endlos-Loop: eine Linie von heute bis langfristig &ndash; alle Phasen in einer horizontalen Leiste, von links nach rechts.
+      </p>
+    </header>
+  </div>
+
+  <div class="fam-roadmap-journey reveal reveal-delay-1">
+    <div class="fam-roadmap-strip" role="region" aria-label="Fünf Phasen der Familien-Roadmap nebeneinander">
+      <div class="fam-roadmap-strip__frame" data-fam-roadmap-strip>
+        <div class="fam-roadmap-strip__viewport">
+        <div class="fam-roadmap-strip__scroller">
+        <ol class="fam-roadmap-strip__row" role="list">
+          <li id="fam-roadmap-step-0" class="fam-roadmap-strip__step" role="listitem">
+            <article class="fam-roadmap-card" aria-labelledby="fam-rm-t1">
+              <div class="fam-roadmap-card__head">
+                <span class="fam-roadmap-card__index" aria-hidden="true">1</span>
+                <p class="fam-roadmap-card__when">Heute</p>
+              </div>
+              <p class="fam-roadmap-card__phase">Phase 1 von 5</p>
+              <h3 id="fam-rm-t1" class="fam-roadmap-card__title">Familie organisieren</h3>
+              <p class="fam-roadmap-card__text">Überblick verschaffen: Was läuft, was fehlt, was nervt? Wir starten dort, wo ihr gerade steht.</p>
+            </article>
+            <div class="fam-roadmap-strip__bridge" aria-hidden="true">
+              <span class="fam-roadmap-strip__bridge-line"></span>
+              <span class="fam-roadmap-strip__bridge-dot"></span>
+            </div>
+          </li>
+          <li id="fam-roadmap-step-1" class="fam-roadmap-strip__step" role="listitem">
+            <article class="fam-roadmap-card" aria-labelledby="fam-rm-t2">
+              <div class="fam-roadmap-card__head">
+                <span class="fam-roadmap-card__index" aria-hidden="true">2</span>
+                <p class="fam-roadmap-card__when">In 1&ndash;2 Jahren</p>
+              </div>
+              <p class="fam-roadmap-card__phase">Phase 2 von 5</p>
+              <h3 id="fam-rm-t2" class="fam-roadmap-card__title">Rücklagen &amp; Einkommensschutz</h3>
+              <p class="fam-roadmap-card__text">Notgroschen aufbauen, Einkommen absichern. Damit ein schlechter Monat keine schlechten Jahre nach sich zieht.</p>
+            </article>
+            <div class="fam-roadmap-strip__bridge" aria-hidden="true">
+              <span class="fam-roadmap-strip__bridge-line"></span>
+              <span class="fam-roadmap-strip__bridge-dot"></span>
+            </div>
+          </li>
+          <li id="fam-roadmap-step-2" class="fam-roadmap-strip__step" role="listitem">
+            <article class="fam-roadmap-card" aria-labelledby="fam-rm-t3">
+              <div class="fam-roadmap-card__head">
+                <span class="fam-roadmap-card__index" aria-hidden="true">3</span>
+                <p class="fam-roadmap-card__when">In 3&ndash;5 Jahren</p>
+              </div>
+              <p class="fam-roadmap-card__phase">Phase 3 von 5</p>
+              <h3 id="fam-rm-t3" class="fam-roadmap-card__title">Kinder, Wohnen, Vorsorge sortieren</h3>
+              <p class="fam-roadmap-card__text">Sparpläne für Kinder, Vorsorge im Hintergrund, Wohnen ehrlich rechnen. Kein Aktionismus, sondern Reihenfolge.</p>
+            </article>
+            <div class="fam-roadmap-strip__bridge" aria-hidden="true">
+              <span class="fam-roadmap-strip__bridge-line"></span>
+              <span class="fam-roadmap-strip__bridge-dot"></span>
+            </div>
+          </li>
+          <li id="fam-roadmap-step-3" class="fam-roadmap-strip__step" role="listitem">
+            <article class="fam-roadmap-card" aria-labelledby="fam-rm-t4">
+              <div class="fam-roadmap-card__head">
+                <span class="fam-roadmap-card__index" aria-hidden="true">4</span>
+                <p class="fam-roadmap-card__when">In 5&ndash;10 Jahren</p>
+              </div>
+              <p class="fam-roadmap-card__phase">Phase 4 von 5</p>
+              <h3 id="fam-rm-t4" class="fam-roadmap-card__title">Vermögen aufbauen</h3>
+              <p class="fam-roadmap-card__text">Aus Einkommen wird Struktur: ETFs, Sparpläne, langfristig denken. Risiko bewusst dosiert, nicht spekulativ.</p>
+            </article>
+            <div class="fam-roadmap-strip__bridge" aria-hidden="true">
+              <span class="fam-roadmap-strip__bridge-line"></span>
+              <span class="fam-roadmap-strip__bridge-dot"></span>
+            </div>
+          </li>
+          <li id="fam-roadmap-step-4" class="fam-roadmap-strip__step fam-roadmap-strip__step--end" role="listitem">
+            <article class="fam-roadmap-card fam-roadmap-card--end" aria-labelledby="fam-rm-t5">
+              <div class="fam-roadmap-card__head">
+                <span class="fam-roadmap-card__index" aria-hidden="true">5</span>
+                <p class="fam-roadmap-card__when">Langfristig</p>
+              </div>
+              <p class="fam-roadmap-card__phase">Phase 5 von 5 · Ende der Kette</p>
+              <h3 id="fam-rm-t5" class="fam-roadmap-card__title">Altersvorsorge &amp; Sicherheit weiter denken</h3>
+              <p class="fam-roadmap-card__text">Was, wenn die Kinder ausziehen? Was, wenn ein Erbe ins Spiel kommt? Wir bleiben dran &ndash; in eurem Tempo.</p>
+            </article>
+          </li>
+        </ol>
+        </div>
+        <span class="fam-roadmap-strip__fade fam-roadmap-strip__fade--left" aria-hidden="true"></span>
+        <span class="fam-roadmap-strip__fade fam-roadmap-strip__fade--right" aria-hidden="true"></span>
+        <button type="button" class="fam-roadmap-strip__nav fam-roadmap-strip__nav--prev" aria-label="Vorherige Station">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+        </button>
+        <button type="button" class="fam-roadmap-strip__nav fam-roadmap-strip__nav--next" aria-label="Nächste Station">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+        </div>
+        <div class="fam-roadmap-strip__dots" data-fam-roadmap-dots role="tablist" aria-label="Station auswählen">
+          <button type="button" class="fam-roadmap-strip__dot" role="tab" data-fam-roadmap-dot="0" aria-controls="fam-roadmap-step-0" aria-label="Station 1" aria-selected="true"></button>
+          <button type="button" class="fam-roadmap-strip__dot" role="tab" data-fam-roadmap-dot="1" aria-controls="fam-roadmap-step-1" aria-label="Station 2" aria-selected="false"></button>
+          <button type="button" class="fam-roadmap-strip__dot" role="tab" data-fam-roadmap-dot="2" aria-controls="fam-roadmap-step-2" aria-label="Station 3" aria-selected="false"></button>
+          <button type="button" class="fam-roadmap-strip__dot" role="tab" data-fam-roadmap-dot="3" aria-controls="fam-roadmap-step-3" aria-label="Station 4" aria-selected="false"></button>
+          <button type="button" class="fam-roadmap-strip__dot" role="tab" data-fam-roadmap-dot="4" aria-controls="fam-roadmap-step-4" aria-label="Station 5" aria-selected="false"></button>
+        </div>
+      </div>
     </div>
   </div>
-</main>
+</section>
 
-<footer style="background:#02254A;color:#B0C4DE;padding:28px 20px;text-align:center;">
-  <p style="font-size:13px;color:rgba(255,255,255,0.45);margin:0;">
-    <a href="../../index.html" style="color:#B0C4DE;text-decoration:none;">Startseite</a>
-    &nbsp;·&nbsp;
-    <a href="../../index.html#faq" style="color:#B0C4DE;text-decoration:none;">FAQ</a>
-    &nbsp;·&nbsp;
-    © 2026 Pascal Roth
-  </p>
+
+<!-- ============================================
+     SECTION 7: WAS PASCAL MIT EUCH SORTIERT
+     ============================================ -->
+<section class="section fam-themes-section" aria-labelledby="fam-themes-h2">
+  <div class="container">
+
+    <header class="fam-themes-intro reveal">
+      <span class="overline" style="display:block;margin-bottom:12px;">Lebensphase, nicht Produktliste</span>
+      <h2 id="fam-themes-h2" class="heading-section">Was ich mit euch sortiere.</h2>
+      <p>
+        Keine Versicherungs-Checkliste. Sondern Lebensfragen, die in eurer Phase fast immer auftauchen.
+      </p>
+    </header>
+
+    <div class="fam-themes">
+
+      <article class="fam-theme reveal reveal-delay-1">
+        <span class="fam-theme__num">01 · Einkommen schützen</span>
+        <h3 class="fam-theme__question">Was passiert, wenn ein Einkommen ausfällt?</h3>
+        <p class="fam-theme__answer">Wir schauen gemeinsam, wie eure Familie finanziell handlungsfähig bleibt, wenn ein Elternteil länger nicht arbeiten kann.</p>
+      </article>
+
+      <article class="fam-theme reveal reveal-delay-2">
+        <span class="fam-theme__num">02 · Kinder absichern</span>
+        <h3 class="fam-theme__question">Wie sichern wir unsere Kinder sinnvoll ab?</h3>
+        <p class="fam-theme__answer">Nicht jedes Produkt ist automatisch wichtig. Entscheidend ist, was zu eurem Alltag, Budget und euren Zielen passt.</p>
+      </article>
+
+      <article class="fam-theme reveal reveal-delay-3">
+        <span class="fam-theme__num">03 · Rücklagen finden</span>
+        <h3 class="fam-theme__question">Wie viel Polster brauchen wir wirklich?</h3>
+        <p class="fam-theme__answer">Gemeinsam prüfen wir, welche Reserve euch Sicherheit gibt &ndash; ohne dass alles ungenutzt herumliegt.</p>
+      </article>
+
+      <article class="fam-theme reveal reveal-delay-1">
+        <span class="fam-theme__num">04 · Vermögen aufbauen</span>
+        <h3 class="fam-theme__question">Wie bauen wir Vermögen auf, ohne uns zu übernehmen?</h3>
+        <p class="fam-theme__answer">Ob Sparplan, Investment oder langfristige Vorsorge: Es geht um eine Strategie, die realistisch bleibt.</p>
+      </article>
+
+      <article class="fam-theme reveal reveal-delay-2">
+        <span class="fam-theme__num">05 · Verträge sortieren</span>
+        <h3 class="fam-theme__question">Welche Verträge brauchen wir &ndash; und welche nicht?</h3>
+        <p class="fam-theme__answer">Gute Beratung heißt auch, unnötige Bausteine zu erkennen und Klarheit in bestehende Verträge zu bringen.</p>
+      </article>
+
+      <article class="fam-theme reveal reveal-delay-3">
+        <span class="fam-theme__num">06 · Ziele verbinden</span>
+        <h3 class="fam-theme__question">Wie planen wir Eigenheim, Kinder und Zukunft zusammen?</h3>
+        <p class="fam-theme__answer">Wenn mehrere Ziele gleichzeitig wichtig sind, braucht es Struktur statt Einzelentscheidungen.</p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================
+     SECTION 8: 3 SCHRITTE ZU MEHR FAMILIENKLARHEIT
+     ============================================ -->
+<section id="beratung" class="section section--strategy-timeline" aria-labelledby="fam-process-h2">
+  <div class="container">
+
+    <header class="strategy-timeline__intro reveal">
+      <span class="strategy-timeline__intro-pill">In 3 Schritten</span>
+      <h2 id="fam-process-h2" class="heading-section">So komme ich mit euch zu mehr <em>Familienklarheit</em></h2>
+      <p>Drei klare Schritte. Damit ihr jederzeit wisst, was als Nächstes kommt. Ohne Show, ohne leere Versprechen. Nur ein verlässlicher Rahmen für eure Familie.</p>
+    </header>
+
+    <ol class="strategy-timeline">
+
+      <li class="strategy-timeline__item reveal reveal-delay-1">
+        <div class="strategy-timeline__text-col">
+          <span class="strategy-timeline__step-label">Schritt I · Erzählt kurz, wo ihr steht</span>
+          <h3>Eure echte Situation, kein Fragebogen-Marathon.</h3>
+          <p>Kinder, Einkommen, Wohnen, offene Themen, Bauchgefühl. Alles, was euch gerade beschäftigt &ndash; ohne dass ihr Unterlagen vorbereiten müsst.</p>
+          <span class="strategy-timeline__meta" aria-label="Dauer">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
+            ca. 15 bis 20 Minuten · per Telefon oder Video
+          </span>
+        </div>
+        <div class="strategy-timeline__node-col" aria-hidden="true">
+          <span class="strategy-timeline__node-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+        </div>
+        <div class="strategy-timeline__media-col">
+          <figure class="strategy-timeline__figure">
+            <span class="strategy-timeline__badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Erstkontakt</span>
+            <img src="../../Fotos/consulting PH1.png" alt="Beim unverbindlichen Kennenlern-Call mit Familien" width="640" height="480" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </li>
+
+      <li class="strategy-timeline__item strategy-timeline__item--reverse reveal reveal-delay-2">
+        <div class="strategy-timeline__text-col">
+          <span class="strategy-timeline__step-label">Schritt II · Gemeinsam sortieren</span>
+          <h3>Eure Familie im Mittelpunkt &ndash; nicht Produktkataloge.</h3>
+          <p>Ich zeige euch verständlich, welche Themen jetzt wirklich wichtig sind und was warten kann. Klar priorisiert, ohne Verkaufsdruck und Fachchinesisch.</p>
+          <span class="strategy-timeline__meta" aria-label="Dauer">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
+            60 bis 90 Minuten · digital oder in Karlsruhe
+          </span>
+        </div>
+        <div class="strategy-timeline__node-col" aria-hidden="true">
+          <span class="strategy-timeline__node-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </span>
+        </div>
+        <div class="strategy-timeline__media-col">
+          <figure class="strategy-timeline__figure">
+            <span class="strategy-timeline__badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Im Gespräch</span>
+            <img src="../../Fotos/Consulting PH2.png" alt="Im persönlichen Familien-Gespräch zur finanziellen Lebensplanung in Karlsruhe" width="640" height="480" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </li>
+
+      <li class="strategy-timeline__item reveal reveal-delay-3">
+        <div class="strategy-timeline__text-col">
+          <span class="strategy-timeline__step-label">Schritt III · Entscheiden ohne Druck</span>
+          <h3>Klare Empfehlungen, in eurem Tempo umgesetzt.</h3>
+          <p>Ihr bekommt einen verständlichen Fahrplan: was jetzt zählt, was später dran ist und wo ihr euch bewusst Zeit lasst. Ohne Vertrag im Anschluss.</p>
+          <span class="strategy-timeline__meta" aria-label="Inhalt">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Strukturierter Familien-Plan · klar priorisiert
+          </span>
+        </div>
+        <div class="strategy-timeline__node-col" aria-hidden="true">
+          <span class="strategy-timeline__node-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 6 9 12 3 18"/><line x1="13" y1="6" x2="21" y2="6"/><line x1="13" y1="12" x2="21" y2="12"/><line x1="13" y1="18" x2="21" y2="18"/></svg>
+          </span>
+        </div>
+        <div class="strategy-timeline__media-col">
+          <figure class="strategy-timeline__figure">
+            <span class="strategy-timeline__badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 12 3 18"/><line x1="13" y1="6" x2="21" y2="6"/><line x1="13" y1="12" x2="21" y2="12"/><line x1="13" y1="18" x2="21" y2="18"/></svg>Strategie</span>
+            <img src="../../Fotos/Consulting PH3.png" alt="Bei der Erstellung und Präsentation eines individuellen Familien-Konzepts" width="640" height="480" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </li>
+
+    </ol>
+
+    <div class="reveal" style="text-align:center;margin-top:56px;">
+      <a href="tel:+4980052569960" class="btn-white">Familien-Check vereinbaren <span aria-hidden="true">→</span></a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================
+     SECTION 9: PASCAL VERTRAUENSABSCHNITT
+     ============================================ -->
+<section class="section fam-pascal-section" aria-labelledby="fam-pascal-h2">
+  <div class="container">
+
+    <div class="fam-pascal">
+
+      <figure class="fam-pascal__visual reveal">
+        <img
+          src="../../assets/images/pascal-roth-ueber-mich.png"
+          alt="Porträt: Pascal Roth, Finanzberater in Karlsruhe"
+          width="800"
+          height="1000"
+          loading="lazy"
+          decoding="async">
+    </figure>
+
+      <div class="fam-pascal__copy">
+        <span class="overline reveal">Wer mit euch sortiert</span>
+        <h2 id="fam-pascal-h2" class="heading-section reveal reveal-delay-1">
+          Ich bin Pascal Roth &ndash; auf Augenhöhe statt im Verkaufsmodus.
+        </h2>
+
+        <blockquote class="fam-pascal__quote reveal reveal-delay-2">
+          „Ich weiß, dass Familien im Alltag schon genug organisieren müssen. Deshalb geht es in meiner Beratung nicht darum, euch mit Produkten zu überfordern. Wir schauen gemeinsam, was eure Familie wirklich braucht – verständlich, unabhängig und Schritt für Schritt."
+        </blockquote>
+
+        <p class="fam-pascal__signature reveal reveal-delay-3">
+          Pascal Roth
+          <span>Finanzberater · Karlsruhe &amp; online</span>
+        </p>
+
+        <div class="fam-pascal__cta-row reveal reveal-delay-3">
+          <a href="tel:+4980052569960" class="btn-primary">
+            Termin mit Pascal anfragen <span aria-hidden="true">→</span>
+          </a>
+          <a href="../../index.html#ueber-pascal" class="btn-ghost">
+            Mehr über mich
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================
+     SECTION 10: FAQ FÜR JUNGE FAMILIEN
+     ============================================ -->
+<section id="fam-faq" class="section section--faq" aria-labelledby="fam-faq-h2">
+  <div class="container faq-split">
+
+    <header class="faq-split__intro reveal">
+      <span class="overline" style="display:block;margin-bottom:12px;">FAQ Junge Familien</span>
+      <h2 id="fam-faq-h2" class="heading-section">
+        Kurz gefragt
+      </h2>
+      <p class="faq-split__lead">
+        Die häufigsten Fragen junger Familien. Kurz und ehrlich beantwortet. Tippt auf eine Frage, um die Antwort zu öffnen.
+      </p>
+      <a href="tel:+4980052569960" class="btn-primary">Erstgespräch vereinbaren <span aria-hidden="true">→</span></a>
+    </header>
+
+    <div class="faq-split__accordion reveal reveal-delay-1">
+
+      <div class="faq-item">
+        <button type="button" class="faq-trigger" aria-expanded="false">
+          <span class="faq-trigger__label">Welche Versicherungen sind für junge Familien wirklich wichtig?</span>
+          <span class="faq-trigger__icon" aria-hidden="true">
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </button>
+        <div class="faq-content">
+          <p class="faq-answer">Es gibt nicht die eine Liste, die für jede Familie passt. Wir starten mit den Themen, die euer Leben gerade trägt: Einkommensschutz, Haftung im Alltag und ein realistisches Polster. Alles andere bauen wir nur dazu, wenn es wirklich euren Alltag besser macht.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="faq-trigger" aria-expanded="false">
+          <span class="faq-trigger__label">Wie sichere ich meine Familie ab, wenn ein Einkommen wegfällt?</span>
+          <span class="faq-trigger__icon" aria-hidden="true">
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </button>
+        <div class="faq-content">
+          <p class="faq-answer">Wir schauen gemeinsam, wie eure Fixkosten, Rücklagen und Einkommen zusammenspielen. Daraus ergibt sich, wie viel Schutz wirklich nötig ist &ndash; und wie viel ihr euch ohne schlechtes Gewissen sparen könnt.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="faq-trigger" aria-expanded="false">
+          <span class="faq-trigger__label">Brauchen Kinder eigene Versicherungen oder Vorsorgeprodukte?</span>
+          <span class="faq-trigger__icon" aria-hidden="true">
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </button>
+        <div class="faq-content">
+          <p class="faq-answer">Manche Bausteine ergeben Sinn, viele andere sind eher Verkaufsargument als echter Mehrwert. Ich sage euch ehrlich, was ich an eurer Stelle für meine Kinder tun würde &ndash; und was ich bewusst weglassen würde.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="faq-trigger" aria-expanded="false">
+          <span class="faq-trigger__label">Wie viel Rücklage sollte eine Familie haben?</span>
+          <span class="faq-trigger__icon" aria-hidden="true">
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </button>
+        <div class="faq-content">
+          <p class="faq-answer">Als Faustregel: drei bis sechs Monate eurer Fixkosten als Notfallpolster. Wir schauen uns euren Alltag an und finden eine Größe, die zu euch passt &ndash; nicht zu wenig, aber auch nicht so viel, dass Geld unnötig herumliegt.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="faq-trigger" aria-expanded="false">
+          <span class="faq-trigger__label">Müssen wir uns im Erstgespräch direkt entscheiden?</span>
+          <span class="faq-trigger__icon" aria-hidden="true">
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </button>
+        <div class="faq-content">
+          <p class="faq-answer">Nein. Im Erstgespräch wird nichts unterschrieben. Ihr bekommt Orientierung &ndash; und entscheidet in eurem Tempo, was und ob ihr etwas umsetzen möchtet.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="faq-trigger" aria-expanded="false">
+          <span class="faq-trigger__label">Kann die Beratung auch online stattfinden?</span>
+          <span class="faq-trigger__icon" aria-hidden="true">
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </button>
+        <div class="faq-content">
+          <p class="faq-answer">Ja. Persönlich in Karlsruhe oder digital per Video, Telefon oder E-Mail &ndash; ganz wie es zu eurem Familienalltag passt.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="faq-trigger" aria-expanded="false">
+          <span class="faq-trigger__label">Hilft Pascal auch beim Vermögensaufbau für Familien?</span>
+          <span class="faq-trigger__icon" aria-hidden="true">
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </button>
+        <div class="faq-content">
+          <p class="faq-answer">Ja. Versicherung, Vorsorge und Investment kommen aus einer Hand. So entsteht eine Strategie, die zusammenpasst &ndash; und keine Lücken zwischen verschiedenen Ansprechpartnern.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="faq-trigger" aria-expanded="false">
+          <span class="faq-trigger__label">Was ist, wenn wir schon viele Verträge haben, aber keinen Überblick?</span>
+          <span class="faq-trigger__icon" aria-hidden="true">
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </button>
+        <div class="faq-content">
+          <p class="faq-answer">Genau dann lohnt sich ein Familien-Check. Wir sortieren, was sinnvoll ist, was sich überschneidet und was ihr getrost streichen könnt &ndash; ohne Druck und ohne Angst, etwas verpasst zu haben.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================
+     SECTION 11: FINALER CTA
+     ============================================ -->
+<section id="fam-kontakt" class="section section--cta-finale" aria-labelledby="fam-cta-finale-h2">
+  <div class="container">
+
+    <h2 id="fam-cta-finale-h2" class="heading-section reveal">
+      Ihr müsst nicht alles allein sortieren.
+    </h2>
+
+    <p class="reveal reveal-delay-1 cta-finale__lead">
+      Startet mit einem unverbindlichen Familien-Check und findet heraus, welche Absicherung, Vorsorge und Finanzstruktur wirklich zu eurem Leben passt.
+    </p>
+
+    <div class="reveal reveal-delay-2 cta-finale__actions">
+      <a href="tel:+4980052569960" class="btn-white">Familien-Check starten <span aria-hidden="true">→</span></a>
+      <a href="tel:+4980052569960" class="btn-ghost-white">Kostenloses Erstgespräch buchen</a>
+    </div>
+
+    <p class="reveal reveal-delay-3 cta-finale__note">
+      Unverbindlich · Verständlich · Persönlich
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer style="background:#02254A;color:#B0C4DE;padding:64px 20px 24px;">
+  <div class="container">
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;margin-bottom:48px;">
+
+      <div>
+        <a href="../../index.html#hero" class="site-logo-link" style="margin-bottom:16px;display:inline-block;" aria-label="Pascal Roth: Zur Startseite">
+          <img src="../../Fotos/Pascal_Roth_Logo_weiss.png" alt="Pascal Roth Logo" class="site-logo site-logo--footer" width="220" height="52" loading="lazy">
+        </a>
+        <p style="font-size:14px;line-height:1.6;color:#B0C4DE;">
+          Finanzberatung<br>in Karlsruhe.
+        </p>
+        <p style="font-size:14px;line-height:1.6;color:#B0C4DE;margin-top:8px;font-style:italic;">
+          Verstehen. Sortieren. Vertrauen.
+        </p>
+      </div>
+
+      <div>
+        <p style="font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px;">Lebensphasen</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="../../index.html#lebensphasen" style="text-decoration:none;color:#B0C4DE;font-size:15px;transition:color 0.3s;">Überblick</a>
+          <a href="../berufseinstieg/index.html" style="text-decoration:none;color:#B0C4DE;font-size:15px;transition:color 0.3s;">Berufseinstieg</a>
+          <a href="../junge-familie/index.html" style="text-decoration:none;color:#93B5E4;font-size:15px;transition:color 0.3s;font-weight:600;" aria-current="page">Junge Familie</a>
+          <span class="nav-footer-link--coming-soon" aria-disabled="true" title="Demnächst">Selbstständigkeit</span>
+          <span class="nav-footer-link--coming-soon" aria-disabled="true" title="Demnächst">Vermögen aufbauen</span>
+          <span class="nav-footer-link--coming-soon" aria-disabled="true" title="Demnächst">Spätstarter 50+</span>
+          <a href="../../index.html#ueber-pascal" style="text-decoration:none;color:#B0C4DE;font-size:15px;transition:color 0.3s;">Über Pascal</a>
+          <a href="#fam-faq" style="text-decoration:none;color:#B0C4DE;font-size:15px;transition:color 0.3s;">FAQ</a>
+        </div>
+      </div>
+
+      <div>
+        <p style="font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px;">Kontakt</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="tel:+4980052569960" style="text-decoration:none;color:#B0C4DE;font-size:15px;">0800 525 6996</a>
+          <a href="mailto:pascal.roth@allfinanz.ag" style="text-decoration:none;color:#B0C4DE;font-size:15px;">pascal.roth@allfinanz.ag</a>
+          <span style="font-size:15px;">Karlsruhe</span>
+          <a href="tel:+4980052569960" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:#93B5E4;font-size:15px;font-weight:600;margin-top:8px;">
+            Termin vereinbaren <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="height:1px;background:rgba(255,255,255,0.08);margin-bottom:24px;"></div>
+
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;">
+      <p style="font-size:13px;color:rgba(255,255,255,0.35);">
+        &copy; 2026 Pascal Roth. Alle Rechte vorbehalten.
+      </p>
+      <div style="display:flex;gap:24px;">
+        <a href="#" style="font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.3s;">Impressum</a>
+        <a href="#" style="font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.3s;">Datenschutz</a>
+      </div>
+    </div>
+
+  </div>
 </footer>
+
+
+<!-- ============================================
+     STICKY MOBILE CTA
+     ============================================ -->
+<div class="sticky-cta" aria-label="Familien-Check starten">
+  <a href="tel:+4980052569960" class="btn-primary" style="width:100%;justify-content:center;padding:14px 24px;font-size:15px;">
+    Familien-Check starten <span aria-hidden="true">→</span>
+  </a>
+</div>
+
+
+<!-- Scripts: globale Logik (Nav, FAQ, Reveal, Sticky-CTA) und Seitenspezifisches -->
+<script src="../../script.js" defer></script>
+<script src="page.js" defer></script>
 
 </body>
 </html>

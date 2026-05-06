@@ -16,13 +16,31 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* --- Sticky Navigation on Scroll --- */
-const NAV_LOGO_TOP = 'Fotos/Pascal Roth Logo_blau.png';
-const NAV_LOGO_SCROLLED = 'Fotos/Pascal Roth Logo.png';
+/* Dateinamen gleich wie auf der Startseite; Basis-URL aus dem im Markup gesetzten src (z. B. ../../Fotos/… auf Unterseiten). */
+const NAV_LOGO_BLUE = 'Pascal Roth Logo_blau.png';
+const NAV_LOGO_DARK = 'Pascal Roth Logo.png';
+
+let navLogoBaseURL = '';
+
+function initNavLogoBaseFromMarkup() {
+  const img = document.querySelector('.site-logo--nav');
+  if (!img) return;
+  const attr = img.getAttribute('src');
+  if (!attr) return;
+  try {
+    const resolved = new URL(attr, window.location.href);
+    navLogoBaseURL = resolved.href.replace(/[^/]+$/, '');
+  } catch {
+    navLogoBaseURL = '';
+  }
+}
 
 function setNavBarLogo(scrolled) {
+  if (!navLogoBaseURL) return;
+  const file = scrolled ? NAV_LOGO_DARK : NAV_LOGO_BLUE;
+  const next = new URL(file, navLogoBaseURL).href;
   document.querySelectorAll('.site-logo--nav').forEach((img) => {
-    const next = scrolled ? NAV_LOGO_SCROLLED : NAV_LOGO_TOP;
-    if (img.getAttribute('src') !== next) {
+    if (img.src !== next) {
       img.src = next;
     }
   });
@@ -31,6 +49,8 @@ function setNavBarLogo(scrolled) {
 function initNavigation() {
   const nav = document.querySelector('.nav-wrapper');
   if (!nav) return;
+
+  initNavLogoBaseFromMarkup();
 
   let lastScroll = 0;
 
@@ -120,7 +140,7 @@ function initFAQ() {
 
 /* --- Testimonial Marquee Clone --- */
 function initMarquee() {
-  const track = document.querySelector('.marquee-track');
+  const track = document.querySelector('#kundenstimmen .marquee-track');
   if (!track) return;
 
   const cards = track.querySelectorAll('.testimonial-card');
