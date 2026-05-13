@@ -131,14 +131,14 @@
       return {
         title: 'Starker Klarheitsgrad – viele Bausteine sind schon sortiert',
         body:
-          '<strong>Orientierung:</strong> Du hast viele Themen bereits auf dem Schirm – das ist eine echte Stärke in der Selbständigkeit.<br><br><strong>Nächster Schritt:</strong> Jetzt geht es oft darum, Überlappungen zu prüfen und Prioritäten feinzujustieren, statt alles neu zu erfinden.<br><br><strong>Einordnung:</strong> Selbst mit gutem Überblick lohnt sich ein unabhängiger Sparringspartner – gerade wenn sich dein Business weiterentwickelt.',
+          '<strong>Orientierung:</strong> Du hast viele Themen bereits auf dem Schirm – das ist eine echte Stärke in der Selbständigkeit.<br><br><strong>Nächster Schritt:</strong> Jetzt geht es oft darum, Überlappungen zu prüfen und Prioritäten feinzujustieren, statt alles neu zu erfinden.<br><br><strong>Einordnung:</strong> Selbst mit gutem Überblick lohnt sich oft ein unabhängiger Sparring – ich begleite dich gern, wenn sich dein Business weiterentwickelt.',
       };
     }
     if (pct >= 60) {
       return {
         title: 'Solider Klarheitsgrad – du bist mitten im Prozess',
         body:
-          '<strong>Orientierung:</strong> Du hast schon wichtige Punkte erkannt – und genau da stehen viele Selbständige.<br><br><strong>Nächster Schritt:</strong> Sinnvoll ist jetzt, Lücken und „Blindspots“ zu schließen, ohne alles auf einmal zu wollen.<br><br><strong>Einordnung:</strong> Ein strukturierter Check hilft, Energie auf die Themen zu lenken, die dir wirklich Ruhe geben.',
+          '<strong>Orientierung:</strong> Du hast schon wichtige Punkte erkannt – und genau da stehen viele Selbständige.<br><br><strong>Nächster Schritt:</strong> Sinnvoll ist jetzt, Lücken und „Blindspots“ zu schließen, ohne alles auf einmal zu wollen.<br><br><strong>Einordnung:</strong> Mit einem strukturierten Check helfe ich dir dabei, die Energie auf die Themen zu lenken, die dir wirklich Ruhe geben.',
       };
     }
     if (pct >= 40) {
@@ -150,8 +150,8 @@
     }
     return {
       title: 'Viel Spielraum für mehr Ruhe und Struktur',
-      body:
-        '<strong>Orientierung:</strong> Wenn viele Fragen noch offen sind, heißt das vor allem: du hast viele Baustellen gleichzeitig – nicht, dass etwas „falsch“ ist.<br><br><strong>Nächster Schritt:</strong> Ein erster Fokus (z. B. Fixkosten + Rücklagen) schafft oft schnell mehr Handlungsspielraum.<br><br><strong>Einordnung:</strong> Genau dafür gibt es Beratung: Themen übersetzen, priorisieren und in einen Plan bringen – verständlich und ohne Verkaufsdruck.',
+        body:
+          '<strong>Orientierung:</strong> Wenn viele Fragen noch offen sind, heißt das vor allem: du hast viele Baustellen gleichzeitig – nicht, dass etwas „falsch“ ist.<br><br><strong>Nächster Schritt:</strong> Ein erster Fokus (z. B. Fixkosten + Rücklagen) schafft oft schnell mehr Handlungsspielraum.<br><br><strong>Einordnung:</strong> Genau dafür bin ich für dich da: Themen übersetzen, priorisieren und in einen Plan bringen – verständlich und ohne Verkaufsdruck.',
     };
   }
 
@@ -626,30 +626,66 @@
   function initSstGrowth() {
     const root = document.querySelector('[data-sst-growth]');
     if (!root) return;
-    const items = root.querySelectorAll('[data-sst-growth-item]');
-    if (!items.length) return;
 
-    if (reduceMotion) {
-      items.forEach((el) => el.classList.add('is-visible'));
-      return;
+    const tabs = Array.from(root.querySelectorAll('[data-sst-growth-tab]'));
+    const panels = Array.from(root.querySelectorAll('[data-sst-growth-panel]'));
+    if (!tabs.length || !panels.length) return;
+
+    function activate(key, focusTab) {
+      tabs.forEach((btn) => {
+        const active = btn.getAttribute('data-sst-growth-tab') === key;
+        btn.classList.toggle('is-active', active);
+        btn.setAttribute('aria-selected', active ? 'true' : 'false');
+        btn.setAttribute('tabindex', active ? '0' : '-1');
+      });
+      panels.forEach((panel) => {
+        const active = panel.getAttribute('data-sst-growth-panel') === key;
+        panel.classList.toggle('is-active', active);
+        if (active) panel.removeAttribute('hidden');
+        else panel.setAttribute('hidden', '');
+      });
+      if (focusTab) {
+        const next = tabs.find((t) => t.getAttribute('data-sst-growth-tab') === key);
+        if (next) next.focus();
+      }
     }
 
-    if (!('IntersectionObserver' in window)) {
-      items.forEach((el) => el.classList.add('is-visible'));
-      return;
-    }
+    tabs.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        activate(btn.getAttribute('data-sst-growth-tab') || '1');
+      });
+      btn.addEventListener('keydown', (ev) => {
+        const navKeys = ['ArrowLeft', 'ArrowRight', 'Home', 'End'];
+        if (!navKeys.includes(ev.key)) return;
+        ev.preventDefault();
+        const idx = tabs.indexOf(btn);
+        let nextIdx;
+        if (ev.key === 'Home') nextIdx = 0;
+        else if (ev.key === 'End') nextIdx = tabs.length - 1;
+        else if (ev.key === 'ArrowRight') nextIdx = (idx + 1) % tabs.length;
+        else nextIdx = (idx - 1 + tabs.length) % tabs.length;
+        const nextKey = tabs[nextIdx].getAttribute('data-sst-growth-tab') || '1';
+        activate(nextKey, true);
+      });
+    });
 
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add('is-visible');
-        });
-      },
-      { threshold: 0.15, rootMargin: '0px 0px -8% 0px' }
-    );
+    const initial = tabs.find((t) => t.classList.contains('is-active')) || tabs[0];
+    activate(initial.getAttribute('data-sst-growth-tab') || '1');
+  }
 
-    items.forEach((el) => io.observe(el));
+  /** Themenwolke: nur drei feste Blautöne (styles.css: --bg-dark, --primary, --secondary), zufällig pro Wort. */
+  function initSstWordcloud() {
+    const svg = document.querySelector('[data-sst-wordcloud] .sst-wordcloud__svg');
+    if (!svg) return;
+
+    const colors = ['#02254a', '#035aa7', '#93b5e4'];
+
+    svg.querySelectorAll('g.wordcloud-word').forEach((g) => {
+      const fill = colors[Math.floor(Math.random() * colors.length)];
+      g.querySelectorAll('text, tspan').forEach((el) => {
+        el.style.setProperty('fill', fill, 'important');
+      });
+    });
   }
 
   function initSstHeroParallax() {
@@ -691,6 +727,7 @@
     initSstWorkforce();
     initSstDuties();
     initSstGrowth();
+    initSstWordcloud();
     initSstHeroParallax();
   });
 })();
