@@ -6,7 +6,6 @@
    - Donut-Chart „Familien-Verpflichtungen" mit Miete/Eigenheim-Toggle
    - Dezenter Hero-Parallax
    - Portrait „Kommt euch das bekannt vor?": Hochfahren bei Scroll-in
-   - Roadmap: horizontale Leiste, Pfeile, Punkte, Drag; ohne Scrollbalken
    Respektiert prefers-reduced-motion.
    ========================================================= */
 
@@ -21,7 +20,6 @@
     initFamLoadChart();
     initFamHeroParallax();
     initFamPortraitRiseOnScroll();
-    initFamRoadmapStrip();
   });
 
   /* =========================================================
@@ -886,161 +884,6 @@
     io.observe(root);
   }
 
-
-  /* =========================================================
-     ROADMAP: horizontale Leiste, Pfeile, Punkte, Drag, kein Scrollbalken
-     ========================================================= */
-  function initFamRoadmapStrip() {
-    const frame = document.querySelector('[data-fam-roadmap-strip]');
-    if (!frame) return;
-
-    const scroller = frame.querySelector('.fam-roadmap-strip__scroller');
-    const steps = scroller
-      ? Array.from(scroller.querySelectorAll('.fam-roadmap-strip__step'))
-      : [];
-    const prevBtn = frame.querySelector('.fam-roadmap-strip__nav--prev');
-    const nextBtn = frame.querySelector('.fam-roadmap-strip__nav--next');
-    const dotsWrap = frame.querySelector('[data-fam-roadmap-dots]');
-    const dots = dotsWrap
-      ? Array.from(dotsWrap.querySelectorAll('[data-fam-roadmap-dot]'))
-      : [];
-
-    if (!scroller || steps.length === 0 || !prevBtn || !nextBtn) return;
-
-    function scrollIntoForIndex(i) {
-      const last = steps.length - 1;
-      let inline = 'center';
-      if (i === 0) inline = 'start';
-      else if (i === last) inline = 'end';
-      return {
-        behavior: reduceMotion ? 'auto' : 'smooth',
-        block: 'nearest',
-        inline,
-      };
-    }
-
-    function nearestIndex() {
-      const maxScroll = scroller.scrollWidth - scroller.clientWidth;
-      const eps = 8;
-      const left = scroller.scrollLeft;
-      if (left <= eps) return 0;
-      if (left >= maxScroll - eps) return steps.length - 1;
-
-      const center = left + scroller.clientWidth * 0.5;
-      let best = 0;
-      let bestDist = Infinity;
-      steps.forEach((step, i) => {
-        const mid = step.offsetLeft + step.offsetWidth / 2;
-        const d = Math.abs(mid - center);
-        if (d < bestDist) {
-          bestDist = d;
-          best = i;
-        }
-      });
-      return best;
-    }
-
-    function goToIndex(idx) {
-      const i = Math.max(0, Math.min(steps.length - 1, idx));
-      steps[i].scrollIntoView(scrollIntoForIndex(i));
-    }
-
-    function go(delta) {
-      const i = nearestIndex();
-      goToIndex(i + delta);
-    }
-
-    function syncDots(activeIdx) {
-      if (!dots.length) return;
-      dots.forEach((dot, i) => {
-        const on = i === activeIdx;
-        dot.classList.toggle('is-active', on);
-        dot.setAttribute('aria-selected', on ? 'true' : 'false');
-      });
-    }
-
-    function updateState() {
-      const maxScroll = scroller.scrollWidth - scroller.clientWidth;
-      const eps = 6;
-      const left = scroller.scrollLeft;
-      const noOverflow = maxScroll <= eps;
-      frame.classList.toggle('fam-roadmap-strip__frame--no-overflow', noOverflow);
-      if (noOverflow) {
-        prevBtn.disabled = true;
-        nextBtn.disabled = true;
-        syncDots(nearestIndex());
-        return;
-      }
-      prevBtn.disabled = left <= eps;
-      nextBtn.disabled = left >= maxScroll - eps;
-      syncDots(nearestIndex());
-    }
-
-    let scrollRaf = 0;
-    function onScroll() {
-      if (scrollRaf) return;
-      scrollRaf = requestAnimationFrame(() => {
-        scrollRaf = 0;
-        updateState();
-      });
-    }
-
-    prevBtn.addEventListener('click', () => go(-1));
-    nextBtn.addEventListener('click', () => go(1));
-
-    if (dotsWrap) {
-      dotsWrap.addEventListener('click', (e) => {
-        const dot = e.target.closest('[data-fam-roadmap-dot]');
-        if (!dot) return;
-        const idx = parseInt(dot.getAttribute('data-fam-roadmap-dot'), 10);
-        if (!Number.isNaN(idx)) goToIndex(idx);
-      });
-    }
-
-    /* Drag mit Maus / Stift (Touch scrollt weiterhin horizontal) */
-    const drag = { id: null, x: 0, scroll: 0 };
-    function endDrag(e) {
-      if (drag.id === null || e.pointerId !== drag.id) return;
-      try {
-        scroller.releasePointerCapture(drag.id);
-      } catch (_) {
-        /* ignore */
-      }
-      scroller.classList.remove('is-dragging');
-      drag.id = null;
-    }
-
-    scroller.addEventListener('pointerdown', (e) => {
-      if (e.pointerType !== 'mouse' && e.pointerType !== 'pen') return;
-      if (e.button !== 0) return;
-      drag.id = e.pointerId;
-      drag.x = e.clientX;
-      drag.scroll = scroller.scrollLeft;
-      scroller.classList.add('is-dragging');
-      try {
-        scroller.setPointerCapture(e.pointerId);
-      } catch (_) {
-        drag.id = null;
-        scroller.classList.remove('is-dragging');
-      }
-    });
-
-    scroller.addEventListener('pointermove', (e) => {
-      if (drag.id === null || e.pointerId !== drag.id) return;
-      const dx = e.clientX - drag.x;
-      scroller.scrollLeft = drag.scroll - dx;
-    });
-
-    scroller.addEventListener('pointerup', endDrag);
-    scroller.addEventListener('pointercancel', endDrag);
-
-    scroller.addEventListener('scroll', onScroll, { passive: true });
-    scroller.addEventListener('scrollend', updateState, { passive: true });
-
-    window.addEventListener('resize', updateState, { passive: true });
-
-    updateState();
-  }
 
 
   /* =========================================================
