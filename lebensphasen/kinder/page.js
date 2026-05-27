@@ -2,11 +2,9 @@
    Pascal Roth · Lebensphase Kinder
    Seitenspezifisches JS:
    - Hero-Parallax (dezent)
-   - Zukunftszug: Wagen auswählen, Detailkarte aktualisieren
    - Kostenrechner: Bausteine bis zum 18. Geburtstag
    - Sparrate-Rechner: Sparen vs. strukturierter Aufbau
    - Statistik Count-up beim Scrollen
-   - Prioritäten-Matrix: Chips per Klick durch Quadranten
    Respektiert prefers-reduced-motion.
    ========================================================= */
 
@@ -17,11 +15,10 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     initKidHeroParallax();
-    initKidTrain();
+    initKidPortraitRiseOnScroll();
     initKidCostCalc();
     initKidSavingsCalc();
     initKidStatsCountUp();
-    initKidMatrix();
   });
 
   /* =========================================================
@@ -91,53 +88,38 @@
 
 
   /* =========================================================
-     ZUKUNFTSZUG: Wagen-Auswahl
+     Portrait: hochfahren beim Scrollen (Orbit-Sektion)
      ========================================================= */
-  function initKidTrain() {
-    const root = document.querySelector('[data-kid-train]');
+  function initKidPortraitRiseOnScroll() {
+    const root = document.querySelector('[data-kid-portrait-rise]');
     if (!root) return;
 
-    const wagons = Array.from(root.querySelectorAll('.kid-train__wagon'));
-    const detailMeta = root.querySelector('[data-kid-train-meta]');
-    const detailTitle = root.querySelector('[data-kid-train-title]');
-    const detailText = root.querySelector('[data-kid-train-text]');
-    const detailIcon = root.querySelector('[data-kid-train-icon]');
-
-    if (!wagons.length || !detailTitle || !detailText) return;
-
-    function activate(wagon) {
-      wagons.forEach((w) => {
-        w.classList.toggle('is-active', w === wagon);
-        w.setAttribute('aria-pressed', w === wagon ? 'true' : 'false');
-      });
-
-      if (detailMeta) detailMeta.textContent = wagon.dataset.meta || 'Baustein';
-      detailTitle.textContent = wagon.dataset.title || '';
-      detailText.textContent = wagon.dataset.text || '';
-
-      if (detailIcon) {
-        const sourceIcon = wagon.querySelector('.kid-train__wagon-icon svg');
-        if (sourceIcon) {
-          detailIcon.innerHTML = sourceIcon.outerHTML;
-        }
-      }
+    if (reduceMotion) {
+      root.classList.add('is-visible');
+      return;
     }
 
-    wagons.forEach((wagon, i) => {
-      wagon.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
-      wagon.addEventListener('click', () => activate(wagon));
-      wagon.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-          e.preventDefault();
-          const next = e.key === 'ArrowRight' ? i + 1 : i - 1;
-          const target = wagons[clamp(next, 0, wagons.length - 1)];
-          target.focus();
-          activate(target);
-        }
-      });
-    });
+    const markVisible = () => {
+      root.classList.add('is-visible');
+    };
 
-    activate(wagons[0]);
+    if (!('IntersectionObserver' in window)) {
+      markVisible();
+      return;
+    }
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          markVisible();
+          io.unobserve(root);
+        });
+      },
+      { threshold: 0, rootMargin: '0px' }
+    );
+
+    io.observe(root);
   }
 
 
@@ -151,7 +133,7 @@
     if (!root) return;
 
     const ageInput = root.querySelector('[data-kid-calc-age]');
-    const yearsOut = root.querySelector('[data-kid-calc-years]');
+    const yearsOut = root.querySelectorAll('[data-kid-calc-years]');
     const sumOut = root.querySelector('[data-kid-calc-sum]');
     const monthlyOut = root.querySelector('[data-kid-calc-monthly]');
     const barFill = root.querySelector('[data-kid-calc-bar]');
@@ -184,15 +166,16 @@
 
       const months = years * 12;
       const monthly = months > 0 ? total / months : 0;
+      const yearsText = formatNumber(years);
+      const monthlyText = formatNumber(Math.round(monthly));
 
-      if (yearsOut) yearsOut.textContent = formatNumber(years);
+      yearsOut.forEach((el) => { el.textContent = yearsText; });
       animateNumber(sumOut, lastSum, total, 500);
-      animateNumber(monthlyOut, lastMonthly, monthly, 500);
+      animateNumber(monthlyOut, lastMonthly, Math.round(monthly), 500);
       lastSum = total;
-      lastMonthly = monthly;
+      lastMonthly = Math.round(monthly);
 
       if (barFill) {
-        // Visualisierung: 0–25.000 € als Skala (PLACEHOLDER_SCALE)
         const pct = clamp((total / 25000) * 100, 0, 100);
         barFill.style.setProperty('--kid-bar-width', pct.toFixed(1) + '%');
       }
@@ -349,77 +332,5 @@
     stats.forEach((el) => io.observe(el));
   }
 
-
-  /* =========================================================
-     PRIORITÄTEN-MATRIX
-     - Chips zyklisch durch Quadranten: now → soon → watch → later → none
-     ========================================================= */
-  function initKidMatrix() {
-    const root = document.querySelector('[data-kid-matrix]');
-    if (!root) return;
-
-    const chips = Array.from(root.querySelectorAll('.kid-matrix__chip'));
-    const quadrants = Array.from(root.querySelectorAll('.kid-matrix__quadrant'));
-    if (!chips.length || !quadrants.length) return;
-
-    const ORDER = ['none', 'now', 'soon', 'watch', 'later'];
-    const QUAD_TEXT = {
-      now: 'Jetzt klären',
-      soon: 'Bald prüfen',
-      watch: 'Im Blick behalten',
-      later: 'Später vertiefen',
-    };
-
-    function syncQuadrants(focusedState = null) {
-      const buckets = { now: [], soon: [], watch: [], later: [] };
-      chips.forEach((chip) => {
-        const state = chip.dataset.state || 'none';
-        if (buckets[state]) buckets[state].push(chip.textContent.trim());
-      });
-
-      quadrants.forEach((q) => {
-        const key = q.dataset.quadrant;
-        const bag = q.querySelector('.kid-matrix__quadrant-bag');
-        if (!bag) return;
-        bag.innerHTML = '';
-        (buckets[key] || []).forEach((label) => {
-          const tag = document.createElement('span');
-          tag.className = 'kid-matrix__quadrant-tag';
-          tag.textContent = label;
-          bag.appendChild(tag);
-        });
-        q.classList.toggle('is-target', !!focusedState && focusedState === key);
-      });
-    }
-
-    function cycle(chip) {
-      const current = chip.dataset.state || 'none';
-      const idx = ORDER.indexOf(current);
-      const next = ORDER[(idx + 1) % ORDER.length];
-      if (next === 'none') {
-        delete chip.dataset.state;
-      } else {
-        chip.dataset.state = next;
-      }
-      const tooltip = next === 'none' ? 'Nicht eingeordnet' : QUAD_TEXT[next];
-      chip.setAttribute('aria-label', `${chip.textContent.trim()} – ${tooltip}`);
-      syncQuadrants(next === 'none' ? null : next);
-    }
-
-    chips.forEach((chip) => {
-      chip.setAttribute('role', 'button');
-      chip.setAttribute('tabindex', '0');
-      chip.setAttribute('aria-label', chip.textContent.trim() + ' – Nicht eingeordnet');
-      chip.addEventListener('click', () => cycle(chip));
-      chip.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          cycle(chip);
-        }
-      });
-    });
-
-    syncQuadrants();
-  }
 
 })();

@@ -767,6 +767,126 @@
   color: rgba(255, 255, 255, 0.85);
 }
 
+/* Persönliche Strategie */
+.vma-strategy__panel {
+  display: grid;
+  gap: 0;
+}
+
+.vma-strategy__block {
+  display: grid;
+  gap: 14px;
+}
+
+.vma-strategy__heading {
+  margin: 0;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(18px, 2.2vw, 22px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.vma-strategy__lead,
+.vma-strategy__region-note,
+.vma-strategy__summary {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(214, 225, 240, 0.78);
+}
+
+.vma-strategy__region-note {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(43, 182, 168, 0.1);
+  border: 1px solid rgba(43, 182, 168, 0.28);
+  color: rgba(230, 248, 245, 0.92);
+}
+
+.vma-strategy__divider {
+  height: 1px;
+  margin: 28px 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.14), transparent);
+}
+
+.vma-strategy__row {
+  display: grid;
+  gap: 10px;
+}
+
+.vma-strategy__row-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: rgba(214, 225, 240, 0.65);
+}
+
+.vma-strategy__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.vma-strategy__chips--regions {
+  gap: 10px;
+}
+
+.vma-strategy__chip {
+  appearance: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
+}
+
+.vma-strategy__chip:hover {
+  border-color: rgba(43, 182, 168, 0.55);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.vma-strategy__chip:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(43, 182, 168, 0.28);
+}
+
+.vma-strategy__chip.is-active {
+  border-color: rgba(43, 182, 168, 0.75);
+  background: linear-gradient(135deg, rgba(3, 90, 167, 0.45), rgba(43, 182, 168, 0.38));
+  box-shadow: 0 10px 28px -16px rgba(43, 182, 168, 0.65);
+}
+
+.vma-strategy__block--calc {
+  gap: 18px;
+}
+
+.vma-strategy__result {
+  margin-top: 8px;
+}
+
+.vma-compare__link {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.vma-compare__link:hover {
+  color: var(--accent);
+}
+
 /* Warten-Vergleich */
 .vma-waiting__compare {
   display: grid;

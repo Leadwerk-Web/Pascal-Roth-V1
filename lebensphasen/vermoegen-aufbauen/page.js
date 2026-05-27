@@ -309,57 +309,114 @@
   }
 
   /* ------------------------------------------------------------
-     2) Sparplan-Rechner
-     - Eingaben: Startkapital, monatliche Sparrate, Laufzeit (Jahre),
-       angenommene Rendite (% p.a.), optionale Dynamik (% pro Jahr).
-     - Berechnung erfolgt jahresweise (vereinfacht).
-     - Hinweis: Beispielrechnung, keine Zusicherung.
+     2) Persönliche Strategie & Modellrechner
+     - Region: Europa, USA, Asien, Weltweit, Rüstungsindustrie (Hinweistext)
+     - Modell: 50|100|200|300 € · 5|7|10|15 Jahre · 3|6|9|12 % p.a.
+     - Monatliche Verzinsung, keine Startkapital-Annahme
      ------------------------------------------------------------ */
 
-  function initVmaSavings() {
-    const root = document.querySelector('[data-vma-savings]');
+  const VMA_REGION_NOTES = {
+    europe:
+      'Europa kann Heimatmarkt und vertraute Unternehmen bedeuten – mit bewusster Streuung über Länder und Branchen.',
+    usa:
+      'Die USA stehen oft für Innovations- und Technologie-Schwerpunkte – mit höherer Schwankung, aber langem Wachstumspfad.',
+    asia:
+      'Asien ergänzt eine globale Strategie – andere Wirtschaftszyklen, Währungen und Chancen außerhalb Europas.',
+    world:
+      'Weltweit breit gestreut: weniger Abhängigkeit von einer Region – der Kern vieler langfristiger Sparpläne.',
+    defense:
+      'Rüstungsindustrie ist eine bewusste Nische – ob und in welchem Umfang sie zu deinen Werten passt, klären wir im Gespräch.',
+  };
+
+  function futureValueMonthly(monthly, annualRate, years) {
+    const months = years * 12;
+    if (months <= 0) return 0;
+    const i = annualRate / 12;
+    if (i === 0) return monthly * months;
+    return monthly * ((Math.pow(1 + i, months) - 1) / i);
+  }
+
+  function initVmaStrategy() {
+    const root = document.querySelector('[data-vma-strategy]');
     if (!root) return;
 
-    const inStart = root.querySelector('[data-vma-savings-start]');
-    const inRate = root.querySelector('[data-vma-savings-rate]');
-    const inYears = root.querySelector('[data-vma-savings-years]');
-    const inReturn = root.querySelector('[data-vma-savings-return]');
-    const inDyn = root.querySelector('[data-vma-savings-dyn]');
+    const regionWrap = root.querySelector('[data-vma-strategy-regions]');
+    const regionNote = root.querySelector('[data-vma-strategy-region-note]');
+    const rateWrap = root.querySelector('[data-vma-strategy-rates]');
+    const yearsWrap = root.querySelector('[data-vma-strategy-years]');
+    const returnWrap = root.querySelector('[data-vma-strategy-returns]');
 
-    const outPaid = root.querySelector('[data-vma-savings-paid]');
-    const outFinal = root.querySelector('[data-vma-savings-final]');
-    const outGain = root.querySelector('[data-vma-savings-gain]');
-    const barPaid = root.querySelector('[data-vma-savings-bar-paid]');
-    const barGain = root.querySelector('[data-vma-savings-bar-gain]');
+    const outPaid = root.querySelector('[data-vma-strategy-paid]');
+    const outFinal = root.querySelector('[data-vma-strategy-final]');
+    const outGain = root.querySelector('[data-vma-strategy-gain]');
+    const outSummary = root.querySelector('[data-vma-strategy-summary]');
+    const barPaid = root.querySelector('[data-vma-strategy-bar-paid]');
+    const barFinal = root.querySelector('[data-vma-strategy-bar-final]');
+
+    const state = {
+      region: 'world',
+      monthly: 100,
+      years: 10,
+      returnPct: 6,
+    };
 
     let last = { paid: 0, final: 0, gain: 0 };
 
-    function readNum(el, fallback = 0) {
-      const n = parseFloat(el?.value);
-      return Number.isFinite(n) ? n : fallback;
+    function setRegion(key) {
+      state.region = key;
+      regionWrap?.querySelectorAll('[data-vma-strategy-region]').forEach((btn) => {
+        const on = btn.getAttribute('data-vma-strategy-region') === key;
+        btn.classList.toggle('is-active', on);
+        btn.setAttribute('aria-checked', on ? 'true' : 'false');
+      });
+      if (regionNote) {
+        regionNote.textContent = VMA_REGION_NOTES[key] || VMA_REGION_NOTES.world;
+      }
     }
 
-    function clamp(v, min, max) {
-      return Math.max(min, Math.min(max, v));
+    function bindChipGroup(wrap, attr, onPick) {
+      if (!wrap) return;
+      wrap.addEventListener('click', (ev) => {
+        const btn = ev.target.closest('.vma-strategy__chip');
+        if (!btn || !wrap.contains(btn)) return;
+        const raw = btn.getAttribute(attr);
+        if (raw == null) return;
+        wrap.querySelectorAll('.vma-strategy__chip').forEach((chip) => {
+          const on = chip === btn;
+          chip.classList.toggle('is-active', on);
+          chip.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        onPick(raw);
+        compute();
+      });
     }
+
+    regionWrap?.addEventListener('click', (ev) => {
+      const btn = ev.target.closest('[data-vma-strategy-region]');
+      if (!btn) return;
+      setRegion(btn.getAttribute('data-vma-strategy-region') || 'world');
+    });
+
+    bindChipGroup(rateWrap, 'data-vma-strategy-rate', (raw) => {
+      state.monthly = parseFloat(raw) || 100;
+    });
+
+    bindChipGroup(yearsWrap, 'data-vma-strategy-years', (raw) => {
+      state.years = parseInt(raw, 10) || 10;
+    });
+
+    bindChipGroup(returnWrap, 'data-vma-strategy-return', (raw) => {
+      state.returnPct = parseFloat(raw) || 6;
+    });
 
     function compute() {
-      const start = Math.max(0, readNum(inStart, 0));
-      let rate = Math.max(0, readNum(inRate, 0));
-      const years = clamp(Math.round(readNum(inYears, 25)), 1, 50);
-      const r = clamp(readNum(inReturn, 5), 0, 12) / 100;
-      const dyn = clamp(readNum(inDyn, 0), 0, 6) / 100;
-
-      let kapital = start;
-      let paid = start;
-      for (let y = 0; y < years; y++) {
-        const annualSavings = rate * 12;
-        kapital = (kapital + annualSavings) * (1 + r);
-        paid += annualSavings;
-        rate = rate * (1 + dyn);
-      }
-      const finalValue = kapital;
-      const gain = finalValue - paid;
+      const monthly = Math.max(0, state.monthly);
+      const years = Math.max(1, state.years);
+      const r = Math.max(0, state.returnPct) / 100;
+      const months = years * 12;
+      const paid = monthly * months;
+      const finalValue = futureValueMonthly(monthly, r, years);
+      const gain = Math.max(0, finalValue - paid);
 
       animateNumber(outPaid, last.paid, paid, 700, formatMoney);
       animateNumber(outFinal, last.final, finalValue, 900, formatMoney);
@@ -367,15 +424,17 @@
 
       const maxVal = Math.max(finalValue, 1);
       if (barPaid) barPaid.style.width = `${(paid / maxVal) * 100}%`;
-      if (barGain) barGain.style.width = `${(finalValue / maxVal) * 100}%`;
+      if (barFinal) barFinal.style.width = `${(finalValue / maxVal) * 100}%`;
+
+      if (outSummary) {
+        outSummary.textContent =
+          `Bei ${formatMoney(monthly)} monatlich über ${years} Jahre und ${state.returnPct} % p. a. könnten rund ${formatMoney(finalValue)} möglich sein – je nach Markt deutlich mehr oder weniger.`;
+      }
 
       last = { paid, final: finalValue, gain };
     }
 
-    [inStart, inRate, inYears, inReturn, inDyn].forEach((el) => {
-      el?.addEventListener('input', compute);
-      el?.addEventListener('change', compute);
-    });
+    setRegion(state.region);
 
     if ('IntersectionObserver' in window && !reduceMotion) {
       const io = new IntersectionObserver(
@@ -572,7 +631,7 @@
      ------------------------------------------------------------ */
   document.addEventListener('DOMContentLoaded', () => {
     initVmaCheck();
-    initVmaSavings();
+    initVmaStrategy();
     initVmaWaiting();
     initVmaGrowth();
     initVmaHeroParallax();
