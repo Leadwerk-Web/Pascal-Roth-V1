@@ -131,7 +131,7 @@
       return {
         title: 'Starker Klarheitsgrad – viele Bausteine sind schon sortiert',
         body:
-          '<strong>Orientierung:</strong> Du hast viele Themen bereits auf dem Schirm – das ist eine echte Stärke in der Selbständigkeit.<br><br><strong>Nächster Schritt:</strong> Jetzt geht es oft darum, Überlappungen zu prüfen und Prioritäten feinzujustieren, statt alles neu zu erfinden.<br><br><strong>Einordnung:</strong> Selbst mit gutem Überblick lohnt sich oft ein unabhängiger Sparring – ich begleite dich gern, wenn sich dein Business weiterentwickelt.',
+          '<strong>Orientierung:</strong> Du hast viele Themen bereits auf dem Schirm – das ist eine echte Stärke in der Selbständigkeit.<br><br><strong>Nächster Schritt:</strong> Jetzt geht es oft darum, Überlappungen zu prüfen und Prioritäten feinzujustieren, statt alles neu zu erfinden.<br><br><strong>Einordnung:</strong> Selbst mit gutem Überblick lohnt sich oft persönlicher Sparring – ich begleite dich gern, wenn sich dein Business weiterentwickelt.',
       };
     }
     if (pct >= 60) {

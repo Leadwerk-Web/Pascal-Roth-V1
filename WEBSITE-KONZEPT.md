@@ -26,9 +26,9 @@
 
 ### Markenverständnis in 8 Punkten
 
-1. **Pascal Roth ist kein Verkäufer.** Er ist ein unabhängiger Begleiter, der Menschen hilft, ihre finanzielle Situation zu verstehen – ohne Druck, ohne Fachsprache, ohne versteckte Agenda.
+1. **Pascal Roth ist kein Verkäufer.** Er ist ein verlässlicher Begleiter, der Menschen hilft, ihre finanzielle Situation zu verstehen – ohne Druck, ohne Fachsprache, ohne versteckte Agenda.
 
-2. **Unabhängigkeit ist das Kernversprechen.** Keine Bindung an einzelne Versicherer oder Produktgeber. Pascal vergleicht, filtert und empfiehlt – im Interesse seiner Kunden.
+2. **Ehrliche Beratung ist das Kernversprechen.** Pascal vergleicht, filtert und empfiehlt – im Interesse seiner Kunden, ohne Verkaufsdruck.
 
 3. **Lebensphasen statt Produktkataloge.** Die Website denkt nicht in Versicherungssparten, sondern in Lebenssituationen: Wer bist du? Wo stehst du? Was brauchst du jetzt?
 
@@ -94,7 +94,7 @@
 
 ### Positionierungssatz (intern)
 
-> Pascal Roth ist der unabhängige Finanzberater in Karlsruhe, der Menschen in verschiedenen Lebensphasen dabei hilft, ihre Finanzen zu verstehen, sich richtig abzusichern und sinnvoll vorzusorgen – durch strukturierte, verständliche und druckfreie Beratung.
+> Pascal Roth ist der Finanzberater in Karlsruhe, der Menschen in verschiedenen Lebensphasen dabei hilft, ihre Finanzen zu verstehen, sich richtig abzusichern und sinnvoll vorzusorgen – durch strukturierte, verständliche und druckfreie Beratung.
 
 ### Tagline-Varianten (extern einsetzbar)
 
@@ -109,7 +109,7 @@
 |-------|-----------|
 | **Headline-Ebene** | Klarheit, Orientierung, Relevanz – „Du bist hier richtig" |
 | **Subheadline** | Konkretisierung: Was genau? Für wen? Wie? |
-| **Trust-Ebene** | Unabhängig, 15+ Jahre, verständlich, kein Druck |
+| **Trust-Ebene** | Persönlich, 15+ Jahre, verständlich, kein Druck |
 | **Nutzen-Ebene** | Was hat der Nutzer konkret davon? (Sicherheit, Struktur, Überblick) |
 | **CTA-Ebene** | Niedrigschwellig, einladend – „Klarheit gewinnen", nicht „Jetzt kaufen" |
 
@@ -310,13 +310,13 @@ space-32:  128px
 ---
 
 **Overline / Eyebrow:**
-> Unabhängige Finanzberatung in Karlsruhe
+> Finanzberatung in Karlsruhe
 
 **H1 / Headline:**
 > Finanzberatung, die Klarheit schafft – nicht Druck.
 
 **Subheadline (Body Large):**
-> Ob Berufsstart, Familiengründung oder späte Vorsorge: Ich helfe dir, deine Finanzen zu verstehen, dich richtig abzusichern und sinnvoll aufzubauen. Persönlich, unabhängig und ohne Verkaufsgespräch.
+> Ob Berufsstart, Familiengründung oder späte Vorsorge: Ich helfe dir, deine Finanzen zu verstehen, dich richtig abzusichern und sinnvoll aufzubauen. Persönlich und ohne Verkaufsgespräch.
 
 **CTA-Bereich:**
 
@@ -328,7 +328,7 @@ space-32:  128px
 **Trust-Badges (unter den CTAs, horizontal):**
 
 ```
-[✓] Unabhängig beraten   [✓] Über 15 Jahre Erfahrung   [✓] Kostenlose Erstberatung
+[✓] Persönlich beraten   [✓] Über 15 Jahre Erfahrung   [✓] Kostenlose Erstberatung
 ```
 
 Kleine Kapselform-Badges in `#F8F9FC` mit `border-card`, Schrift in `#5A6B7C`, Häkchen in `#2BB6A8`.
@@ -469,10 +469,10 @@ Kleine Kapselform-Badges in `#F8F9FC` mit `border-card`, Schrift in `#5A6B7C`, H
 > Über mich
 
 **H2:**
-> Unabhängig beraten. Verständlich erklärt. Menschlich begleitet.
+> Persönlich beraten. Verständlich erklärt. Menschlich begleitet.
 
 **Body Text:**
-> Ich bin Pascal Roth – unabhängiger Finanzberater aus Karlsruhe. Seit über 15 Jahren begleite ich Menschen dabei, finanzielle Entscheidungen zu treffen, die sie wirklich verstehen.
+> Ich bin Pascal Roth – Finanzberater aus Karlsruhe. Seit über 15 Jahren begleite ich Menschen dabei, finanzielle Entscheidungen zu treffen, die sie wirklich verstehen.
 >
 > Was mich antreibt: Ich möchte, dass du nach unserem Gespräch nicht nur eine Police in der Hand hast, sondern weißt, warum du sie hast. Ich möchte, dass du dich sicher fühlst – nicht, weil ich dich überredet habe, sondern weil du die Zusammenhänge verstehst.
 >
@@ -482,7 +482,7 @@ Kleine Kapselform-Badges in `#F8F9FC` mit `border-card`, Schrift in `#5A6B7C`, H
 
 | Icon | Punkt | Erklärung |
 |------|-------|-----------|
-| 🔓 | Unabhängig | Nicht an Versicherer gebunden – ich vergleiche für dich |
+| 🔓 | Situationsbezogen | Dein Bedarf steht im Mittelpunkt – nicht die Produktliste |
 | 📅 | 15+ Jahre | Erfahrung, die Sicherheit gibt |
 | 💬 | Verständlich | Keine Fachbegriffe ohne Erklärung |
 | 🤝 | Ohne Druck | Du entscheidest – in deinem Tempo |
@@ -610,8 +610,8 @@ Kleine Kapselform-Badges in `#F8F9FC` mit `border-card`, Schrift in `#5A6B7C`, H
 **Frage 1: Ist das Erstgespräch wirklich kostenlos?**
 > Ja, komplett. Im Erstgespräch geht es nur darum, dich und deine Situation kennenzulernen. Kein Verkauf, kein Vertrag, kein Haken. Wir schauen gemeinsam, ob und wie ich dir helfen kann.
 
-**Frage 2: Was bedeutet „unabhängig"?**
-> Ich bin an keinen Versicherer oder Produktgeber gebunden. Das heißt: Ich kann den gesamten Markt für dich vergleichen und empfehle nur, was wirklich zu deiner Situation passt – nicht das, was mir die höchste Provision bringt.
+**Frage 2: Wie arbeitest du?**
+> Ich schaue mir deine Situation an, vergleiche passende Optionen und erkläre dir verständlich, was Sinn macht – und was nicht. Du entscheidest in deinem Tempo.
 
 **Frage 3: Ich habe keine Ahnung von Finanzen. Ist das schlimm?**
 > Im Gegenteil – das ist der häufigste Grund, warum Menschen zu mir kommen. Mein Job ist es, Finanzthemen so zu erklären, dass du sie wirklich verstehst. Ohne Fachsprache, ohne das Gefühl, dumm dazustehen.
@@ -710,7 +710,7 @@ Formular mit folgenden Feldern:
 | Spalte 1 | Spalte 2 | Spalte 3 | Spalte 4 |
 |----------|----------|----------|----------|
 | **Pascal Roth** | **Leistungen** | **Für dich** | **Kontakt** |
-| Unabhängige Finanzberatung Karlsruhe | Absicherung | Berufseinsteiger | 0800 525 6996 |
+| Finanzberatung Karlsruhe | Absicherung | Berufseinsteiger | 0800 525 6996 |
 | Tagline | Vorsorge | Junge Familien | pascal.roth@allfinanz.ag |
 | | Vermögensaufbau | Spätstarter 50+ | Karlsruhe |
 | | | | |
@@ -761,7 +761,7 @@ Formular mit folgenden Feldern:
      - Für wen: Angestellte über der Beitragsbemessungsgrenze, Selbstständige.
 
 4. **Wie Pascal berät**
-   - Betonung: unabhängiger Vergleich, keine Bindung an Versicherer
+   - Betonung: breiter Marktvergleich, Empfehlungen passend zur Situation
    - „Ich zeige dir auch, was du NICHT brauchst."
 
 5. **FAQ spezifisch zu Absicherung**
@@ -957,11 +957,11 @@ Formular mit folgenden Feldern:
 
 2. **Geschichte / Werdegang**
    - „Über 15 Jahre in der Finanzbranche. Aber nicht 15 Jahre lang das Gleiche. Ich habe gelernt, dass gute Beratung nicht beim Produkt anfängt – sondern beim Zuhören."
-   - „Warum unabhängig? Weil ich nur so empfehlen kann, was wirklich zu dir passt."
+   - „Warum situationsbezogen? Weil gute Beratung bei deiner Lebenssituation anfängt – nicht beim Produkt."
    - „Warum Karlsruhe? Weil es mein Zuhause ist. Und weil persönliche Nähe Vertrauen schafft."
 
 3. **Werte**
-   - Unabhängigkeit · Verständlichkeit · Ehrlichkeit · Kein Verkaufsdruck · Ganzheitlich denken
+   - Situationsbezogen · Verständlichkeit · Ehrlichkeit · Kein Verkaufsdruck · Ganzheitlich denken
 
 4. **Wie Pascal arbeitet**
    - Digital und vor Ort
@@ -1015,7 +1015,7 @@ Formular mit folgenden Feldern:
 
 **Allgemein:**
 - Ist das Erstgespräch wirklich kostenlos? → Ja, ohne Haken.
-- Was bedeutet „unabhängig"? → Nicht an Versicherer gebunden.
+- Wie arbeitest du? → Situation verstehen, Optionen vergleichen, verständlich erklären.
 - Muss ich etwas abschließen? → Nein, nie.
 - Wie läuft die Beratung ab? → Kennenlernen, Analyse, Beratung, Umsetzung.
 - Online oder vor Ort? → Beides möglich.
@@ -1215,16 +1215,16 @@ Solange keine echten Kundenstimmen vorliegen:
 
 | Seite | Title | Meta Description |
 |-------|-------|-----------------|
-| **Startseite** | Finanzberatung Karlsruhe – Pascal Roth · Unabhängig & Persönlich | Unabhängige Finanzberatung in Karlsruhe. Absicherung, Vorsorge & Vermögensaufbau – verständlich erklärt, ohne Verkaufsdruck. Jetzt Erstgespräch vereinbaren. |
-| **Absicherung** | Absicherung & Versicherungen – Pascal Roth, Karlsruhe | BU, Haftpflicht, Risiko-Leben & Krankenversicherung: Finde heraus, welche Absicherung du wirklich brauchst. Unabhängige Beratung in Karlsruhe. |
+| **Startseite** | Finanzberatung Karlsruhe – Pascal Roth · Persönlich & Verständlich | Finanzberatung in Karlsruhe. Absicherung, Vorsorge & Vermögensaufbau – verständlich erklärt, ohne Verkaufsdruck. Jetzt Erstgespräch vereinbaren. |
+| **Absicherung** | Absicherung & Versicherungen – Pascal Roth, Karlsruhe | BU, Haftpflicht, Risiko-Leben & Krankenversicherung: Finde heraus, welche Absicherung du wirklich brauchst. Finanzberatung in Karlsruhe. |
 | **Vorsorge** | Altersvorsorge & Rürup – Pascal Roth, Karlsruhe | Altersvorsorge verständlich erklärt. Rürup, Kinderabsicherung & mehr – für jede Lebensphase. Jetzt kostenlose Beratung in Karlsruhe. |
-| **Vermögensaufbau** | Vermögensaufbau & Geldanlage – Pascal Roth, Karlsruhe | Fonds, Sparpläne & nachhaltige Geldanlagen: Vermögen aufbauen ab 50 € im Monat. Unabhängige Beratung in Karlsruhe. |
+| **Vermögensaufbau** | Vermögensaufbau & Geldanlage – Pascal Roth, Karlsruhe | Fonds, Sparpläne & nachhaltige Geldanlagen: Vermögen aufbauen ab 50 € im Monat. Finanzberatung in Karlsruhe. |
 | **Berufseinsteiger** | Finanzberatung für Berufseinsteiger – Pascal Roth, Karlsruhe | BU, Haftpflicht & erster Sparplan: Was du als Berufseinsteiger wirklich brauchst. Einfach erklärt, ohne Druck. |
 | **Junge Familien** | Familienabsicherung – Pascal Roth, Karlsruhe | Familie absichern in Karlsruhe: Risiko-Leben, Kindervorsorge & Vermögensaufbau. Kostenlose Erstberatung vereinbaren. |
 | **Spätstarter** | Altersvorsorge ab 50 – Pascal Roth, Karlsruhe | Spät dran mit der Vorsorge? Kein Problem. Ich zeige dir, was jetzt noch möglich ist. Ohne Vorwürfe, mit klarem Plan. |
-| **Über Pascal** | Über Pascal Roth – Unabhängiger Finanzberater Karlsruhe | 15+ Jahre Erfahrung, unabhängig, verständlich: Lerne Pascal Roth kennen – deinen Finanzberater in Karlsruhe. |
+| **Über Pascal** | Über Pascal Roth – Finanzberater Karlsruhe | 15+ Jahre Erfahrung, verständlich, persönlich: Lerne Pascal Roth kennen – deinen Finanzberater in Karlsruhe. |
 | **Kontakt** | Termin vereinbaren – Pascal Roth, Karlsruhe | Kostenloses Erstgespräch buchen. Online oder persönlich in Karlsruhe. Unverbindlich, ohne Verkaufsdruck. |
-| **FAQ** | Häufige Fragen zur Finanzberatung – Pascal Roth | Antworten auf die häufigsten Fragen zu Versicherungen, Vorsorge, Kosten und Ablauf einer unabhängigen Finanzberatung. |
+| **FAQ** | Häufige Fragen zur Finanzberatung – Pascal Roth | Antworten auf die häufigsten Fragen zu Versicherungen, Vorsorge, Kosten und Ablauf einer Finanzberatung. |
 
 ### Accessibility
 
@@ -1255,7 +1255,7 @@ Solange keine echten Kundenstimmen vorliegen:
     <div class="hero__content">
 
       <span class="hero__eyebrow">
-        Unabhängige Finanzberatung in Karlsruhe
+        Finanzberatung in Karlsruhe
       </span>
 
       <h1 class="hero__headline">
@@ -1266,7 +1266,7 @@ Solange keine echten Kundenstimmen vorliegen:
       <p class="hero__subheadline">
         Ob Berufsstart, Familiengründung oder späte Vorsorge: Ich helfe dir,
         deine Finanzen zu verstehen, dich richtig abzusichern und sinnvoll
-        aufzubauen. Persönlich, unabhängig und ohne Verkaufsgespräch.
+        aufzubauen. Persönlich und ohne Verkaufsgespräch.
       </p>
 
       <div class="hero__cta-group">
@@ -1283,7 +1283,7 @@ Solange keine echten Kundenstimmen vorliegen:
       <div class="hero__trust-badges">
         <div class="trust-badge">
           <svg class="trust-badge__icon" aria-hidden="true"><!-- Check --></svg>
-          <span>Unabhängig beraten</span>
+          <span>Persönlich beraten</span>
         </div>
         <div class="trust-badge">
           <svg class="trust-badge__icon" aria-hidden="true"><!-- Check --></svg>
@@ -1301,7 +1301,7 @@ Solange keine echten Kundenstimmen vorliegen:
       <div class="hero__image-wrapper">
         <img
           src="/images/pascal-roth-portrait.webp"
-          alt="Pascal Roth – Unabhängiger Finanzberater in Karlsruhe"
+          alt="Pascal Roth – Finanzberater in Karlsruhe"
           width="560"
           height="640"
           loading="eager"
@@ -1325,7 +1325,7 @@ Solange keine echten Kundenstimmen vorliegen:
       {/* Content */}
       <div className="space-y-6">
         <span className="inline-block text-[13px] font-semibold uppercase tracking-[0.08em] text-[#2BB6A8]">
-          Unabhängige Finanzberatung in Karlsruhe
+          Finanzberatung in Karlsruhe
         </span>
 
         <h1 className="text-[32px] font-bold leading-[1.1] tracking-[-0.02em] text-[#1A2B3C] md:text-[56px]">
@@ -1336,7 +1336,7 @@ Solange keine echten Kundenstimmen vorliegen:
         <p className="max-w-[540px] text-[18px] leading-[1.6] text-[#5A6B7C] md:text-[20px]">
           Ob Berufsstart, Familiengründung oder späte Vorsorge: Ich helfe dir,
           deine Finanzen zu verstehen, dich richtig abzusichern und sinnvoll
-          aufzubauen. Persönlich, unabhängig und ohne Verkaufsgespräch.
+          aufzubauen. Persönlich und ohne Verkaufsgespräch.
         </p>
 
         <div className="flex flex-wrap gap-4 pt-2">
@@ -1351,7 +1351,7 @@ Solange keine echten Kundenstimmen vorliegen:
         </div>
 
         <div className="flex flex-wrap gap-4 pt-4">
-          {['Unabhängig beraten', 'Über 15 Jahre Erfahrung', 'Kostenlose Erstberatung'].map((badge) => (
+          {['Persönlich beraten', 'Über 15 Jahre Erfahrung', 'Kostenlose Erstberatung'].map((badge) => (
             <div key={badge}
                  className="flex items-center gap-2 rounded-full bg-[#F8F9FC] px-4 py-2 text-[13px] font-medium text-[#5A6B7C]"
                  style={{ border: '1px solid rgba(2,90,167,0.08)' }}>
@@ -1366,7 +1366,7 @@ Solange keine echten Kundenstimmen vorliegen:
       <div className="relative hidden lg:block">
         <div className="relative z-10 overflow-hidden rounded-3xl">
           <img src="/images/pascal-roth-portrait.webp"
-               alt="Pascal Roth – Unabhängiger Finanzberater in Karlsruhe"
+               alt="Pascal Roth – Finanzberater in Karlsruhe"
                className="h-auto w-full object-cover" />
         </div>
         <div className="absolute -right-8 -top-8 h-[120%] w-[120%] rounded-full bg-[#93B5E4] opacity-10 blur-3xl"
@@ -1384,7 +1384,7 @@ Solange keine echten Kundenstimmen vorliegen:
 
 | Aspekt | Umsetzung |
 |--------|-----------|
-| **Positionierung** | Unabhängig, persönlich, verständlich, druckfrei |
+| **Positionierung** | Persönlich, situationsbezogen, verständlich, druckfrei |
 | **Tonalität** | Klar, warm, kompetent – wie ein gutes Gespräch |
 | **Zielgruppen** | Berufseinsteiger, junge Familien, Spätstarter 50+ |
 | **Drei Säulen** | Absicherung · Vorsorge · Vermögensaufbau |

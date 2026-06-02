@@ -301,7 +301,7 @@
 .fam-orbit__bubbles .fam-bubble:nth-child(5) { --d: 3.2s; --dur: 10s; --anim: fam-drift-b; }
 .fam-orbit__bubbles .fam-bubble:nth-child(6) { --d: 1.8s; --dur: 13s; --anim: fam-drift-c; }
 
-/* Leicht versetzt (Margin / justify-self – unabhängig von der Drift-Animation auf translate) */
+/* Leicht versetzt (Margin / justify-self – getrennt von der Drift-Animation auf translate) */
 .fam-orbit__bubbles .fam-bubble:nth-child(odd) {
   margin-inline: clamp(0px, 3vw, 28px) auto;
   margin-block: 0;

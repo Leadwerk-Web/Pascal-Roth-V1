@@ -114,7 +114,7 @@
       ],
     },
     {
-      text: 'Wurde deine Geldanlage schon einmal unabhängig geprüft?',
+      text: 'Wurde deine Geldanlage schon einmal systematisch geprüft?',
       options: [
         { label: 'Ja, kürzlich', score: 10 },
         { label: 'Vor längerer Zeit', score: 5 },
@@ -128,7 +128,7 @@
       return {
         title: 'Schon gut strukturiert – starke Basis',
         body:
-          '<strong>Orientierung:</strong> Du hast viele Bausteine deines Vermögensaufbaus bereits sortiert. Das ist eine gute Ausgangslage für die nächsten Jahre.<br><br><strong>Nächster Schritt:</strong> Jetzt geht es oft um Feinjustierung – Kosten, Risiko-Mix und Steuerthemen sauber zusammenführen.<br><br><strong>Einordnung:</strong> Eine unabhängige Zweitmeinung kann helfen, die Strategie ruhig weiterzuentwickeln, ohne alles umzustellen.',
+          '<strong>Orientierung:</strong> Du hast viele Bausteine deines Vermögensaufbaus bereits sortiert. Das ist eine gute Ausgangslage für die nächsten Jahre.<br><br><strong>Nächster Schritt:</strong> Jetzt geht es oft um Feinjustierung – Kosten, Risiko-Mix und Steuerthemen sauber zusammenführen.<br><br><strong>Einordnung:</strong> Eine Zweitmeinung kann helfen, die Strategie ruhig weiterzuentwickeln, ohne alles umzustellen.',
       };
     }
     if (pct >= 50) {
