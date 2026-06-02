@@ -1449,114 +1449,170 @@ body {
   border-top: 1px solid var(--border-subtle);
 }
 
-/* --- Editorial Bridge --- */
+/* --- Editorial Bridge: „Der andere Einstieg“ --- */
 .bridge {
   position: relative;
-  background: #FFFFFF;
+  background: linear-gradient(180deg, #fff 0%, var(--bg-warm) 100%);
   overflow: hidden;
 }
 
 .section.bridge {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: clamp(72px, 10vw, 108px);
+  padding-bottom: clamp(72px, 10vw, 108px);
 }
 
-.bridge__inner {
+.bridge__layout {
   display: grid;
   grid-template-columns: 1fr;
   gap: 28px;
   align-items: start;
 }
 
-@media (min-width: 880px) {
-  .bridge__inner {
-    grid-template-columns: 1.05fr 1fr;
-    gap: 48px;
-    align-items: start;
+@media (min-width: 900px) {
+  .bridge__layout {
+    grid-template-columns: minmax(480px, 0.62fr) minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: clamp(40px, 5vw, 64px);
+    row-gap: 0;
+  }
+
+  .bridge__overline {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .bridge__aside {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .bridge__main {
+    grid-column: 2;
+    grid-row: 2;
   }
 }
 
-.bridge__lead .overline {
-  margin-bottom: 16px;
-}
-
-.bridge .heading-section {
-  margin: 0;
-}
-
-.bridge__body {
-  position: relative;
-  padding-left: 0;
-}
-
-.bridge__text {
-  font-size: clamp(16px, 1.6vw, 18px);
-  line-height: 1.7;
-  color: var(--text-secondary);
-  margin: 0 0 28px;
-  max-width: 52ch;
-}
-
-.bridge__list {
-  list-style: none;
-  margin: 0 0 32px;
-  padding: 0;
-  display: grid;
-  gap: 14px;
-}
-
-.bridge__list li {
+.bridge__aside {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-start;
-  gap: 16px;
+  gap: 0;
+  align-self: start;
 }
 
-.bridge__list-icon {
-  flex-shrink: 0;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: rgba(3, 90, 167, 0.12);
-  color: var(--primary);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
+@media (min-width: 900px) {
+  .bridge__aside {
+    padding-right: clamp(16px, 2vw, 28px);
+  }
 }
 
-.bridge__list-icon svg {
-  width: 15px;
-  height: 15px;
-  stroke-width: 2.6;
-}
-
-.bridge__list-text {
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-.bridge__list-text strong {
+.bridge__overline {
   display: block;
-  font-weight: 700;
-  font-size: clamp(16px, 1.35vw, 18px);
-  letter-spacing: -0.02em;
-  line-height: 1.25;
-  color: var(--primary);
+  margin-bottom: 14px;
 }
 
-.bridge__list-text span {
-  display: block;
-  color: var(--text-secondary);
-  margin-top: 5px;
-  font-size: 14px;
-  line-height: 1.55;
+.bridge__title {
+  margin: 0 0 28px;
+  font-size: clamp(30px, 3.6vw, 44px);
+  line-height: 1.12;
+}
+
+.bridge__title em {
+  font-style: normal;
+  color: var(--primary);
 }
 
 .bridge__ctas {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   gap: 16px 24px;
+  margin-top: 4px;
+}
+
+.bridge__main {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-self: start;
+}
+
+.bridge__text {
+  font-size: clamp(17px, 1.65vw, 19px);
+  line-height: 1.72;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 58ch;
+}
+
+.bridge__cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .bridge__cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+}
+
+.bridge__card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px 18px 22px;
+  background: var(--bg-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.bridge__card:hover {
+  border-color: rgba(43, 182, 168, 0.35);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.bridge__card-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(3, 90, 167, 0.1), rgba(43, 182, 168, 0.14));
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bridge__card-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.bridge__card-copy strong {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.bridge__card-copy p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-secondary);
 }
 
 /* --- Lebensphasen: asymmetrisches Bento-Grid (ohne Bilder) --- */

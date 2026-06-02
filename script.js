@@ -277,31 +277,55 @@ function initStickyMobileCTA() {
   }, { passive: true });
 }
 
-/* --- Contact Form Basic Handling --- */
+/* --- Contact Form --- */
 function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
+  const TO_EMAIL = 'pascal.roth@allfinanz.ag';
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    const fd = new FormData(form);
+    const name = String(fd.get('name') || '').trim();
+    const email = String(fd.get('email') || '').trim();
+    const phone = String(fd.get('phone') || '').trim();
+    const topic = String(fd.get('topic') || '').trim();
+    const message = String(fd.get('message') || '').trim();
+
+    const subject = topic ? `Kontaktanfrage: ${topic}` : 'Kontaktanfrage über pascal-roth.de';
+    const bodyLines = [
+      `Name: ${name}`,
+      `E-Mail: ${email}`,
+      phone ? `Telefon: ${phone}` : null,
+      topic ? `Thema: ${topic}` : null,
+      '',
+      message,
+    ].filter(Boolean);
+
+    const mailto = `mailto:${TO_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+
     const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'E-Mail wird geöffnet …';
+    }
 
-    submitBtn.textContent = 'Wird gesendet...';
-    submitBtn.disabled = true;
+    window.location.href = mailto;
 
-    setTimeout(() => {
-      submitBtn.textContent = 'Nachricht gesendet!';
-      submitBtn.style.background = '#22C55E';
-
-      setTimeout(() => {
-        submitBtn.textContent = originalText;
-        submitBtn.style.background = '';
+    window.setTimeout(() => {
+      form.classList.add('is-sent');
+      if (submitBtn) {
         submitBtn.disabled = false;
-        form.reset();
-      }, 3000);
-    }, 1200);
+        submitBtn.innerHTML = 'Nachricht senden <span aria-hidden="true">→</span>';
+      }
+    }, 600);
   });
 }
 
