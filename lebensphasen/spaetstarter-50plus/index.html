@@ -17,7 +17,7 @@
   <meta name="twitter:description" content="Mit 50+ den roten Faden finden: Rente, Rücklagen, Verträge – strukturiert und verständlich.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <link rel="icon" href="../../Fotos/cropped-Favicon.png" type="image/png">
   <link rel="stylesheet" href="../../styles.css">
   <link rel="stylesheet" href="page.css">
@@ -51,7 +51,6 @@
           <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <div class="nav-dropdown">
-          <a href="../../index.html#lebensphasen"><div><div>Alle Lebensphasen</div><span class="dropdown-desc">Auf der Startseite ansehen</span></div></a>
           <a href="../berufseinstieg/index.html"><div><div>Berufseinstieg</div><span class="dropdown-desc">Klarheit am Anfang</span></div></a>
           <a href="../junge-familie/index.html"><div><div>Junge Familie</div><span class="dropdown-desc">Verantwortung sortieren</span></div></a>
           <a href="../kinder/index.html"><div><div>Kinder</div><span class="dropdown-desc">Zukunft früh planen</span></div></a>
@@ -111,22 +110,30 @@
   </div>
 </section>
 
-<section id="sp50-relate" class="section vma-relate-section" aria-labelledby="sp50-relate-h2">
+<section id="sp50-relate" class="section sp50-relatable" aria-labelledby="sp50-relate-h2">
   <div class="container">
-    <header class="vma-section-intro reveal">
-      <span class="overline" style="display:block;margin-bottom:12px;">Wiedererkennen</span>
-      <h2 id="sp50-relate-h2" class="heading-section">Kommt dir das bekannt vor?</h2>
-      <p>Viele Themen ab 50 sind normal – und gut lösbar, wenn man sie einmal strukturiert anspricht. Hier ein paar typische Gedanken.</p>
-    </header>
-    <div class="vma-relate">
-      <article class="vma-relate__card reveal reveal-delay-1"><span class="vma-relate__quote-mark" aria-hidden="true">&ldquo;</span><p class="vma-relate__text">Ich habe Renteninformation &amp; Konten – aber kein Gesamtbild.</p></article>
-      <article class="vma-relate__card reveal reveal-delay-2"><span class="vma-relate__quote-mark" aria-hidden="true">&ldquo;</span><p class="vma-relate__text">Ist es zu spät, noch etwas zu verbessern?</p></article>
-      <article class="vma-relate__card reveal reveal-delay-3"><span class="vma-relate__quote-mark" aria-hidden="true">&ldquo;</span><p class="vma-relate__text">Ich will nicht riskieren – aber inflationsbedingt tut sich wenig.</p></article>
-      <article class="vma-relate__card reveal reveal-delay-1"><span class="vma-relate__quote-mark" aria-hidden="true">&ldquo;</span><p class="vma-relate__text">Verträge aus früheren Jahren – weiß nicht, was noch passt.</p></article>
-      <article class="vma-relate__card reveal reveal-delay-2"><span class="vma-relate__quote-mark" aria-hidden="true">&ldquo;</span><p class="vma-relate__text">Wie viel kann ich mir im Ruhestand leisten – realistisch?</p></article>
-      <article class="vma-relate__card reveal reveal-delay-3"><span class="vma-relate__quote-mark" aria-hidden="true">&ldquo;</span><p class="vma-relate__text">Wann soll ich Kapital lieber ansparen, wann nutzen?</p></article>
-      <article class="vma-relate__card reveal reveal-delay-1"><span class="vma-relate__quote-mark" aria-hidden="true">&ldquo;</span><p class="vma-relate__text">Pflege, Familie, Immobilie – ich komme nicht nach.</p></article>
-      <article class="vma-relate__card reveal reveal-delay-2"><span class="vma-relate__quote-mark" aria-hidden="true">&ldquo;</span><p class="vma-relate__text">Ich brauche eine zweite Meinung – nicht den nächsten Verkauf.</p></article>
+    <div class="sp50-relatable__layout">
+      <header class="sp50-relatable__intro reveal">
+        <span class="overline sp50-relatable__eyebrow">Wiedererkennen</span>
+        <h2 id="sp50-relate-h2" class="heading-section sp50-relatable__title">Kommt dir das bekannt vor?</h2>
+        <p class="sp50-relatable__lede">Rentenlücke, Kapital, Verträge und Ruhe im Kopf – oft gleichzeitig, selten im Gesamtbild. Die Wolke fasst zusammen, woran viele ab 50 denken.</p>
+        <ul class="sp50-relatable__tags" role="list" aria-label="Themen, die mitschwingen">
+          <li><span aria-hidden="true">·</span>Rentenlücke</li>
+          <li><span aria-hidden="true">·</span>Klarheit</li>
+          <li><span aria-hidden="true">·</span>Ruhestand</li>
+        </ul>
+        <div class="sp50-relatable__cta">
+          <a href="#sp50-check" class="btn-primary">Spätstarter-Klarheitscheck <span aria-hidden="true">→</span></a>
+        </div>
+      </header>
+      <div class="sp50-relatable__visual reveal reveal-delay-1">
+        <!-- Themenwolke: drei feste Farben (#02254a, #035aa7, #93b5e4), zufaellig pro Wort -->
+        <figure class="sp50-wordcloud" data-sp50-wordcloud aria-label="Themenwolke">
+          <div class="sp50-wordcloud__inner">
+            <svg id="sp50-wordcloud-svg" class="sp50-wordcloud__svg" focusable="false" aria-label="Themenwolke Spaetstarter 50plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 667.6 324.51"><defs><style>.cls-1{font-size:31px;}.cls-1,.cls-2,.cls-3,.cls-4,.cls-5{font-family:PlusJakartaSans-Light, 'Plus Jakarta Sans';font-variation-settings:'wght' 300;font-weight:300;}.cls-6{letter-spacing:-.05em;}.cls-7{letter-spacing:0em;}.cls-8{font-size:37px;}.cls-8,.cls-9,.cls-10,.cls-11{font-family:PlusJakartaSans-Bold, 'Plus Jakarta Sans';font-variation-settings:'wght' 700;font-weight:700;}.cls-12{letter-spacing:0em;}.cls-13{letter-spacing:-.05em;}.cls-2{font-size:22px;}.cls-14{letter-spacing:-.05em;}.cls-3{font-size:17px;}.cls-9,.cls-5,.cls-15,.cls-16{font-size:20px;}.cls-17{letter-spacing:-.03em;}.cls-18,.cls-4,.cls-19{font-size:30px;}.cls-18,.cls-20,.cls-16{font-family:PlusJakartaSans-SemiBold, 'Plus Jakarta Sans';font-variation-settings:'wght' 600;font-weight:600;}.cls-21{letter-spacing:-.05em;}.cls-22{letter-spacing:-.03em;}.cls-10{font-size:24px;}.cls-23{letter-spacing:0em;}.cls-24{letter-spacing:-.03em;}.cls-25{letter-spacing:-.03em;}.cls-26{font-size:35px;}.cls-26,.cls-15,.cls-19,.cls-27{font-family:PlusJakartaSans-Medium, 'Plus Jakarta Sans';font-variation-settings:'wght' 500;font-weight:500;}.cls-28{letter-spacing:-.02em;}.cls-29{letter-spacing:-.05em;}.cls-30{letter-spacing:-.02em;}.cls-20,.cls-27{font-size:25px;}.cls-31{letter-spacing:0em;}.cls-11{font-size:23px;}</style></defs><g class="wordcloud-word" data-wc-label="EINKOMMEN" role="group" aria-label="EINKOMMEN"><text class="cls-15" transform="translate(539.79 139.76)"><tspan x="0" y="0">EIN</tspan><tspan class="cls-25" x="32.16" y="0">K</tspan><tspan x="44.8" y="0">OMMEN</tspan></text></g><g class="wordcloud-word" data-wc-label="VORSORGE" role="group" aria-label="VORSORGE"><text class="cls-5" transform="translate(98.82 204.84)"><tspan class="cls-28" x="0" y="0">V</tspan><tspan x="12.66" y="0">ORSORGE</tspan></text></g><g class="wordcloud-word" data-wc-label="FAHRPLAN" role="group" aria-label="FAHRPLAN"><text class="cls-15" transform="translate(366.37 139.62) rotate(-90)"><tspan class="cls-29" x="0" y="0">F</tspan><tspan class="cls-12" x="10.66" y="0">AHRPLAN</tspan></text></g><g class="wordcloud-word" data-wc-label="PRIORITÄTEN" role="group" aria-label="PRIORITÄTEN"><text class="cls-2" transform="translate(472.12 139.62) rotate(-90)"><tspan x="0" y="0">PRIORI</tspan><tspan class="cls-13" x="72.71" y="0">TÄ</tspan><tspan class="cls-23" x="96.05" y="0">TEN</tspan></text></g><g class="wordcloud-word" data-wc-label="RUHESTAND" role="group" aria-label="RUHESTAND"><text class="cls-8" transform="translate(248.15 177.05)"><tspan x="0" y="0">RUHES</tspan><tspan class="cls-6" x="124.1" y="0">T</tspan><tspan x="142.3" y="0">AND</tspan></text></g><g class="wordcloud-word" data-wc-label="SICHERHEIT" role="group" aria-label="SICHERHEIT"><text class="cls-26" transform="translate(508.02 241.2) rotate(-90)"><tspan x="0" y="0">SICHERHEIT</tspan></text></g><g class="wordcloud-word" data-wc-label="RENTENLÜCKE" role="group" aria-label="RENTENLÜCKE"><text class="cls-18" transform="translate(1.16 152.77)"><tspan x="0" y="0">RENTEN</tspan><tspan class="cls-30" x="115.92" y="0">L</tspan><tspan x="131.49" y="0">ÜCKE</tspan></text></g><g class="wordcloud-word" data-wc-label="KLARHEIT" role="group" aria-label="KLARHEIT"><text class="cls-4" transform="translate(77.29 117.25)"><tspan x="0" y="0">KLARHEIT</tspan></text></g><g class="wordcloud-word" data-wc-label="DEPOT" role="group" aria-label="DEPOT"><text class="cls-27" transform="translate(212.24 296.55) rotate(-90)"><tspan x="0" y="0">DEP</tspan><tspan class="cls-24" x="49.8" y="0">O</tspan><tspan x="71" y="0">T</tspan></text></g><g class="wordcloud-word" data-wc-label="GESAMTBILD" role="group" aria-label="GESAMTBILD"><text class="cls-16" transform="translate(517.91 113.94)"><tspan x="0" y="0">GE</tspan><tspan class="cls-7" x="28.24" y="0">S</tspan><tspan x="41.08" y="0">AMTBILD</tspan></text></g><g class="wordcloud-word" data-wc-label="KAPITAL" role="group" aria-label="KAPITAL"><text class="cls-5" transform="translate(373.69 138)"><tspan x="0" y="0">KAPI</tspan><tspan class="cls-21" x="43.92" y="0">T</tspan><tspan x="53.18" y="0">AL</tspan></text></g><g class="wordcloud-word" data-wc-label="RENTE" role="group" aria-label="RENTE"><text class="cls-10" transform="translate(373.11 111.53)"><tspan x="0" y="0">RENTE</tspan></text></g><g class="wordcloud-word" data-wc-label="IMMOBILIE" role="group" aria-label="IMMOBILIE"><text class="cls-15" transform="translate(110.24 179.09)"><tspan x="0" y="0">IMMOBILIE</tspan></text></g><g class="wordcloud-word" data-wc-label="RISIKO" role="group" aria-label="RISIKO"><text class="cls-11" transform="translate(387.99 240.33)"><tspan x="0" y="0">RISI</tspan><tspan class="cls-22" x="42.92" y="0">K</tspan><tspan x="57.84" y="0">O</tspan></text></g><g class="wordcloud-word" data-wc-label="RUHE" role="group" aria-label="RUHE"><text class="cls-9" transform="translate(540.79 163.77)"><tspan x="0" y="0">RUHE</tspan></text></g><g class="wordcloud-word" data-wc-label="LIQUIDITÄT" role="group" aria-label="LIQUIDITÄT"><text class="cls-19" transform="translate(147.25 85.26)"><tspan x="0" y="0">LIQUIDI</tspan><tspan class="cls-14" x="109.56" y="0">TÄ</tspan><tspan class="cls-31" x="142.38" y="0">T</tspan></text></g><g class="wordcloud-word" data-wc-label="SZENARIEN" role="group" aria-label="SZENARIEN"><text class="cls-3" transform="translate(250.73 110.23)"><tspan x="0" y="0">SZENARIEN</tspan></text></g><g class="wordcloud-word" data-wc-label="PUFFER" role="group" aria-label="PUFFER"><text class="cls-20" transform="translate(249.87 137.17)"><tspan x="0" y="0">PUFFER</tspan></text></g><g class="wordcloud-word" data-wc-label="ORIENTIERUNG" role="group" aria-label="ORIENTIERUNG"><text class="cls-19" transform="translate(243.06 315.84) rotate(-90)"><tspan x="0" y="0">ORIENTIERUNG</tspan></text></g><g class="wordcloud-word" data-wc-label="STRUKTUR" role="group" aria-label="STRUKTUR"><text class="cls-5" transform="translate(379.25 322.2) rotate(-90)"><tspan x="0" y="0">STRUKTUR</tspan></text></g><g class="wordcloud-word" data-wc-label="VERTRÄGE" role="group" aria-label="VERTRÄGE"><text class="cls-5" transform="translate(254.27 238.23)"><tspan x="0" y="0">VE</tspan><tspan class="cls-28" x="25.32" y="0">R</tspan><tspan x="37.68" y="0">TR</tspan><tspan class="cls-17" x="60.7" y="0">Ä</tspan><tspan x="73.06" y="0">GE</tspan></text></g><g class="wordcloud-word" data-wc-label="ZEITHORIZONT" role="group" aria-label="ZEITHORIZONT"><text class="cls-1" transform="translate(249.56 213.03)"><tspan x="0" y="0">ZEITHORIZONT</tspan></text></g><g class="wordcloud-word" data-wc-label="KAPITALAUFBAU" role="group" aria-label="KAPITALAUFBAU"><text class="cls-5" transform="translate(532.99 278.45) rotate(-90)"><tspan x="0" y="0">KAPI</tspan><tspan class="cls-21" x="43.92" y="0">T</tspan><tspan x="53.18" y="0">AL</tspan><tspan class="cls-28" x="76.78" y="0">A</tspan><tspan x="89.34" y="0">UFB</tspan><tspan class="cls-28" x="128.86" y="0">A</tspan><tspan x="141.42" y="0">U</tspan></text></g></svg>
+          </div>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
@@ -528,7 +535,7 @@
           <p>Rente, Verträge, Kapital, Sorgen – wir sortieren, was für dich Priorität hat.</p>
         </div>
         <div class="strategy-timeline__node-col" aria-hidden="true"><span class="strategy-timeline__node-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span></div>
-        <div class="strategy-timeline__media-col"><figure class="strategy-timeline__figure"><span class="strategy-timeline__badge">Einordnung</span><img src="../../Fotos/consulting PH1.png" alt="Beratungsgespräch, Einordnung" width="640" height="480" loading="lazy" decoding="async"></figure></div>
+        <div class="strategy-timeline__media-col"><figure class="strategy-timeline__figure"><span class="strategy-timeline__badge">Einordnung</span><img src="../../Fotos/Auf%20Website%20genutzt/Schritte_Kennenlernen.jpg" alt="Beratungsgespräch, Einordnung" width="640" height="480" loading="lazy" decoding="async"></figure></div>
       </li>
       <li class="strategy-timeline__item strategy-timeline__item--reverse reveal reveal-delay-2">
         <div class="strategy-timeline__text-col">
@@ -537,7 +544,7 @@
           <p>Wir vergleichen Optionen verständlich – ohne vorgefertigte Produktlösungen.</p>
         </div>
         <div class="strategy-timeline__node-col" aria-hidden="true"><span class="strategy-timeline__node-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span></div>
-        <div class="strategy-timeline__media-col"><figure class="strategy-timeline__figure"><span class="strategy-timeline__badge">Strategie</span><img src="../../Fotos/Consulting PH2.png" alt="Beratungsgespräch, Strategie" width="640" height="480" loading="lazy" decoding="async"></figure></div>
+        <div class="strategy-timeline__media-col"><figure class="strategy-timeline__figure"><span class="strategy-timeline__badge">Strategie</span><img src="../../Fotos/Auf%20Website%20genutzt/Schritte_Erstgespraech.jpg" alt="Beratungsgespräch, Strategie" width="640" height="480" loading="lazy" decoding="async"></figure></div>
       </li>
       <li class="strategy-timeline__item reveal reveal-delay-3">
         <div class="strategy-timeline__text-col">
@@ -546,7 +553,7 @@
           <p>Du entscheidest, was umgesetzt wird – ich begleite bei Bedarf weiter.</p>
         </div>
         <div class="strategy-timeline__node-col" aria-hidden="true"><span class="strategy-timeline__node-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></div>
-        <div class="strategy-timeline__media-col"><figure class="strategy-timeline__figure"><span class="strategy-timeline__badge">Nächste Schritte</span><img src="../../Fotos/Consulting PH3.png" alt="Beratungsgespräch, nächste Schritte" width="640" height="480" loading="lazy" decoding="async"></figure></div>
+        <div class="strategy-timeline__media-col"><figure class="strategy-timeline__figure"><span class="strategy-timeline__badge">Nächste Schritte</span><img src="../../Fotos/Auf%20Website%20genutzt/Schritte_Konzept.jpg" alt="Beratungsgespräch, nächste Schritte" width="640" height="480" loading="lazy" decoding="async"></figure></div>
       </li>
     </ol>
   </div>
@@ -555,7 +562,7 @@
 <section class="section vma-pascal-section" aria-labelledby="sp50-pascal-h2">
   <div class="container">
     <div class="vma-pascal">
-      <figure class="vma-pascal__visual reveal"><img src="../../Fotos/Pascal Roth Über mich.png" alt="Pascal Roth, Finanzberater Karlsruhe" width="800" height="1000" loading="lazy" decoding="async"></figure>
+      <figure class="vma-pascal__visual reveal"><img src="../../Fotos/Auf%20Website%20genutzt/_X8A4207_prev.jpg" alt="Pascal Roth, Finanzberater Karlsruhe" width="800" height="1000" loading="lazy" decoding="async"></figure>
       <div class="vma-pascal__copy">
         <span class="overline reveal">Persönlich</span>
         <h2 id="sp50-pascal-h2" class="heading-section reveal reveal-delay-1">Ruhige Begleitung in einer lauten Phase</h2>

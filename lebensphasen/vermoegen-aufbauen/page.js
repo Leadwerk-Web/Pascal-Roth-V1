@@ -590,6 +590,26 @@
     activate(initial.getAttribute('data-vma-growth-tab') || '1');
   }
 
+  /** Themenwolke: drei feste Blautöne, zufaellig pro Wort (wie Selbststaendigkeit). */
+  function initVmaWordcloud() {
+    const svg = document.querySelector('[data-vma-wordcloud] .vma-wordcloud__svg');
+    if (!svg) return;
+
+    // Gewichtet: mehr Dunkelblau (#02254a), dann Primary, dann Hell
+    const colors = [
+      '#02254a', '#02254a', '#02254a', '#02254a', '#02254a',
+      '#035aa7', '#035aa7', '#035aa7',
+      '#93b5e4', '#93b5e4',
+    ];
+
+    svg.querySelectorAll('g.wordcloud-word').forEach((g) => {
+      const fill = colors[Math.floor(Math.random() * colors.length)];
+      g.querySelectorAll('text, tspan').forEach((el) => {
+        el.style.setProperty('fill', fill, 'important');
+      });
+    });
+  }
+
   /* ------------------------------------------------------------
      6) Hero-Parallax (sehr dezent)
      ------------------------------------------------------------ */
@@ -630,6 +650,7 @@
      Init
      ------------------------------------------------------------ */
   document.addEventListener('DOMContentLoaded', () => {
+    initVmaWordcloud();
     initVmaCheck();
     initVmaStrategy();
     initVmaWaiting();

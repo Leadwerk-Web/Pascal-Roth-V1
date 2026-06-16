@@ -11,7 +11,7 @@
   overflow: hidden;
   isolation: isolate;
   background-color: var(--bg-warm);
-  min-height: 60vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   padding: 104px 20px 48px;
@@ -44,6 +44,7 @@
   z-index: 1;
   pointer-events: none;
   background:
+    var(--hero-top-fade),
     linear-gradient(
       105deg,
       rgba(255, 255, 255, 0.94) 0%,

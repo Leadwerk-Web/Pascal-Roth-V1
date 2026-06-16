@@ -22,7 +22,7 @@
   overflow: hidden;
   isolation: isolate;
   background-color: var(--bg-warm);
-  min-height: 52vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   padding: 104px 20px 64px;
@@ -30,7 +30,7 @@
 @media (min-width: 768px) {
   .pr-page .vma-hero {
     padding: 112px 40px 72px;
-    min-height: 54vh;
+    min-height: 70vh;
   }
 }
 .pr-page .vma-hero::before {
@@ -38,9 +38,9 @@
   position: absolute;
   inset: -4% -2% -2%;
   z-index: 0;
-  background-image: url('../Fotos/2026_05_19_PascalRoth_prev/_X8A4536_prev.jpg');
+  background-image: url('../Fotos/Auf%20Website%20genutzt/Hero_About.png');
   background-size: cover;
-  background-position: center 35%;
+  background-position: center top;
   background-repeat: no-repeat;
   filter: saturate(0.9) brightness(0.97);
   transform: translate3d(0, var(--pr-parallax-y, 0px), 0) scale(1.05);
@@ -54,6 +54,7 @@
   z-index: 1;
   pointer-events: none;
   background:
+    var(--hero-top-fade),
     linear-gradient(105deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.82) 34%, rgba(255, 255, 255, 0.4) 62%, rgba(255, 255, 255, 0.05) 85%, rgba(255, 255, 255, 0) 100%),
     radial-gradient(120% 80% at 0% 100%, rgba(3, 90, 167, 0.08) 0%, rgba(3, 90, 167, 0) 58%);
 }

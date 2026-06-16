@@ -52,7 +52,6 @@
           <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <div class="nav-dropdown">
-          <a href="../../index.html#lebensphasen"><div><div>Alle Lebensphasen</div><span class="dropdown-desc">Auf der Startseite ansehen</span></div></a>
           <a href="../berufseinstieg/index.html"><div><div>Berufseinstieg</div><span class="dropdown-desc">Klarheit am Anfang</span></div></a>
           <a href="../junge-familie/index.html"><div><div>Junge Familie</div><span class="dropdown-desc">Verantwortung sortieren</span></div></a>
           <a href="../kinder/index.html"><div><div>Kinder</div><span class="dropdown-desc">Zukunft früh planen</span></div></a>
@@ -100,7 +99,7 @@
         <span class="sst-hero__accent">Absicherung und Altersvorsorge zuerst – dann der Rest.</span>
       </h1>
       <p class="sst-hero__sub reveal reveal-delay-2">
-        Rücklagen, Einkommensschutz, Krankheit, Altersstrategie und Steuerhebel – wir klären die fünf Kernfragen, die Selbständige wirklich betreffen. Verständlich und ohne Druck.
+        Einkommensschutz, Krankheit, Altersstrategie und Steuerhebel – wir klären die vier Kernfragen, die Selbständige wirklich betreffen. Verständlich und ohne Druck.
       </p>
       <div class="sst-hero__cta-row reveal reveal-delay-3">
         <a href="#sst-check" class="btn-primary">
@@ -148,8 +147,7 @@
       <span class="overline" style="display:block;margin-bottom:12px;">Selbständigen-Klarheitscheck</span>
       <h2 id="sst-check-h2" class="heading-section">Wo stehst du gerade – wirklich?</h2>
       <p>Zehn kurze Impulse zu den Themen, die für Selbständige zählen – Rücklagen, Absicherung, Vorsorge und Steuern. Alles bleibt bei dir im Browser. <strong>Kein Gut/Schlecht-Score</strong> – nur ein Klarheitsgrad.</p>
-      <nav class="sst-check__kern reveal" aria-label="Die fünf Kernfragen auf dieser Seite">
-        <a href="#sst-reserve">Rücklagen</a>
+      <nav class="sst-check__kern reveal" aria-label="Die vier Kernfragen auf dieser Seite">
         <a href="#sst-workforce">Einkommen &amp; Krankheit</a>
         <a href="#sst-compare">Altersstrategie</a>
         <a href="#sst-duties">Steuerhebel</a>
@@ -192,33 +190,6 @@
         <a href="tel:+4980052569960" class="btn-primary">Selbständigen-Check bei mir anfragen <span aria-hidden="true">→</span></a>
         <button type="button" class="btn-ghost sst-check__restart" data-sst-check-restart>Von vorn beginnen</button>
       </div>
-    </div>
-  </div>
-</section>
-
-<section id="sst-reserve" class="section sst-reserve-section" aria-labelledby="sst-reserve-h2">
-  <div class="container">
-    <header class="sst-section-intro reveal">
-      <span class="overline" style="display:block;margin-bottom:12px;">Kernfrage · Rücklagen</span>
-      <h2 id="sst-reserve-h2" class="heading-section">Hast du Rücklagen – und wie lange tragen sie dich?</h2>
-      <p>Puffer für Fixkosten, Steuern und schwankende Monate. Trage deine Zahlen ein und sieh dir an, wie viel Luft du ungefähr hast – grobe Orientierung, keine Steuerberatung.</p>
-    </header>
-    <div class="sst-reserve sst-panel reveal reveal-delay-1" data-sst-reserve>
-      <div class="sst-panel__grid">
-        <div class="sst-field"><label for="sst-netto">Monatliches durchschnittliches Nettoeinkommen</label><input id="sst-netto" type="number" min="0" step="100" value="4000" data-sst-reserve-netto><span class="sst-field__suffix">€</span></div>
-        <div class="sst-field"><label for="sst-priv">Monatliche private Fixkosten</label><input id="sst-priv" type="number" min="0" step="50" value="2200" data-sst-reserve-priv><span class="sst-field__suffix">€</span></div>
-        <div class="sst-field"><label for="sst-biz">Monatliche geschäftliche Fixkosten</label><input id="sst-biz" type="number" min="0" step="50" value="1300" data-sst-reserve-biz><span class="sst-field__suffix">€</span></div>
-        <div class="sst-field"><label for="sst-cash">Aktuelle Rücklagen</label><input id="sst-cash" type="number" min="0" step="100" value="12000" data-sst-reserve-cash><span class="sst-field__suffix">€</span></div>
-        <div class="sst-field sst-field--full"><label for="sst-months">Gewünschte Sicherheitsdauer (Monate)</label><input id="sst-months" type="number" min="1" max="36" step="1" value="6" data-sst-reserve-months></div>
-      </div>
-      <div class="sst-reserve__out" aria-live="polite">
-        <div class="sst-reserve__stat"><span class="sst-reserve__label">Gesamte monatliche Fixkosten</span><strong data-sst-reserve-total>0 €</strong></div>
-        <div class="sst-reserve__stat"><span class="sst-reserve__label">Rücklagen reichen ca.</span><strong data-sst-reserve-coverage>0 Monate</strong></div>
-        <div class="sst-reserve__stat"><span class="sst-reserve__label">Rücklagenziel (gewünschte Monate)</span><strong data-sst-reserve-target>0 €</strong></div>
-        <div class="sst-reserve__stat"><span class="sst-reserve__label">Differenz zum Ziel</span><strong data-sst-reserve-gap>0 €</strong></div>
-      </div>
-      <div class="sst-reserve__bar-wrap" role="img" aria-label="Deckung in Monaten"><div class="sst-reserve__bar"><div class="sst-reserve__bar-fill" data-sst-reserve-bar></div></div></div>
-      <p class="sst-disclaimer">Rücklagen sind für Selbständige oft Bewegungsfreiheit. Gemeinsam prüfen wir, wie viel Puffer zu deinem Alltag, deinem Business und deinen Zielen passt.</p>
     </div>
   </div>
 </section>
@@ -569,17 +540,17 @@
       <li class="strategy-timeline__item reveal reveal-delay-1">
         <div class="strategy-timeline__text-col"><span class="strategy-timeline__step-label">Schritt 1</span><h3>Kurz einordnen, wo du stehst</h3><p>Business, Einkommen, Kosten, Rücklagen, Verträge und offene Fragen – ich starte mit deiner echten Situation.</p></div>
         <div class="strategy-timeline__node-col" aria-hidden="true"><span class="strategy-timeline__node-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span></div>
-        <div class="strategy-timeline__media-col"><figure class="strategy-timeline__figure"><span class="strategy-timeline__badge">Selbständigen-Check</span><img src="../../Fotos/consulting PH1.png" alt="Beratungsgespräch, Schritt Einordnung" width="640" height="480" loading="lazy" decoding="async"></figure></div>
+        <div class="strategy-timeline__media-col"><figure class="strategy-timeline__figure"><span class="strategy-timeline__badge">Selbständigen-Check</span><img src="../../Fotos/Auf%20Website%20genutzt/Schritte_Kennenlernen.jpg" alt="Beratungsgespräch, Schritt Einordnung" width="640" height="480" loading="lazy" decoding="async"></figure></div>
       </li>
       <li class="strategy-timeline__item strategy-timeline__item--reverse reveal reveal-delay-2">
         <div class="strategy-timeline__text-col"><span class="strategy-timeline__step-label">Schritt 2</span><h3>Gemeinsam sortieren</h3><p>Ich zeige dir verständlich, welche Themen jetzt wichtig sind und was später reicht.</p></div>
         <div class="strategy-timeline__node-col" aria-hidden="true"><span class="strategy-timeline__node-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span></div>
-        <div class="strategy-timeline__media-col"><figure class="strategy-timeline__figure"><span class="strategy-timeline__badge">Klarheit</span><img src="../../Fotos/Consulting PH2.png" alt="Beratungsgespräch, Schritt Sortieren" width="640" height="480" loading="lazy" decoding="async"></figure></div>
+        <div class="strategy-timeline__media-col"><figure class="strategy-timeline__figure"><span class="strategy-timeline__badge">Klarheit</span><img src="../../Fotos/Auf%20Website%20genutzt/Schritte_Erstgespraech.jpg" alt="Beratungsgespräch, Schritt Sortieren" width="640" height="480" loading="lazy" decoding="async"></figure></div>
       </li>
       <li class="strategy-timeline__item reveal reveal-delay-3">
         <div class="strategy-timeline__text-col"><span class="strategy-timeline__step-label">Schritt 3</span><h3>Entscheiden ohne Druck</h3><p>Klare Empfehlungen – du entscheidest in Ruhe, was zu deiner Selbständigkeit passt.</p></div>
         <div class="strategy-timeline__node-col" aria-hidden="true"><span class="strategy-timeline__node-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></div>
-        <div class="strategy-timeline__media-col"><figure class="strategy-timeline__figure"><span class="strategy-timeline__badge">Nächste Schritte</span><img src="../../Fotos/Consulting PH3.png" alt="Beratungsgespräch, Schritt Entscheidung" width="640" height="480" loading="lazy" decoding="async"></figure></div>
+        <div class="strategy-timeline__media-col"><figure class="strategy-timeline__figure"><span class="strategy-timeline__badge">Nächste Schritte</span><img src="../../Fotos/Auf%20Website%20genutzt/Schritte_Konzept.jpg" alt="Beratungsgespräch, Schritt Entscheidung" width="640" height="480" loading="lazy" decoding="async"></figure></div>
       </li>
     </ol>
   </div>
@@ -588,7 +559,7 @@
 <section class="section sst-pascal-section" aria-labelledby="sst-pascal-h2">
   <div class="container">
     <div class="sst-pascal">
-      <figure class="sst-pascal__visual reveal"><img src="../../assets/images/pascal-roth-ueber-mich.png" alt="Pascal Roth" width="800" height="1000" loading="lazy" decoding="async"></figure>
+      <figure class="sst-pascal__visual reveal"><img src="../../Fotos/Auf%20Website%20genutzt/_X8A4207_prev.jpg" alt="Pascal Roth, Finanzberater Karlsruhe" width="800" height="1000" loading="lazy" decoding="async"></figure>
       <div class="sst-pascal__copy">
         <span class="overline reveal">Persönlich</span>
         <h2 id="sst-pascal-h2" class="heading-section reveal reveal-delay-1">Struktur statt Überforderung</h2>

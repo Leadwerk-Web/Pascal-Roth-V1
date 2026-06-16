@@ -27,6 +27,13 @@
   --radius-xl: 24px;
   --radius-full: 9999px;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --hero-top-fade: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.78) 10%,
+    rgba(255, 255, 255, 0.32) 20%,
+    transparent 30%
+  );
 }
 
 /* --- Base Reset & Smoothing --- */
@@ -99,27 +106,29 @@ body {
   inset: 0;
   z-index: 0;
   background-color: var(--bg-warm);
-  background-image: url('Fotos/2026_05_19_PascalRoth_prev/_X8A4536_prev.jpg');
+  background-image: url('Fotos/Auf%20Website%20genutzt/Hero_Startseite.jpg');
   background-size: cover;
-  background-position: center center;
+  background-position: center top;
   background-repeat: no-repeat;
 }
 
-/* Weißes Overlay links für Text; ab ~2/3 Breite ausgeblendet, rechtes Drittel unverdeckt */
+/* Overlay: oben Weiß→transparent (Nav-Übergang), links Weiß→transparent (Textlesbarkeit) */
 .hero-section::after {
   content: '';
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.88) 0%,
-    rgba(255, 255, 255, 0.52) 34%,
-    rgba(255, 255, 255, 0.22) 52%,
-    rgba(255, 255, 255, 0.06) 62%,
-    transparent 66.67%
-  );
+  background:
+    var(--hero-top-fade),
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.88) 0%,
+      rgba(255, 255, 255, 0.52) 34%,
+      rgba(255, 255, 255, 0.22) 52%,
+      rgba(255, 255, 255, 0.06) 62%,
+      transparent 66.67%
+    );
 }
 
 .hero-section__inner {
@@ -1371,7 +1380,7 @@ body {
 
 /* --- Landingpages / längere Textseiten --- */
 .landing-wrap {
-  min-height: 60vh;
+  min-height: 70vh;
   padding-top: clamp(72px, 10vh, 120px);
 }
 

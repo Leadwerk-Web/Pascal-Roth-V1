@@ -323,59 +323,6 @@
     renderStep();
   }
 
-  function initSstReserve() {
-    const root = document.querySelector('[data-sst-reserve]');
-    if (!root) return;
-
-    const netto = root.querySelector('[data-sst-reserve-netto]');
-    const priv = root.querySelector('[data-sst-reserve-priv]');
-    const biz = root.querySelector('[data-sst-reserve-biz]');
-    const cash = root.querySelector('[data-sst-reserve-cash]');
-    const months = root.querySelector('[data-sst-reserve-months]');
-    const outTotal = root.querySelector('[data-sst-reserve-total]');
-    const outCoverage = root.querySelector('[data-sst-reserve-coverage]');
-    const outTarget = root.querySelector('[data-sst-reserve-target]');
-    const outGap = root.querySelector('[data-sst-reserve-gap]');
-    const bar = root.querySelector('[data-sst-reserve-bar]');
-
-    function readNum(el, fallback = 0) {
-      const n = parseFloat(el?.value);
-      return Number.isFinite(n) ? Math.max(0, n) : fallback;
-    }
-
-    function recalc() {
-      const n = readNum(netto, 0);
-      const p = readNum(priv, 0);
-      const b = readNum(biz, 0);
-      const c = readNum(cash, 0);
-      const m = Math.max(1, Math.min(36, readNum(months, 6)));
-
-      const total = p + b;
-      const coverageMonths = total > 0 ? c / total : 0;
-      const target = total * m;
-      const gap = target - c;
-
-      if (outTotal) outTotal.textContent = formatMoney(total);
-      if (outCoverage) {
-        if (total <= 0) outCoverage.textContent = '–';
-        else outCoverage.textContent = `${coverageMonths.toFixed(1).replace('.', ',')} Monate`;
-      }
-      if (outTarget) outTarget.textContent = formatMoney(target);
-      if (outGap) outGap.textContent = formatMoney(gap);
-
-      let barPct = 0;
-      if (target > 0) barPct = Math.min(100, (c / target) * 100);
-      if (bar) bar.style.width = `${barPct}%`;
-    }
-
-    [netto, priv, biz, cash, months].forEach((el) => {
-      el?.addEventListener('input', recalc);
-      el?.addEventListener('change', recalc);
-    });
-
-    recalc();
-  }
-
   function initSstWorkforce() {
     const root = document.querySelector('[data-sst-workforce]');
     if (!root) return;
@@ -723,7 +670,6 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     initSstCheck();
-    initSstReserve();
     initSstWorkforce();
     initSstDuties();
     initSstGrowth();

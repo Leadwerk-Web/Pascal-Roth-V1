@@ -22,7 +22,7 @@
   overflow: hidden;
   isolation: isolate;
   background-color: var(--bg-warm);
-  min-height: 60vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   padding: 104px 20px 64px;
@@ -31,7 +31,7 @@
 @media (min-width: 768px) {
   .kontakt-page .vma-hero {
     padding: 120px 40px 80px;
-    min-height: 60vh;
+    min-height: 70vh;
   }
 }
 
@@ -40,7 +40,7 @@
   position: absolute;
   inset: -4% -2% -2%;
   z-index: 0;
-  background-image: url('../Fotos/consulting%20PH1.png');
+  background-image: url('../Fotos/Auf%20Website%20genutzt/_X8A4345_prev.jpg');
   background-size: cover;
   background-position: center 40%;
   background-repeat: no-repeat;
@@ -57,6 +57,7 @@
   z-index: 1;
   pointer-events: none;
   background:
+    var(--hero-top-fade),
     linear-gradient(
       105deg,
       rgba(255, 255, 255, 0.95) 0%,
