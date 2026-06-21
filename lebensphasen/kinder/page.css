@@ -675,7 +675,7 @@
   border: 1.5px solid rgba(255, 255, 255, 0.35);
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.08);
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -954,7 +954,7 @@
   background: var(--accent);
   border: 3px solid #ffffff;
   box-shadow: 0 2px 8px rgba(2, 37, 74, 0.18);
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
 }
 
 .kid-save__range::-moz-range-thumb {
@@ -964,7 +964,7 @@
   background: var(--accent);
   border: 3px solid #ffffff;
   box-shadow: 0 2px 8px rgba(2, 37, 74, 0.18);
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
 }
 
 .kid-save__range:focus-visible::-webkit-slider-thumb {

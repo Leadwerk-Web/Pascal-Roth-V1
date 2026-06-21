@@ -649,7 +649,7 @@
     var(--border-subtle) var(--p, 50%),
     var(--border-subtle) 100%
   );
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   outline: none;
 }
 
@@ -662,7 +662,7 @@
   background: #ffffff;
   border: 2px solid var(--primary);
   box-shadow: 0 2px 8px rgba(3, 90, 167, 0.3);
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
@@ -673,7 +673,7 @@
   background: #ffffff;
   border: 2px solid var(--primary);
   box-shadow: 0 2px 8px rgba(3, 90, 167, 0.3);
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
 }
 
 .bek-calc__range:focus-visible::-webkit-slider-thumb {
@@ -707,7 +707,7 @@
   font-weight: 600;
   color: var(--text-secondary);
   border-radius: 999px;
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   letter-spacing: 0.02em;
   transition: background var(--transition), color var(--transition);
 }

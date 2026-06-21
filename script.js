@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStickyMobileCTA();
   initContactForm();
   initSmoothScroll();
+  initScrollToTop();
 });
 
 /* --- Sticky Navigation on Scroll --- */
@@ -342,4 +343,33 @@ function initSmoothScroll() {
       }
     });
   });
+}
+
+/* --- Scroll to Top --- */
+function initScrollToTop() {
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'scroll-top';
+  btn.setAttribute('aria-label', 'Nach oben scrollen');
+  btn.innerHTML = '<svg class="scroll-top__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>';
+
+  document.body.appendChild(btn);
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const showAfter = 420;
+
+  function toggleVisibility() {
+    if (window.scrollY > showAfter) {
+      btn.classList.add('is-visible');
+    } else {
+      btn.classList.remove('is-visible');
+    }
+  }
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
+  });
+
+  window.addEventListener('scroll', toggleVisibility, { passive: true });
+  toggleVisibility();
 }

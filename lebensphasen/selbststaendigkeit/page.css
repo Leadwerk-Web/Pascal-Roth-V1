@@ -288,7 +288,7 @@
 }
 
 .sst-wordcloud__svg .wordcloud-word {
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   transform-box: fill-box;
   transform-origin: center;
   transition:
@@ -424,7 +424,7 @@
   padding: 14px 16px;
   border-radius: 14px;
   border: 1.5px solid var(--border-subtle);
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   transition: border-color var(--transition), background var(--transition);
 }
 
@@ -930,7 +930,7 @@
   font-size: 13px;
   font-weight: 600;
   color: var(--text-secondary);
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
 
@@ -1035,7 +1035,7 @@
   border-radius: 14px;
   border: 1px solid var(--border-subtle);
   background: #fff;
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   font: inherit;
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
@@ -1291,7 +1291,7 @@
   background: none;
   border: 0;
   padding: 4px;
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   display: flex;
   flex-direction: column;
   align-items: center;
