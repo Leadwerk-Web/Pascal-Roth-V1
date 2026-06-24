@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /* Dateinamen gleich wie auf der Startseite; Basis-URL aus dem im Markup gesetzten src (z. B. ../../Fotos/… auf Unterseiten). */
 const NAV_LOGO_BLUE = 'Pascal Roth Logo_blau.png';
 const NAV_LOGO_DARK = 'Pascal Roth Logo.png';
+const NAV_LOGO_WHITE = 'Pascal_Roth_Logo_weiss.png';
 
 let navLogoBaseURL = '';
 
@@ -38,7 +39,10 @@ function initNavLogoBaseFromMarkup() {
 
 function setNavBarLogo(scrolled) {
   if (!navLogoBaseURL) return;
-  const file = scrolled ? NAV_LOGO_DARK : NAV_LOGO_BLUE;
+  const isLegalPage = document.body.classList.contains('legal-page');
+  const file = isLegalPage
+    ? (scrolled ? NAV_LOGO_DARK : NAV_LOGO_WHITE)
+    : (scrolled ? NAV_LOGO_DARK : NAV_LOGO_BLUE);
   const next = new URL(file, navLogoBaseURL).href;
   document.querySelectorAll('.site-logo--nav').forEach((img) => {
     if (img.src !== next) {

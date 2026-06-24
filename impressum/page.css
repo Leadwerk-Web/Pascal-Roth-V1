@@ -17,20 +17,79 @@
 
 .legal-page .skip-to-content:focus { top: 0; }
 
+/* Nav über dunklem Hero: helle Links & Menü-Icon */
+.legal-page .nav-wrapper:not(.scrolled) .desktop-nav a {
+  color: rgba(214, 225, 240, 0.88) !important;
+}
+
+.legal-page .nav-wrapper:not(.scrolled) .desktop-nav a:hover,
+.legal-page .nav-wrapper:not(.scrolled) .desktop-nav a:focus-visible {
+  color: #fff !important;
+}
+
+.legal-page .nav-wrapper:not(.scrolled) .mobile-trigger svg {
+  stroke: #fff;
+}
+
 .legal-hero {
   position: relative;
-  padding: 104px 20px 40px;
-  background: linear-gradient(180deg, #fff 0%, var(--bg-warm) 100%);
-  border-bottom: 1px solid var(--border-subtle);
+  padding: 104px 20px 48px;
+  background: linear-gradient(180deg, #02152a 0%, #02254A 48%, #031d3a 100%);
+  color: #fff;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.legal-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.038) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.038) 1px, transparent 1px);
+  background-size: 56px 56px;
+  background-position: center;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 28%, transparent 72%);
+          mask-image: radial-gradient(ellipse at center, #000 28%, transparent 72%);
+  opacity: 0.58;
 }
 
 @media (min-width: 768px) {
-  .legal-hero { padding: 112px 40px 48px; }
+  .legal-hero { padding: 112px 40px 56px; }
 }
 
 .legal-hero__inner {
   max-width: 760px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.legal-hero .overline {
+  color: var(--secondary);
+}
+
+.legal-hero .hero-breadcrumb__list {
+  color: rgba(214, 225, 240, 0.72);
+}
+
+.legal-hero .hero-breadcrumb__list li + li::before {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.legal-hero .hero-breadcrumb__list a {
+  color: rgba(214, 225, 240, 0.82);
+}
+
+.legal-hero .hero-breadcrumb__list a:hover,
+.legal-hero .hero-breadcrumb__list a:focus-visible {
+  color: #fff;
+}
+
+.legal-hero .hero-breadcrumb__list li[aria-current="page"] {
+  color: #fff;
 }
 
 .legal-hero h1 {
@@ -38,7 +97,7 @@
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  color: var(--text-primary);
+  color: #fff;
   margin: 12px 0 10px;
   text-wrap: balance;
 }
@@ -46,7 +105,7 @@
 .legal-hero__meta {
   margin: 0;
   font-size: 14px;
-  color: var(--text-secondary);
+  color: rgba(214, 225, 240, 0.82);
 }
 
 .legal-main {
