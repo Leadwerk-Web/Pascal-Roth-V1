@@ -1,4 +1,4 @@
-/* Pascal Roth · Lebensphase Spätstarter 50+ (Namespace vma-*, page-scoped)
+﻿/* Pascal Roth · Lebensphase Spätstarter 50+ (Namespace vma-*, page-scoped)
    Diese Seite basiert technisch auf der Vermögen-aufbauen-Seite.
    - Klarheitscheck wie „Familien-Check“ (8 Fragen, Skala, Tasten 1–3)
    - Beispielrechner: „Was ist bis zur Rente noch möglich?“ (Sparplan)
@@ -404,7 +404,7 @@
 
         const cta = document.createElement('a');
         cta.className = 'btn-primary';
-        cta.href = 'tel:+4980052569960';
+        cta.href = 'tel:+4972493260';
         cta.innerHTML = 'Gespräch mit mir anfragen <span aria-hidden="true">→</span>';
         actions.appendChild(cta);
 

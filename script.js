@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initSmoothScroll();
   initScrollToTop();
+  initHomeHeroParallax();
 });
 
 /* --- Sticky Navigation on Scroll --- */
@@ -76,6 +77,35 @@ function initNavigation() {
   applyScrollState();
 
   window.addEventListener('scroll', applyScrollState, { passive: true });
+}
+
+/* --- Startseite: Hero-Parallax (wie Über Pascal) --- */
+function initHomeHeroParallax() {
+  const hero = document.querySelector('.home-hero[data-parallax]');
+  if (!hero || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  let ticking = false;
+  let latestY = 0;
+
+  function update() {
+    const rect = hero.getBoundingClientRect();
+    if (rect.bottom < 0 || rect.top > window.innerHeight) {
+      ticking = false;
+      return;
+    }
+    const offset = Math.max(-28, Math.min(24, -latestY * 0.05));
+    hero.style.setProperty('--home-parallax-y', `${offset.toFixed(1)}px`);
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    latestY = window.scrollY;
+    if (!ticking) {
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+  update();
 }
 
 /* --- Mobile Menu Toggle --- */
