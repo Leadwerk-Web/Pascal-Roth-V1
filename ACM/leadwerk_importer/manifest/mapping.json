@@ -1,0 +1,154 @@
+{
+  "version": "4",
+  "site_title": "Pascal Roth Finanzberatung",
+  "site_tagline": "Finanzberatung in Karlsruhe nach Lebensphasen.",
+  "pages": [
+    {
+      "source_key": "pascal-home-v1",
+      "field_name": "pascal_page_sections",
+      "source_file": "index.html",
+      "title": "Pascal Roth Finanzberatung",
+      "slug": "home",
+      "target_type": "page",
+      "post_status": "publish",
+      "is_front_page": true
+    },
+    {
+      "source_key": "pascal-berufseinstieg-v1",
+      "field_name": "pascal_page_sections",
+      "source_file": "lebensphasen/berufseinstieg/index.html",
+      "title": "Finanzberatung für Berufseinsteiger",
+      "slug": "lebensphasen/berufseinstieg",
+      "target_type": "page",
+      "post_status": "publish"
+    },
+    {
+      "source_key": "pascal-junge-familie-v1",
+      "field_name": "pascal_page_sections",
+      "source_file": "lebensphasen/junge-familie/index.html",
+      "title": "Finanzberatung für junge Familien",
+      "slug": "lebensphasen/junge-familie",
+      "target_type": "page",
+      "post_status": "publish"
+    },
+    {
+      "source_key": "pascal-kinder-v1",
+      "field_name": "pascal_page_sections",
+      "source_file": "lebensphasen/kinder/index.html",
+      "title": "Vorsorge für Kinder",
+      "slug": "lebensphasen/kinder",
+      "target_type": "page",
+      "post_status": "publish"
+    },
+    {
+      "source_key": "pascal-selbststaendigkeit-v1",
+      "field_name": "pascal_page_sections",
+      "source_file": "lebensphasen/selbststaendigkeit/index.html",
+      "title": "Finanzberatung für Selbständige",
+      "slug": "lebensphasen/selbststaendigkeit",
+      "target_type": "page",
+      "post_status": "publish"
+    },
+    {
+      "source_key": "pascal-vermoegen-v1",
+      "field_name": "pascal_page_sections",
+      "source_file": "lebensphasen/vermoegen-aufbauen/index.html",
+      "title": "Vermögen aufbauen mit Strategie",
+      "slug": "lebensphasen/vermoegen-aufbauen",
+      "target_type": "page",
+      "post_status": "publish"
+    },
+    {
+      "source_key": "pascal-spaetstarter-50plus-v1",
+      "field_name": "pascal_page_sections",
+      "source_file": "lebensphasen/spaetstarter-50plus/index.html",
+      "title": "Spätstarter 50+",
+      "slug": "lebensphasen/spaetstarter-50plus",
+      "target_type": "page",
+      "post_status": "publish"
+    },
+    {
+      "source_key": "pascal-spaetstarter-v1",
+      "field_name": "pascal_page_sections",
+      "source_file": "lebensphasen/spaetstarter/index.html",
+      "title": "Spätstarter",
+      "slug": "lebensphasen/spaetstarter",
+      "target_type": "page",
+      "post_status": "publish"
+    },
+    {
+      "source_key": "pascal-veraenderung-v1",
+      "field_name": "pascal_page_sections",
+      "source_file": "lebensphasen/veraenderung/index.html",
+      "title": "Lebensveränderung",
+      "slug": "lebensphasen/veraenderung",
+      "target_type": "page",
+      "post_status": "publish"
+    },
+    {
+      "source_key": "pascal-ueber-v1",
+      "field_name": "pascal_page_sections",
+      "source_file": "ueber-pascal/index.html",
+      "title": "Über Pascal Roth",
+      "slug": "ueber-pascal",
+      "target_type": "page",
+      "post_status": "publish"
+    },
+    {
+      "source_key": "pascal-kontakt-v1",
+      "field_name": "pascal_page_sections",
+      "source_file": "kontakt/index.html",
+      "title": "Kontakt",
+      "slug": "kontakt",
+      "target_type": "page",
+      "post_status": "publish"
+    },
+    {
+      "source_key": "pascal-danke-v1",
+      "field_name": "pascal_page_sections",
+      "source_file": "danke/index.html",
+      "title": "Vielen Dank",
+      "slug": "danke",
+      "target_type": "page",
+      "post_status": "publish"
+    },
+    {
+      "source_key": "pascal-legal-v1",
+      "field_name": "pascal_page_sections",
+      "source_file": "legal/index.html",
+      "title": "Legal",
+      "slug": "legal",
+      "target_type": "page",
+      "post_status": "publish"
+    },
+    {
+      "source_key": "pascal-impressum-v1",
+      "field_name": "pascal_page_sections",
+      "source_file": "impressum/index.html",
+      "title": "Impressum",
+      "slug": "impressum",
+      "target_type": "page",
+      "post_status": "publish"
+    },
+    {
+      "source_key": "pascal-datenschutz-v1",
+      "field_name": "pascal_page_sections",
+      "source_file": "datenschutz/index.html",
+      "title": "Datenschutzerklärung",
+      "slug": "datenschutz",
+      "target_type": "page",
+      "post_status": "publish"
+    },
+    {
+      "source_key": "pascal-404-v1",
+      "field_name": "pascal_page_sections",
+      "source_file": "404.html",
+      "title": "404",
+      "slug": "404",
+      "target_type": "page",
+      "post_status": "publish",
+      "meta_robots": "noindex,follow"
+    }
+  ],
+  "news_articles": []
+}

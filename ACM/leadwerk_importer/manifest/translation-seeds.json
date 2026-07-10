@@ -1,0 +1,9 @@
+{
+  "version": "4",
+  "documentation": "Solange pages leer ist, werden EN-Feldinhalte beim Import nicht aus dieser Datei vorbefüllt. Übersetzungen: WP-Admin über Leadwerk WPML Clone (englische Seiten bearbeiten) oder später pages mit Pascal source_key und en-Struktur befüllen; Export/Workflow siehe Leadwerk_Translation_Seed_Manager.",
+  "languages": {
+    "source": "de",
+    "target": "en"
+  },
+  "pages": {}
+}

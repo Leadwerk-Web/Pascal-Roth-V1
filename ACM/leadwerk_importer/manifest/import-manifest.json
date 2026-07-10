@@ -1,0 +1,56 @@
+{
+  "version": 4,
+  "derived_from": "leadwerk_importer/manifest/mapping.json",
+  "documentation": "Nicht zur Laufzeit von Leadwerk_Importer gelesen. Kanonische Steuerdatei: leadwerk_importer/manifest/mapping.json.",
+  "mapping_version": "4",
+  "site_title": "Pascal Roth Finanzberatung",
+  "site_tagline": "Finanzberatung in Karlsruhe nach Lebensphasen.",
+  "site_locale_default": "de",
+  "items": [
+    {
+      "type": "page",
+      "import_key": "de:page:home",
+      "source": "index.html",
+      "slug": "home",
+      "source_key": "pascal-home-v1",
+      "field_name": "pascal_page_sections",
+      "title": "Pascal Roth Finanzberatung",
+      "status": "publish",
+      "update_mode": "replace",
+      "is_front_page": true
+    },
+    {
+      "type": "page",
+      "import_key": "de:page:danke",
+      "source": "danke/index.html",
+      "slug": "danke",
+      "source_key": "pascal-danke-v1",
+      "field_name": "pascal_page_sections",
+      "title": "Vielen Dank",
+      "status": "publish",
+      "update_mode": "replace"
+    },
+    {
+      "type": "page",
+      "import_key": "de:page:legal",
+      "source": "legal/index.html",
+      "slug": "legal",
+      "source_key": "pascal-legal-v1",
+      "field_name": "pascal_page_sections",
+      "title": "Legal",
+      "status": "publish",
+      "update_mode": "replace"
+    },
+    {
+      "type": "page",
+      "import_key": "de:page:404",
+      "source": "404.html",
+      "slug": "404",
+      "source_key": "pascal-404-v1",
+      "field_name": "pascal_page_sections",
+      "title": "404",
+      "status": "publish",
+      "update_mode": "replace"
+    }
+  ]
+}
