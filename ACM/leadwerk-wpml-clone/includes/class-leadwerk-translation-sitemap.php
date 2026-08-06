@@ -24,6 +24,7 @@ class Leadwerk_Translation_Sitemap {
 		add_filter( 'wp_sitemaps_posts_entry', array( __CLASS__, 'add_hreflang_to_sitemap_entry' ), 10, 3 );
 
 		/* Yoast SEO */
+		add_filter( 'wpseo_sitemap_urlset', array( __CLASS__, 'add_xhtml_namespace_to_yoast_urlset' ), 10, 1 );
 		add_filter( 'wpseo_sitemap_url', array( __CLASS__, 'add_hreflang_to_yoast_url' ), 10, 2 );
 
 		/* RankMath */
@@ -31,6 +32,50 @@ class Leadwerk_Translation_Sitemap {
 
 		/* Expand the WP sitemap to include translated pages */
 		add_filter( 'wp_sitemaps_posts_query_args', array( __CLASS__, 'include_translated_posts_in_sitemap' ), 10, 2 );
+	}
+
+	/**
+	 * Declare xhtml namespace on Yoast sitemap urlset (required for xhtml:link hreflang).
+	 *
+	 * @param string $urlset Opening urlset element.
+	 * @return string
+	 */
+	public static function add_xhtml_namespace_to_yoast_urlset( $urlset ) {
+		$urlset = (string) $urlset;
+		if ( '' === $urlset || false !== strpos( $urlset, 'xmlns:xhtml' ) ) {
+			return $urlset;
+		}
+
+		$updated = preg_replace(
+			'#(<urlset\b[^>]*)(>)#',
+			'$1 xmlns:xhtml="http://www.w3.org/1999/xhtml"$2',
+			$urlset,
+			1
+		);
+
+		// #region agent log
+		$log_path = dirname( dirname( dirname( __DIR__ ) ) ) . '/.cursor/debug-09b519.log';
+		if ( is_writable( dirname( $log_path ) ) || is_file( $log_path ) ) {
+			file_put_contents(
+				$log_path,
+				wp_json_encode(
+					array(
+						'sessionId'    => '09b519',
+						'hypothesisId' => 'A',
+						'location'     => 'class-leadwerk-translation-sitemap.php:add_xhtml_namespace_to_yoast_urlset',
+						'message'      => 'yoast_urlset_namespace_added',
+						'data'         => array(
+							'updated' => is_string( $updated ) && $updated !== $urlset,
+						),
+						'timestamp'    => (int) round( microtime( true ) * 1000 ),
+					)
+				) . "\n",
+				FILE_APPEND | LOCK_EX
+			);
+		}
+		// #endregion
+
+		return is_string( $updated ) && '' !== $updated ? $updated : $urlset;
 	}
 
 	/**
@@ -153,7 +198,8 @@ class Leadwerk_Translation_Sitemap {
 			return '';
 		}
 
-		$xml = '';
+		$xml       = '';
+		$alternate_count = 0;
 		foreach ( $translations as $lang => $translation_id ) {
 			$translation_post = get_post( $translation_id );
 			if ( ! $translation_post instanceof WP_Post || 'publish' !== $translation_post->post_status ) {
@@ -166,7 +212,35 @@ class Leadwerk_Translation_Sitemap {
 
 			if ( $url ) {
 				$xml .= "\t" . '<xhtml:link rel="alternate" hreflang="' . esc_attr( $bcp47 ) . '" href="' . esc_url( $url ) . '" />' . "\n";
+				++$alternate_count;
 			}
+		}
+
+		// Hreflang in sitemaps requires at least two language alternates.
+		if ( $alternate_count < 2 ) {
+			// #region agent log
+			$log_path = dirname( dirname( dirname( __DIR__ ) ) ) . '/.cursor/debug-09b519.log';
+			if ( is_writable( dirname( $log_path ) ) || is_file( $log_path ) ) {
+				file_put_contents(
+					$log_path,
+					wp_json_encode(
+						array(
+							'sessionId'    => '09b519',
+							'hypothesisId' => 'B',
+							'location'     => 'class-leadwerk-translation-sitemap.php:build_alternates_xml',
+							'message'      => 'hreflang_skipped_insufficient_alternates',
+							'data'         => array(
+								'post_id'         => (int) $post_id,
+								'alternate_count' => $alternate_count,
+							),
+							'timestamp'    => (int) round( microtime( true ) * 1000 ),
+						)
+					) . "\n",
+					FILE_APPEND | LOCK_EX
+				);
+			}
+			// #endregion
+			return '';
 		}
 
 		return $xml;
